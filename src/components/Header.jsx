@@ -17,8 +17,7 @@ const Header = () => {
         <header className="fixed top-0 left-0 w-full bg-[#333] text-white z-50 shadow-md">
             <div className="flex justify-between items-center h-16 px-4 md:px-8">
                 <img src={Logo} alt="Tatak Mountaineers Logo" className="h-12 w-auto mx-5" />
-
-                <nav className="hidden md:flex items-center gap-5 mx-16">
+                <nav className="hidden md:flex items-center gap-5">
                     <ul className="flex gap-7">
                         {navLinks.map((link) => (
                             <li key={link.name}>
@@ -34,7 +33,7 @@ const Header = () => {
                             </li>
                         ))}
                     </ul>
-                    <button className="bg-green-500 px-5 py-2 rounded-lg shadow-md">Login</button>
+                    <button className="bg-green-500 px-5 py-2 rounded-lg shadow-md cursor-pointer">Book Now</button>
                 </nav>
 
                 {/* Burger Menu Button */}
@@ -58,7 +57,7 @@ const Header = () => {
                             {link.name}
                         </Link>
                     ))}
-                    <button className="bg-green-500 px-4 py-2 rounded-lg shadow-md w-fit">Login</button>
+                    <button className="bg-green-500 px-4 py-2 rounded-lg shadow-md w-fit cursor-pointer">Book Now</button>
                 </div>
             )}
         </header>
