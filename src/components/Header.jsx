@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from '../assets/tatakmountaineers_logo.png';
 import DarkModeToggle from './DarkModeToggle';
+import SearchComponent from "./SearchComponent"
+
 
 
 const Header = () => {
@@ -15,6 +17,13 @@ const Header = () => {
         { name: 'Contact', path: '/contact' }
     ];
 
+    // const handleMobileSearch = (e) => {
+    //     e.preventDefault()
+    //     if (mobileSearchQuery.trim()) {
+    //         console.log("Mobile searching for:", mobileSearchQuery)
+    //     }
+    // }
+
     return (
         <header className="fixed top-0 left-0 w-full bg-[var(--bg-color)] text-[var(--text-color)] z-50 shadow-md">
             <div className="flex justify-between items-center h-16 px-4 md:px-8">
@@ -25,17 +34,20 @@ const Header = () => {
                             <li key={link.name}>
                                 <Link
                                     to={link.path}
-                                    className={`relative group pb-1 ${location.pathname === link.path ? 'text-[var(--bg-color)]' : ''
+                                    className={`relative group pb-1 ${location.pathname === link.path ? 'text-[var(--primary-color)]' : ''
                                         }`}
                                 >
                                     {link.name}
-                                    <span className={`absolute left-0 bottom-0 h-[2px] bg-[var(--bg-color)] transition-all duration-300 pointer-events-none ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                                    <span className={`absolute left-0 bottom-0 h-[2px] bg-[var(--primary-color)] transition-all duration-300 pointer-events-none ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                                 </Link>
                             </li>
                         ))}
                     </ul>
-                    <DarkModeToggle />
-                    <button className="bg-[var(--bg-color)] px-5 py-2 rounded-lg shadow-md cursor-pointer">Book Now</button>
+                    <div className='flex justify-center items-center gap-1'>
+                        <SearchComponent />
+                        <DarkModeToggle />
+                    </div>
+                    <button className="bg-[var(--primary-color)] px-5 py-2 rounded-lg shadow-md cursor-pointer">Book Now</button>
                 </nav>
 
                 {/* Burger Menu Button */}
@@ -59,8 +71,11 @@ const Header = () => {
                             {link.name}
                         </Link>
                     ))}
-                    <DarkModeToggle />
-                    <button className="bg-[var(--bg-color)] px-4 py-2 rounded-lg shadow-md w-fit cursor-pointer">Book Now</button>
+                    <div className='flex items-center gap-1'>
+                        <SearchComponent />
+                        <DarkModeToggle />
+                    </div>
+                    <button className="bg-[var(--primary-color)] px-4 py-2 rounded-lg shadow-md w-fit cursor-pointer">Book Now</button>
                 </div>
             )}
         </header>

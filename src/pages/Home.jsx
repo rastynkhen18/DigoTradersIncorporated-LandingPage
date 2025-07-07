@@ -16,7 +16,7 @@ const Home = () => {
                         Explore the great outdoors with us. Join hikes, meet fellow mountaineers, and experience nature like never before.
                     </p>
                     <div className='flex gap-5'>
-                        <button className='text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl bg-[var(--primary-color)] hover:bg-[var(--hover-color)] px-6 py-2 rounded-lg cursor-pointer transition-all duration-300'>Get Started</button>
+                        <button className='text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl bg-[var(--primary-color)] hover:bg-[var(--hover-color)] px-6 py-2 rounded-lg cursor-pointer transition-all duration-300'>Get Started!</button>
                         <button className='text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl border-2 border-[var(--primary-color)] text-[var(--text-color)] px-6 py-2 rounded-lg cursor-pointer transition-all duration-300'>Learn More</button>
                     </div>
                 </div>

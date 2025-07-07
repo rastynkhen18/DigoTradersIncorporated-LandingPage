@@ -42,7 +42,7 @@ const DarkModeToggle = () => {
       <div className="relative w-5 h-5">
         {/* Sun Icon */}
         <svg
-          className={`absolute inset-0 w-5 h-5 text-green-500 transition-all duration-300 bg-[#fff] rounded-lg cursor-pointer ${
+          className={`absolute inset-0 w-5 h-5 text-green-500 transition-all duration-300 cursor-pointer ${
             isDark ? "opacity-0 rotate-90 scale-0" : "opacity-100 rotate-0 scale-100"
           }`}
           fill="currentColor"
@@ -57,7 +57,7 @@ const DarkModeToggle = () => {
 
         {/* Moon Icon */}
         <svg
-          className={`absolute inset-0 w-5 h-5 text-green-500 transition-all duration-300 cursor-pointer${
+          className={`absolute inset-0 w-5 h-5 text-green-500 transition-all duration-300 cursor-pointer ${
             isDark ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-90 scale-0"
           }`}
           fill="currentColor"
