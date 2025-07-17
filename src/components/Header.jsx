@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Logo from '../assets/tatakmountaineers_logo.png';
+import Logo from '../assets/49th_logo.png';
 import DarkModeToggle from './DarkModeToggle';
-import SearchComponent from "./SearchComponent"
-// import Booking from "../pages/Booking";
-
-
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,24 +9,19 @@ const Header = () => {
 
     const navLinks = [
         { name: 'Home', path: '/' },
-        { name: 'Services', path: '/services' },
+        { name: 'Menu', path: '/menu' },
         { name: 'About', path: '/about' },
-        { name: 'Contact', path: '/contact' }
+        { name: 'Contact', path: '/contact'},
+        { name: 'Galley', path: '/gallery' }
     ];
 
-    // const handleMobileSearch = (e) => {
-    //     e.preventDefault()
-    //     if (mobileSearchQuery.trim()) {
-    //         console.log("Mobile searching for:", mobileSearchQuery)
-    //     }
-    // }
 
     return (
         <header className="fixed top-0 left-0 w-full bg-[var(--bg-color)] text-[var(--text-color)] z-50 shadow-md">
             <div className="flex justify-between items-center h-16 px-4 md:px-8">
                 <div className='display flex justify-center items-center'>
-                    <img src={Logo} alt="Tatak Mountaineers Logo" className="h-12 w-auto mx-5" />
-                    <h1 className='text-2xl' >Tatak Mountaineers</h1>
+                    <img src={Logo} alt="The 49th Denver Logo" className="h-12 w-auto mx-5" />
+                    {/* <h1 className='text-2xl' >The 49th Denver</h1> */}
                 </div>
                 <nav className="hidden md:flex items-center gap-5">
                     <ul className="flex gap-7">
@@ -48,10 +39,8 @@ const Header = () => {
                         ))}
                     </ul>
                     <div className='flex justify-center items-center gap-1'>
-                        <SearchComponent />
                         <DarkModeToggle />
-                    </div>
-                    <Link to="/booking"><button className="bg-[var(--primary-color)] px-5 py-2 rounded-lg shadow-md cursor-pointer">Book Now</button></Link>
+                    </div>                         
                 </nav>
 
                 {/* Burger Menu Button */}
@@ -76,11 +65,9 @@ const Header = () => {
                         </Link>
                     ))}
                     <div className='flex items-center gap-1'>
-                        <SearchComponent />
                         <DarkModeToggle />
+                    </div>                
                     </div>
-                    <Link to="/booking"><button className="bg-[var(--primary-color)] px-4 py-2 rounded-lg shadow-md w-fit cursor-pointer">Book Now</button></Link>
-                </div>
             )}
         </header>
     );
