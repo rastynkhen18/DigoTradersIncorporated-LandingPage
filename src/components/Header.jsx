@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../assets/DigoTradersIncorporated_logo.png";
 import DarkModeToggle from "./DarkModeToggle";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +44,6 @@ const Header = () => {
       ],
     },
     { name: "Contacts", path: "/contacts" },
-    { name: "Galley", path: "/gallery" },
   ];
 
   return (
@@ -55,13 +55,16 @@ const Header = () => {
             alt="Digo Traders Incorporated Logo"
             className="h-12 w-auto mx-5"
           />
-          <h1 className='text-base text-[var(--primary-color)] md:text-2xl' >DiGO Traders Inc,</h1>
+          <h1 className="text-base text-[var(--primary-color)] md:text-2xl">
+            DiGO Traders Inc,
+          </h1>
         </div>
+
         <nav className="hidden md:flex items-center gap-5">
           <ul className="flex gap-7">
             {navLinks.map((link) => (
               <li key={link.name} className="relative group">
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-1 group">
                   <Link
                     to={link.path}
                     className={`relative group pb-1 ${
@@ -79,7 +82,10 @@ const Header = () => {
                       }`}
                     ></span>
                   </Link>
-                  {link.subLinks && <span className="text-md">&#9662;</span>}
+
+                  {link.subLinks && (
+                    <FaChevronDown className="transition-transform duration-300 group-hover:rotate-180" size={14} />
+                  )}
                 </div>
 
                 {link.subLinks && (
@@ -99,6 +105,7 @@ const Header = () => {
               </li>
             ))}
           </ul>
+
           <div className="flex justify-center items-center gap-1">
             <DarkModeToggle />
           </div>
@@ -134,12 +141,16 @@ const Header = () => {
               >
                 <span>{link.name}</span>
                 {link.subLinks && (
-                  <span className="text-xs ml-2">
-                    {activeDropdown === link.name ? "\u25B2" : "\u25BC"}{" "}
-                    {/* ▲ ▼ */}
+                  <span className="ml-2">
+                    {activeDropdown === link.name ? (
+                      <FaChevronUp size={12} />
+                    ) : (
+                      <FaChevronDown size={12} />
+                    )}
                   </span>
                 )}
               </div>
+
               {link.subLinks && activeDropdown === link.name && (
                 <div className="ml-4 mt-2 flex flex-col gap-2">
                   {link.subLinks.map((sub) => (
@@ -149,7 +160,6 @@ const Header = () => {
                       onClick={() => setIsOpen(false)}
                       className="text-sm hover:text-[var(--primary-color)]"
                     >
-                      {" "}
                       {sub.name}
                     </Link>
                   ))}

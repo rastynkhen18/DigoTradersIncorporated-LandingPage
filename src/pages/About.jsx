@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../assets/DigoTradersIncorporated_logo.png";
+import DropdownFAQ from "../components/DropDownFAQ";
 
 const About = () => {
   return (
@@ -28,6 +29,9 @@ const About = () => {
               Under the leadership of Carlito Espinosa, our licensed customs
               broker, we provide comprehensive customs clearance services.
             </p>
+          </div>
+          <div className="flex justify-center items-center flex-col">
+          <DropdownFAQ/>
           </div>
         </div>
       </main>
