@@ -1,28 +1,56 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import CustomButton from '../components/CustomButton';
 import BlurredButton from '../components/BlurredButton';
-import Background from '../assets/background.jpg';
+// import Background from '../assets/DigoTradersIncorporated_bg.png';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
+function useIsMobile() {
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 640); // Tailwind's sm = 640px
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 640);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    return isMobile;
+}
 
 const Home = () => {
+
+    const isMobile = useIsMobile();
+
+    const slideIn = {
+        initial: isMobile ? { y: 50, opacity: 0 } : { x: -100, opacity: 0 },
+        animate: { x: 0, y: 0, opacity: 1, transition: { duration: 0.8, ease: 'easeOut' } },
+    };
     return (
         <>
-            <Header />
-            <main className='relative mt-16 flex items-center justify-center min-h-screen'>
-                <div className="absolute inset-0 bg-cover bg-center opacity-70 z-0" style={{ backgroundImage: `url(${Background})` }}></div>
+            <main className='relative mt-3 flex items-center justify-center min-h-screen px-4 md:justify-start'>
+                {/* Optional background */}
+                {/* <div className="absolute inset-0 bg-cover bg-center opacity-70 z-0" style={{ backgroundImage: `url(${Background})` }}></div> */}
 
-                <div className='relative z-10 flex flex-col justify-center items-center text-center mb-10'>
-                    <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 [var(--text-color)]'>Welcome to The 49th Food & Spirits</h1>
-                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-4 px-4 sm:px-8 md:px-20 lg:px-32 xl:px-64 text-center [var(--text-color)]">
-                    Alaskan-Inspired Food & Spirits in Denver and Littleton, Colorado — where every plate tells a story.
+                <motion.div
+                    variants={slideIn}
+                    initial="initial"
+                    animate="animate"
+                    transition={{ duration: 0.8, ease: 'easeOut' }}
+                    className='relative z-10 md:m-20 text-center md:text-left md:max-w-2xl'
+                >
+                    <h1 className='text-3xl sm:text-4xl md:text-5xl font-black mb-3 text-[var(--text-color)]'>
+                        Professional Customs Brokerage Services
+                    </h1>
+                    <p className="text-base sm:text-lg md:text-xl mb-4 text-[var(--text-color)]">
+                        Your trusted partner in international trade and customs clearance with over years of expertise
                     </p>
-                    <div className='flex gap-5'>
-                       <Link to="/"><CustomButton>Order Now</CustomButton></Link>
-                        <BlurredButton onClick={() => alert('Clicked!')}>Learn More </BlurredButton>
+                    <div className='flex sm:flex-row gap-5 justify-center md:justify-start items-center'>
+                        <Link to="/"><CustomButton>Get Started</CustomButton></Link>
+                        <BlurredButton onClick={() => alert('Clicked!')}>Learn More</BlurredButton>
                     </div>
-                </div>
+                </motion.div>
             </main>
         </>
     )
