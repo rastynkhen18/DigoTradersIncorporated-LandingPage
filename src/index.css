@@ -5,7 +5,8 @@
   --text-color: #333333;       
   --primary-color:#e08300;
   /* --primary-color: #f79f24; */
-  --secondary-color:#010080;
+  --secondary-color:#1e2939;
+  /* --secondary-color:#1e40af;     */
   --primary-hover: #c47100;
      
 }
@@ -15,7 +16,8 @@
   --text-color: #ffffff;       
   --primary-color:#e08300;
   /* --primary-color: #f79f24; */
-  --secondary-color:#010080;
+  --secondary-color:#1e2939;
+  /* --secondary-color:#1e40af;    */
   --primary-hover: #c47100;        
 }
 

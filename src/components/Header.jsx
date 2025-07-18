@@ -10,6 +10,7 @@ const Header = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
     {
       name: "Services",
       path: "/services",
@@ -41,9 +42,7 @@ const Header = () => {
         },
       ],
     },
-
-    { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
+    { name: "Contacts", path: "/contacts" },
     { name: "Galley", path: "/gallery" },
   ];
 
@@ -56,7 +55,7 @@ const Header = () => {
             alt="Digo Traders Incorporated Logo"
             className="h-12 w-auto mx-5"
           />
-          {/* <h1 className='text-2xl' >The 49th Denver</h1> */}
+          <h1 className='text-base text-[var(--primary-color)] md:text-2xl' >DiGO Traders Inc,</h1>
         </div>
         <nav className="hidden md:flex items-center gap-5">
           <ul className="flex gap-7">

@@ -1,11 +1,14 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import Header from '../components/Header';
 import CustomButton from '../components/CustomButton';
 import BlurredButton from '../components/BlurredButton';
 // import Background from '../assets/DigoTradersIncorporated_bg.png';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import About from './About'
+import Services from './Services';
+import Contacts from './Contacts';
+import Footer from '../components/Footer';
 
 function useIsMobile() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 640); // Tailwind's sm = 640px
@@ -52,6 +55,10 @@ const Home = () => {
                     </div>
                 </motion.div>
             </main>
+            <About/>
+            <Services/>
+            <Contacts/>
+            <Footer/>
         </>
     )
 }
