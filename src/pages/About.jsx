@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../assets/DigoTradersIncorporated_logo.png";
 import DropdownFAQ from "../components/DropDownFAQ";
+import WhoWeServe from "../components/WhoWeServe";
 
 const About = () => {
   return (
@@ -32,6 +33,7 @@ const About = () => {
           </div>
           <div className="flex justify-center items-center flex-col">
           <DropdownFAQ/>
+          <WhoWeServe/>
           </div>
         </div>
       </main>

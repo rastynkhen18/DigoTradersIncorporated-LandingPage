@@ -4,20 +4,34 @@
   --bg-color: #ffffff;         
   --text-color: #333333;       
   --primary-color:#e08300;
-  /* --primary-color: #f79f24; */
   --secondary-color:#1e2939;
-  /* --secondary-color:#1e40af;     */
   --primary-hover: #c47100;
-     
+
+  /* * Linear Gradients */
+  --gradient-linear-right: linear-gradient(to right, #ff7e5f, #feb47b); 
+  --gradient-linear-left: linear-gradient(to left, #6a11cb, #2575fc);
+  --gradient-linear-top: linear-gradient(to top, #43cea2, #185a9d);
+  --gradient-linear-bottom: linear-gradient(to bottom, #ff6e7f, #bfe9ff);
+  --gradient-linear-diagonal: linear-gradient(45deg, #667eea, #764ba2);
+
+  /* Radial Gradient */
+  --gradient-radial: radial-gradient(circle, #ff9a9e, #fad0c4);
+
+  /* Conic Gradient */
+  --gradient-conic: conic-gradient(from 0deg, #ff9a9e, #fad0c4, #ff9a9e);
+
+  /* Cool Variations */
+  --gradient-sunset: linear-gradient(to right, #0b486b, #f56217);
+  --gradient-sea: linear-gradient(to right, #2b5876, #4e4376);
+  --gradient-peach: linear-gradient(to right, #ed4264, #ffedbc);
+  --gradient-forest: linear-gradient(to right, #5a3f37, #2c7744);
 }
 
 :root.dark {
   --bg-color: #333333;         
   --text-color: #ffffff;       
   --primary-color:#e08300;
-  /* --primary-color: #f79f24; */
   --secondary-color:#1e2939;
-  /* --secondary-color:#1e40af;    */
   --primary-hover: #c47100;        
 }
 

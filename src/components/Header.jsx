@@ -4,6 +4,7 @@ import Logo from "../assets/DigoTradersIncorporated_logo.png";
 import DarkModeToggle from "./DarkModeToggle";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -47,7 +48,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-[var(--secondary-color)] text-[#fff] z-50 shadow-md">
+    <header className="fixed top-0 left-0 w-full text-[#fff] z-50 shadow-md"  style={{ backgroundImage: 'var(--gradient-linear-left)' }}>
       <div className="flex justify-between items-center h-16 px-4 md:px-8">
         <div className="display flex justify-center items-center">
           <img
@@ -141,13 +142,15 @@ const Header = () => {
               >
                 <span>{link.name}</span>
                 {link.subLinks && (
-                  <span className="ml-2">
-                    {activeDropdown === link.name ? (
-                      <FaChevronUp size={12} />
-                    ) : (
-                      <FaChevronDown size={12} />
-                    )}
-                  </span>
+                <span
+                className={`ml-92 transition-transform duration-200 ${
+                  activeDropdown === link.name ? 'rotate-180' : ''
+                }`}
+              >
+                <FaChevronDown size={12} />
+              </span>
+              
+               
                 )}
               </div>
 
