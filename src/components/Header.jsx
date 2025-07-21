@@ -1,181 +1,56 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import Logo from "../assets/DigoTradersIncorporated_logo.png";
-import DarkModeToggle from "./DarkModeToggle";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-
+import React, { useState } from 'react';
+import Logo from '../assets/DigoTradersIncLogo.svg';
+import { Menu, X, ChevronDown } from 'lucide-react'; 
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-  const [activeDropdown, setActiveDropdown] = useState(null);
-
-  const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    {
-      name: "Services",
-      path: "/services",
-      subLinks: [
-        {
-          name: "Import/Export Consolidation by sea",
-          path: "/services/Import/Export-Consolidation-by-sea",
-        },
-        {
-          name: "Import/Export by air",
-          path: "/services/Import/Export-by-air",
-        },
-        { name: "Trucking Services", path: "/services/Trucking-Services" },
-        { name: "Intl FCL/LCL", path: "/services/Intl-FCL/LCL" },
-        { name: "Custom Brokerage", path: "/services/Custom-Brokerage" },
-        { name: "Land Transportation", path: "/services/Land-Transportation" },
-        { name: "Domestic Transfer", path: "/services/Domestic-Transfer" },
-        {
-          name: "Freight & Tariff Consultaion",
-          path: "/services/Freight-and-Tariff-Consultaion",
-        },
-        {
-          name: "Renewal of Amo Certificate",
-          path: "/services/Renewal-of-Amo-Certificate",
-        },
-        {
-          name: "Accreditaion of Import License",
-          path: "/services/Accreditaion-of-Import-License",
-        },
-      ],
-    },
-    { name: "Contacts", path: "/contacts" },
-  ];
 
   return (
-    <header className="fixed top-0 left-0 w-full text-[#fff] z-50 shadow-md"  style={{ backgroundImage: 'var(--gradient-linear-left)' }}>
-      <div className="flex justify-between items-center h-16 px-4 md:px-8">
-        <div className="display flex justify-center items-center">
-          <img
-            src={Logo}
-            alt="Digo Traders Incorporated Logo"
-            className="h-12 w-auto mx-5"
-          />
-          <h1 className="text-base text-[var(--primary-color)] md:text-2xl">
-            DiGO Traders Inc,
-          </h1>
-        </div>
+    <header className='relative top-0 right-0 flex justify-around items-center w-full h-16 px-5 bg-[var(--pwhite-color)] z-10'>
+      <img src={Logo} alt="Digo Traders Incorporated Logo" className='cursor-pointer w-32' />
 
-        <nav className="hidden md:flex items-center gap-5">
-          <ul className="flex gap-7">
-            {navLinks.map((link) => (
-              <li key={link.name} className="relative group">
-                <div className="flex items-center gap-1 group">
-                  <Link
-                    to={link.path}
-                    className={`relative group pb-1 ${
-                      location.pathname === link.path
-                        ? "text-[var(--primary-color)]"
-                        : ""
-                    }`}
-                  >
-                    {link.name}
-                    <span
-                      className={`absolute left-0 bottom-0 h-[2px] bg-[var(--primary-color)] transition-all duration-300 pointer-events-none ${
-                        location.pathname === link.path
-                          ? "w-full"
-                          : "w-0 group-hover:w-full"
-                      }`}
-                    ></span>
-                  </Link>
+      {/* Desktop Nav */}
+      <nav className='hidden md:flex justify-center items-center gap-10 text-[var(--secondary-color)] font-bold'>
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+        <a href="" className="flex items-center gap-1">
+          Services <ChevronDown size={16} />
+        </a>
+      </nav>
 
-                  {link.subLinks && (
-                    <FaChevronDown className="transition-transform duration-300 group-hover:rotate-180" size={14} />
-                  )}
-                </div>
-
-                {link.subLinks && (
-                  <ul className="absolute hidden group-hover:block bg-[var(--secondary-color)] text-[#fff] shadow-lg py-2 rounded-md min-w-[285px] z-50 text-justify">
-                    {link.subLinks.map((sub) => (
-                      <li key={sub.name}>
-                        <Link
-                          to={sub.path}
-                          className="block px-4 py-2 cursor-pointer hover:text-[var(--primary-color)] transition"
-                        >
-                          {sub.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
-
-          <div className="flex justify-center items-center gap-1">
-            <DarkModeToggle />
-          </div>
-        </nav>
-
-        {/* Burger Menu Button */}
-        <button
-          className="md:hidden text-2xl cursor-pointer"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? String.fromCharCode(10005) : String.fromCharCode(9776)}
+      {/* Desktop Button */}
+      <div className='hidden md:block'>
+        <button className='bg-[var(--primary-color)] text-[var(--white-color)] px-6 py-2 rounded-full cursor-pointer'>
+          Learn More
         </button>
       </div>
 
-      {/* Mobile Nav Dropdown */}
-      {isOpen && (
-        <div className="overflow-hidden transition-all duration-300 ease-in-out bg-[var(--secondary-color)] px-6 pb-4 pt-2 flex flex-col gap-4">
-          {navLinks.map((link) => (
-            <div key={link.name}>
-              <div
-                onClick={() =>
-                  link.subLinks
-                    ? setActiveDropdown(
-                        activeDropdown === link.name ? null : link.name
-                      )
-                    : setIsOpen(false)
-                }
-                className={`cursor-pointer flex items-center justify-start ${
-                  location.pathname === link.path
-                    ? "text-[var(--primary-color)]"
-                    : ""
-                }`}
-              >
-                <span>{link.name}</span>
-                {link.subLinks && (
-                <span
-                className={`ml-92 transition-transform duration-200 ${
-                  activeDropdown === link.name ? 'rotate-180' : ''
-                }`}
-              >
-                <FaChevronDown size={12} />
-              </span>
-              
-               
-                )}
-              </div>
+      {/* Burger Icon */}
+      <div className='md:hidden z-20'>
+        {isOpen ? (
+          <X size={28} onClick={() => setIsOpen(false)} className="text-[var(--secondary-color)] cursor-pointer" />
+        ) : (
+          <Menu size={28} onClick={() => setIsOpen(true)} className="text-[var(--secondary-color)] cursor-pointer" />
+        )}
+      </div>
 
-              {link.subLinks && activeDropdown === link.name && (
-                <div className="ml-4 mt-2 flex flex-col gap-2">
-                  {link.subLinks.map((sub) => (
-                    <Link
-                      key={sub.name}
-                      to={sub.path}
-                      onClick={() => setIsOpen(false)}
-                      className="text-sm hover:text-[var(--primary-color)]"
-                    >
-                      {sub.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-
-          <div className="flex items-center gap-1">
-            <DarkModeToggle />
-          </div>
-        </div>
-      )}
+      {/* Mobile Menu */}
+      <div
+        className={`absolute top-16 left-0 w-full bg-[var(--white-color)] flex flex-col items-center gap-6 py-8 text-[var(--secondary-color)] font-bold transition-transform duration-300 md:hidden ${
+          isOpen ? 'translate-y-0 opacity-100' : '-translate-y-[100%] opacity-0 pointer-events-none'
+        }`}
+      >
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+        <a href="" className="flex items-center gap-1">
+          Services <ChevronDown size={16} />
+        </a>
+        <button className='bg-[var(--primary-color)] text-[var(--white-color)] px-6 py-2 rounded-full cursor-pointer'>
+          Learn More
+        </button>
+      </div>
     </header>
   );
 };

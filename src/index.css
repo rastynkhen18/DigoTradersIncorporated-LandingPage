@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --bg-color: #ffffff;         
-  --text-color: #333333;       
-  --primary-color:#e08300;
-  --secondary-color:#1e2939;
-  --primary-hover: #c47100;
+  --primary-color: #f79f24;
+  --primary-accent: #fe7220;
+  --secondary-color: #020181;
+  --secondary-accent: #000035;
+  --white-color: #ffffff;
+  --gray-color: #c5c5c5;
+  --gray-accent: #818181;
 
   /* * Linear Gradients */
-  --gradient-linear-right: linear-gradient(to right, #ff7e5f, #feb47b); 
+  --gradient-linear-right: linear-gradient(to right, #f79f24, #fe7220);
   --gradient-linear-left: linear-gradient(to left, #6a11cb, #2575fc);
   --gradient-linear-top: linear-gradient(to top, #43cea2, #185a9d);
   --gradient-linear-bottom: linear-gradient(to bottom, #ff6e7f, #bfe9ff);
@@ -28,11 +30,13 @@
 }
 
 :root.dark {
-  --bg-color: #333333;         
-  --text-color: #ffffff;       
-  --primary-color:#e08300;
-  --secondary-color:#1e2939;
-  --primary-hover: #c47100;        
+  --primary-color: #f79f24;
+  --primary-accent: #fe7220;
+  --secondary-color: #020181;
+  --secondary-accent: #000035;
+  --white-color: #ffffff;
+  --gray-color: #c5c5c5;
+  --gray-accent: #818181;
 }
 
 
@@ -41,6 +45,10 @@ body {
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
   font-family: system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* :root {

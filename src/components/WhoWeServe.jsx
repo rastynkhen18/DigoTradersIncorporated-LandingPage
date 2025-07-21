@@ -21,7 +21,7 @@ const WhoWeServeSlideshow = () => {
       {/* Animation container */}
       <div className="slideshow inline-flex gap-12 text-gray-700 font-semibold text-lg whitespace-nowrap">
         {[...clients, ...clients].map((item, index) => (
-          <span key={index} className="shrink-0">
+          <span key={index} className="shrink-0 hover:text-black">
             {item}
           </span>
         ))}
