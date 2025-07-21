@@ -77,7 +77,7 @@ const DropdownFAQ = () => {
   };
 
   return (
-    <div className="max-w-sm mt-10 space-y-4">
+    <div className="mt-10 space-y-4">
       {faqs.map((faq, index) => {
         const isOpen = index === openIndex;
         const height = isOpen
@@ -87,7 +87,7 @@ const DropdownFAQ = () => {
         return (
           <div
             key={index}
-            className="border rounded-xl shadow-sm bg-white p-4 transition-all duration-300"
+            className="text-[var(--secondary-color)] border-none rounded-xl shadow-sm bg-white p-4 transition-all duration-300"
           >
             <button
               onClick={() => toggleDropdown(index)}
@@ -105,7 +105,7 @@ const DropdownFAQ = () => {
               style={{ height }}
               className="overflow-hidden transition-all duration-300 ease-in-out"
             >
-              <p className="mt-3 text-[#4a5565]">{faq.answer}</p>
+              <p className="mt-3 text-[var(--gray-accent)]">{faq.answer}</p>
             </div>
           </div>
         );
