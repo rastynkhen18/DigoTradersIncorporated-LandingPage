@@ -3,20 +3,69 @@ import { FaChevronDown } from "react-icons/fa";
 
 const faqs = [
   {
-    question: "What is React JS?",
-    answer:
-      "React JS is a JavaScript library developed by Facebook for building user interfaces. It allows developers to create large web applications that can update and render efficiently in response to data changes.",
+    question: "Step 1: Consultation & Requirements Gathering",
+    answer: `
+  📞 You contact Digo Traders via email or phone.
+  
+  📝 You explain what kind of goods you're importing, where they're coming from, and your timeline.
+  
+  💬 Digo Traders will advise you on:
+    • The best shipping method (sea or air)
+    • Required documents
+    • Estimated costs and timeline
+  `
+  },
+
+  {
+    question: "Step 2: Import License & AMO Assistance (if needed)",
+    answer: `
+  🧾 If you’re a new importer:
+  
+    • Digo helps you apply for an Import License  
+    • They assist with renewal of the AMO Certificate if it’s expired
+  `
   },
   {
-    question: "What are components in React?",
-    answer:
-      "Components are the building blocks of a React application. They can be functional or class-based and help to split the UI into independent, reusable pieces.",
+    question: "Step 3: Freight Arrangement",
+    answer: `
+  ✈️ If air freight:  
+    • They coordinate international air shipment.
+  
+  ⛴️ If sea freight:  
+    • Choose between:  
+      – FCL (Full Container Load) — for big shipments  
+      – LCL (Less than Container Load) — for small shipments  
+    • They consolidate your cargo with others if using LCL to save costs.
+  `
   },
   {
-    question: "What is JSX?",
-    answer:
-      "JSX stands for JavaScript XML. It allows us to write HTML in React and makes it easier to write and add HTML in React components.",
+    question: "Step 4: Customs Brokerage",
+    answer: `
+  📋 Digo Traders handles:
+    • Import declaration  
+    • Customs taxes & tariffs  
+    • Permits and paperwork
+  
+  🚫 You don’t have to deal with customs — they handle it for you.
+  `
   },
+  {
+    question: "Step 5: Domestic Transfer & Land Transportation",
+    answer: `
+  🚚 Once cleared, your goods are:
+    • Transferred locally (from port to city/province)  
+    • Delivered via truck to your warehouse or business location
+  `
+  },
+  {
+    question: "Step 6: Final Delivery & Support",
+    answer: `
+  📦 You receive your goods at your preferred location.
+  
+  📞 Digo provides post-delivery support or freight consultation for future shipments.
+  `
+  }
+
 ];
 
 const DropdownFAQ = () => {
@@ -28,7 +77,7 @@ const DropdownFAQ = () => {
   };
 
   return (
-    <div className="max-w-sm mx-auto mt-10 space-y-4">
+    <div className="max-w-sm mt-10 space-y-4">
       {faqs.map((faq, index) => {
         const isOpen = index === openIndex;
         const height = isOpen
@@ -46,9 +95,8 @@ const DropdownFAQ = () => {
             >
               <span>{faq.question}</span>
               <FaChevronDown
-                className={`transform transition-transform duration-300 ${
-                  isOpen ? "rotate-180" : "rotate-0"
-                }`}
+                className={`transform transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"
+                  }`}
               />
             </button>
 

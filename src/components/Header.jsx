@@ -10,7 +10,7 @@ const Header = () => {
       <img src={Logo} alt="Digo Traders Incorporated Logo" className='cursor-pointer w-32' />
 
       {/* Desktop Nav */}
-      <nav className='hidden md:flex justify-center items-center gap-10 text-[var(--secondary-color)] font-bold'>
+      <nav className='hidden md:flex justify-center items-center gap-10 text-[var(--secondary-color)] font-normal'>
         <a href="">Home</a>
         <a href="">About</a>
         <a href="">Contact</a>
