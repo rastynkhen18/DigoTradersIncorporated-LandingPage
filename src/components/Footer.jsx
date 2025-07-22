@@ -9,35 +9,34 @@ const Footer = () => {
             <div className="grid md:grid-cols-6 gap-8 border-b border-[var(--gray-accent)] pb-10">
 
                 {/* Logo and description */}
-                <div className="md:col-span-2">
+                <div className="col-span-3 md:col-span-2 flex flex-col items-center text-center md:items-start md:text-left">
                     <img src={Logo} alt="Digo Traders Inc." className="w-40 mb-4" />
                     <p className="text-[var(--gray-color)] text-sm">
                         Digo Traders Inc. helps individuals and businesses with local and international import and export, managing everything from paperwork to delivery.
                     </p>
                 </div>
 
-                    
-                    {/* Quick Links */}
-                    <div>
-                        <h2 className="font-semibold text-lg text-[var(--primary-color)] mb-2">Quick Links</h2>
-                        <ul className="space-y-1 text-sm text-[var(--gray-color)]">
-                            <li>Home</li>
-                            <li>About</li>
-                            <li>Services</li>
-                            <li>Contact</li>
-                        </ul>
-                    </div>
+                {/* Quick Links */}
+                <div>
+                    <h2 className="font-semibold text-lg text-[var(--primary-color)] mb-2">Quick Links</h2>
+                    <ul className="space-y-1 text-sm text-[var(--gray-color)]">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Services</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
 
-                    {/* Services */}
-                    <div>
-                        <h2 className="font-semibold text-lg text-[var(--primary-color)] mb-2">Services</h2>
-                        <ul className="space-y-1 text-sm text-[var(--gray-color)]">
-                            <li>Air Freight</li>
-                            <li>Sea Freight</li>
-                            <li>Land Freight</li>
-                            <li>FCL / LCL</li>
-                        </ul>
-                    </div>
+                {/* Services */}
+                <div>
+                    <h2 className="font-semibold text-lg text-[var(--primary-color)] mb-2">Services</h2>
+                    <ul className="space-y-1 text-sm text-[var(--gray-color)]">
+                        <li>Air Freight</li>
+                        <li>Sea Freight</li>
+                        <li>Land Freight</li>
+                        <li>FCL / LCL</li>
+                    </ul>
+                </div>
 
                 {/* About */}
                 <div>
@@ -48,9 +47,9 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <div className="flex flex-col mt-4 md:mt-0">
+                {/* Follow Us */}
+                <div className="col-span-3 md:col-span-1 flex flex-col items-center text-center mt-4 md:mt-0 md:items-start md:text-left">
                     <h2 className="font-semibold text-lg text-[var(--primary-color)] mb-2">Follow Us</h2>
-
                     <div className="flex space-x-4">
                         <a href="#" aria-label="Facebook">
                             <img src={FacebookLogo} alt="Facebook" className="w-6 h-6 hover:opacity-80" />
@@ -63,10 +62,8 @@ const Footer = () => {
 
             </div>
 
-
             <div className="flex md:flex-row justify-center items-center mt-6 text-sm text-[var(--gray-color)]">
                 <p>© 2025 Digo Traders Inc. All rights reserved.</p>
-
             </div>
         </footer>
     );
