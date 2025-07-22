@@ -38,11 +38,101 @@ const Home = () => {
   return (
     <>
       <main >
-        <section>
-          <div>
+        <section
+          className="w-full min-h-screen bg-cover bg-center flex flex-col justify-between"
+          style={{ backgroundImage: `url(${HomePageBackground})` }}
+        >
+          {/* Airplane Image */}
+          <img
+            src={Airplane}
+            alt="Airplane"
+            className="absolute top-20 left-10 w-[200px] h-auto object-cover z-10"
+          />
 
-            {/* //Blue Container Transparent */}
-            <div className="absolute inset-0 flex justify-center items-center z-2">
+          {/* Blue Container Transparent - Centered */}
+          <div className="flex justify-center items-center flex-grow z-20 px-4">
+            <div
+              className="relative flex flex-col text-left rounded-2xl w-[400px] md:w-[700px] p-6"
+              style={{ background: 'rgba(2, 1, 129, 0.7)' }}
+            >
+              <h1 className="text-[var(--white-color)] font-bold text-4xl md:text-5xl">
+                Go Beyond Borders with
+                <mark className="bg-transparent text-[var(--primary-color)]"> Digo Traders</mark>
+              </h1>
+              <p className="text-[var(--white-color)] mt-4 mb-5 text-base md:text-lg md:max-w-xl">
+                From <mark className="bg-transparent text-[var(--primary-color)]">small packages to large cargo</mark> — Digo Traders ships by land, air and sea to support businesses of every size.
+              </p>
+
+              {/* Gradient Effect - Positioned at Bottom Left with Full Height */}
+              <div className="absolute bottom-0 left-1 h-10 p-3 w-[380px] md:w-[500px] rounded-2xl bg-[linear-gradient(to_right,var(--secondary-color),var(--primary-accent))] flex justify-end items-center">
+                <Package size={30} className="text-[var(--white-color)] left-2 sm:left-3" />
+              </div>
+            </div>
+          </div>
+
+          {/* Who We Serve Section at Bottom */}
+          <div className="w-full">
+            {/* Top Divider */}
+            <div className="w-full h-[20px] bg-[var(--primary-color)]" />
+
+            {/* Content Area */}
+            <div className="w-full bg-[var(--white-color)] text-center flex flex-col items-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-[var(--primary-color)] m-2">
+                Who We Serve
+              </h2>
+
+              <div className="grid grid-cols-5 md:grid-cols-5 md:gap-6 text-[var(--gray-color)]">
+                {/* SMEs */}
+                <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
+                  <Package size={34} />
+                  <p className="text-sm md:text-lg">SMEs</p>
+                </div>
+
+                {/* E-Commerce */}
+                <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
+                  <ShoppingCart size={34} />
+                  <p className="text-sm md:text-lg">E-Commerce</p>
+                </div>
+
+                {/* Distributors */}
+                <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
+                  <Truck size={34} />
+                  <p className="text-sm md:text-lg">Distributors</p>
+                </div>
+
+                {/* Manufacturer */}
+                <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
+                  <Factory size={34} />
+                  <p className="text-sm md:text-lg">Manufacturer</p>
+                </div>
+
+                {/* Large Enterprises */}
+                <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
+                  <Building2 size={34} />
+                  <p className="text-sm md:text-lg">Large Enterprises</p>
+                </div>
+              </div>
+
+              {/* Caption */}
+              <p className="text-xs md:text-sm text-[var(--gray-color)] m-3">
+                Trusted by Small Businesses, E-Commerce Stores, and Corporations
+              </p>
+            </div>
+
+            {/* Bottom Divider */}
+            <div className="w-full h-[20px] bg-[var(--primary-color)]" />
+          </div>
+        </section>
+
+
+
+
+
+        {/* <section>
+          <div> */}
+
+        {/* //Blue Container Transparent */}
+        {/* <div className="absolute inset-0 flex justify-center items-center z-2">
               <div className="relative flex flex-col text-left rounded-2xl w-[400px] md:w-[700px]" style={{
                 background: 'rgba(2, 1, 129, 0.7)'
               }}
@@ -54,82 +144,82 @@ const Home = () => {
                 <p className="text-[var(--white-color)] mt-4 mb-5 text-base px-8 pt-5 md:text-lg md:max-w-xl md:px-5">
                   From <mark className="bg-transparent text-[var(--primary-color)]">small packages to large cargo</mark> —
                   Digo Traders ships by land, air and sea to support businesses of every size.
-                </p>
+                </p> */}
 
-                {/* //Gradient Effect */}
-                <div>
+        {/* //Gradient Effect */}
+        {/* <div>
                   <div className=" h-10 p-3 w-[380px] md:w-[500px] md:h-2 md:p-5 rounded-2xl bg-[linear-gradient(to_right,var(--secondary-color),var(--primary-accent))] text-[var(--white-color)] flex justify-end items-center">
                     <Package size={30} className="relative left-2 sm:left-3" />
                   </div>
                 </div>
 
               </div>
-            </div>
+            </div> */}
 
 
-            {/* Background Image */}
-            <img
+        {/* Background Image */}
+        {/* <img
               src={HomePageBackground}
               alt="Homepage Background"
               className="w-full h-[400px] object-cover"
-            />
+            /> */}
 
-            {/* Who We Serve Section */}
-            <div>
-              {/* Top Divider */}
-              <div className="w-full h-[20px] bg-[var(--primary-color)]" />
+        {/* Who We Serve Section */}
+        {/* <div> */}
+        {/* Top Divider */}
+        {/* <div className="w-full h-[20px] bg-[var(--primary-color)]" /> */}
 
-              {/* Content Area */}
-              <div className="w-full bg-[var(--white-color)] text-center flex flex-col items-center">
+        {/* Content Area */}
+        {/* <div className="w-full bg-[var(--white-color)] text-center flex flex-col items-center">
                 <h2 className="text-2xl md:text-3xl font-bold text-[var(--primary-color)] m-2">
                   Who We Serve
                 </h2>
 
-                <div className="grid grid-cols-5 md:grid-cols-5 md:gap-6 text-[var(--gray-color)]">
-                  {/* SMEs */}
-                  <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
+                <div className="grid grid-cols-5 md:grid-cols-5 md:gap-6 text-[var(--gray-color)]"> */}
+        {/* SMEs */}
+        {/* <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
                     <Package size={34} />
                     <p className="text-sm md:text-lg">SMEs</p>
-                  </div>
+                  </div> */}
 
-                  {/* E-Commerce */}
-                  <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
+        {/* E-Commerce */}
+        {/* <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
                     <ShoppingCart size={34} />
                     <p className="text-sm md:text-lg">E-Commerce</p>
-                  </div>
+                  </div> */}
 
-                  {/* Distributors */}
-                  <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
+        {/* Distributors */}
+        {/* <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
                     <Truck size={34} />
                     <p className="text-sm md:text-lg">Distributors</p>
-                  </div>
+                  </div> */}
 
-                  {/* Manufacturer */}
-                  <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
+        {/* Manufacturer */}
+        {/* <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
                     <Factory size={34} />
                     <p className="text-sm md:text-lg">Manufacturer</p>
-                  </div>
+                  </div> */}
 
-                  {/* Large Enterprises */}
-                  <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
+        {/* Large Enterprises */}
+        {/* <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
                     <Building2 size={34} />
                     <p className="text-sm md:text-lg">Large Enterprises</p>
                   </div>
-                </div>
+                </div> */}
 
-                {/* Caption */}
-                <p className="text-xs md:text-sm text-[var(--gray-color)] m-3">
+        {/* Caption */}
+        {/* <p className="text-xs md:text-sm text-[var(--gray-color)] m-3">
                   Trusted by Small Businesses, E-Commerce Stores, and Corporations
                 </p>
-              </div>
+              </div> */}
 
-              {/* Bottom Divider */}
-              <div className="w-full h-[20px] bg-[var(--primary-color)]" />
+        {/* Bottom Divider */}
+        {/* <div className="w-full h-[20px] bg-[var(--primary-color)]" />
             </div>
           </div>
           {/* //Airplane Image */}
-          <img src={Airplane} alt="Airplane" className='absolute top-20 left-10 w-[200px] h-auto object-cover z-1' />
-        </section>
+        {/* <img src={Airplane} alt="Airplane" className='absolute top-20 left-10 w-[200px] h-auto object-cover z-1' /> */}
+        {/* </section> */}
 
 
         {/* <section className="relative w-full overflow-hidden"> */}
@@ -213,7 +303,7 @@ const Home = () => {
 
 
         {/* 2nd Section  Our Services*/}
-        <ServicesSection/>
+        <ServicesSection />
         {/* <section style={{
           background: 'linear-gradient(to top, var(--secondary-accent), var(--secondary-accent), transparent)',
         }}>
@@ -225,16 +315,16 @@ const Home = () => {
               We Offer End-To-End Logistics Solutions Tailored To Your Shipping Needs, Whether By Sea, Land Or Air.
             </p> */}
 
-            {/* <div className="flex justify-center items-center flex-wrap gap-7 px-4">
+        {/* <div className="flex justify-center items-center flex-wrap gap-7 px-4">
               {services.map((service, index) => (
                 <div key={index} className="flex flex-col"> */}
-                  {/* Card with background image */}
-                  {/* <div
+        {/* Card with background image */}
+        {/* <div
                     className="relative h-[500px] w-[375px] bg-cover bg-center text-[var(--white-color)] rounded-xl overflow-hidden "
                     style={{ backgroundImage: `url(${service.bgImage})` }}
                   > */}
-                    {/* Gradient overlay at bottom */}
-                    {/* <div
+        {/* Gradient overlay at bottom */}
+        {/* <div
                       className="absolute bottom-0 left-0 w-full h-72 z-0"
                       style={{
                         background: 'linear-gradient(to top, var(--secondary-accent), var(--secondary-accent), transparent)',

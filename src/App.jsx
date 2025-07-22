@@ -7,19 +7,18 @@ import Contact from './pages/Contact';
 
 // import Home from './pages/Home';
 // import About from './pages/About'
-// import Services from './pages/Services';
+import Services from './pages/Services';
 // // import Footer from './components/Footer'
-import ServicesSection from './components/ServicesSection';
 
 const App = () => {
   return (
     <div>
-
       <Header />
       <Home />
-      <ServicesSection />
       <Contact />
       <Footer />
+      <Services/>
+
     </div>
     // <div>
     //   <Header />
