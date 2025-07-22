@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 // import Home from './pages/Home';
 // import About from './pages/About'
 // import Services from './pages/Services';
-// import Contacts from './pages/Contacts';
+import Contact from './pages/Contact';
 // import Footer from './components/Footer'
 
 const App = () => {
@@ -14,6 +14,7 @@ const App = () => {
     <div>
       <Header />
       <Home />
+      <Contact />
       <Footer />
     </div>
     // <div>

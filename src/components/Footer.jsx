@@ -62,7 +62,7 @@ const Footer = () => {
 
             </div>
 
-            {/* Bottom Row */}
+
             <div className="flex md:flex-row justify-center items-center mt-6 text-sm text-[var(--gray-color)]">
                 <p>© 2025 Digo Traders Inc. All rights reserved.</p>
 

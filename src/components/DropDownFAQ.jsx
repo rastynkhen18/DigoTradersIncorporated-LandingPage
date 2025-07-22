@@ -87,11 +87,11 @@ const DropdownFAQ = () => {
         return (
           <div
             key={index}
-            className="text-[var(--secondary-color)] border-none rounded-xl shadow-sm bg-white p-4 transition-all duration-300"
+            className="text-[var(--secondary-color)] border-none rounded-xl shadow-sm bg-[var(--white-color)] p-4 transition-all duration-300"
           >
             <button
               onClick={() => toggleDropdown(index)}
-              className="w-full flex items-center justify-between text-left text-lg font-medium focus:outline-none"
+              className="w-full flex items-center justify-between text-left text-lg font-medium focus:outline-none cursor-pointer"
             >
               <span>{faq.question}</span>
               <FaChevronDown
