@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   const baseClass = "px-4 py-2 rounded transition";
-  const activeClass = "bg-[var(--primary-color)] font-bold";
+  const activeClass = "bg-[var(--primary-color)]";
 //   const hoverClass = "hover:bg-[var(--primary-color)]";
 
   const getLinkClass = ({ isActive }) =>

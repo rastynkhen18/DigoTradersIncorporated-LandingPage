@@ -57,8 +57,38 @@ const Seafreight = () => {
                                 </ul>
                         </p>
 
-                        <h1 className="text-4xl md:5xl font-bold text-[var(--secondary-color)]">Why Choose Consolidation?</h1>
+                        <h1 className="text-4xl text-center md:4xl font-bold text-[var(--primary-color)]">Why Choose Consolidation?</h1>
+                        <table className="w-full rounded-full">
+                                <thead>
+                                        <tr>
+                                                <th className="bg-[var(--primary-color)] text-[var(--white-color)] text-center text-[20px] p-2">Benefits</th>
+                                                <th className="bg-[var(--secondary-color)] text-[var(--white-color)] text-center text-[20px] p-2">Description</th>
 
+                                        </tr>
+                                </thead>
+                                <tbody className='bg-[var(--gray-color)] p-5'>
+                                        <tr>
+                                                <td className='font-bold p-5'>✅Lower Shipping Cost</td>
+                                                <td >Share container space and pay only for what you use.</td>
+                                        </tr>
+                                        <tr>
+                                                <td className='font-bold p-5'>✅No Need for Full Container</td>
+                                                <td >Ideal for 1-12 CBM (cubic meters) of cargo.</td>
+                                        </tr>
+                                        <tr>
+                                                <td className='font-bold p-5'>✅Flexible Scheduling</td>
+                                                <td >We offer weekly sailings to major destinations.</td>
+                                        </tr>
+                                        <tr>
+                                                <td className='font-bold p-5'>✅Door-to-Door Option</td>
+                                                <td >Combine with land transport for ther final delivery.</td>
+                                        </tr>
+                                        <tr>
+                                                <td className='font-bold p-5'>✅Handled Paperwork</td>
+                                                <td >We take care of documents and customs clearance.</td>
+                                        </tr>
+                                </tbody>
+                        </table>
                         <h1 className="text-4xl md:5xl font-bold text-[var(--secondary-color)]">🌍 Available Routes</h1>
                         <p className='text:base md:text-lg'>
                                 We consolidate shipments to and from major ports such as:
