@@ -80,7 +80,7 @@ const ServicesSection = () => {
       }}
     >
       <div className="bg-[var(--secondary-accent)] flex justify-center items-center flex-col py-10">
-        <h1 className="text-[var(--primary-color)] text-4xl md:text-5xl font-semibold">
+        <h1 className="text-[var(--primary-color)] text-4xl md:text-5xl font-bold">
           OUR SERVICES
         </h1>
         <p className="text-[var(--white-color)] text-base md:text-lg text-center max-w-xl my-4">

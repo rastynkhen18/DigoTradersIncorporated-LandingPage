@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../assets/DigoTradersIncLogo.svg';
-import { Menu, X, ChevronDown } from 'lucide-react'; 
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,12 +12,12 @@ const Header = () => {
 
       {/* Desktop Nav */}
       <nav className='hidden md:flex justify-center items-center gap-10 text-[var(--secondary-color)] font-normal'>
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Contact</a>
-        <a href="" className="flex items-center gap-1">
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/services" className="flex items-center gap-1">
           Services <ChevronDown size={16} />
-        </a>
+        </Link>
       </nav>
 
       {/* Desktop Button */}
@@ -37,9 +38,8 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`absolute top-16 left-0 w-full bg-[var(--white-color)] flex flex-col items-center gap-6 py-8 text-[var(--secondary-color)] font-bold transition-transform duration-300 md:hidden ${
-          isOpen ? 'translate-y-0 opacity-100' : '-translate-y-[100%] opacity-0 pointer-events-none'
-        }`}
+        className={`absolute z-20 top-16 left-0 w-full bg-[var(--white-color)] flex flex-col items-center gap-6 py-8 text-[var(--secondary-color)] font-bold transition-transform duration-300 md:hidden ${isOpen ? 'translate-y-0 opacity-100' : '-translate-y-[100%] opacity-0 pointer-events-none'
+          }`}
       >
         <a href="">Home</a>
         <a href="">About</a>

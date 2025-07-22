@@ -1,38 +1,12 @@
 import React from 'react'
 import HomePageBackground from '../assets/images/homepage-img.png';
-import Airplane from '../assets/images/airplane-transparent.png';
-import AirFreightbg from '../assets/images/airfreight-bg.png';
-import SeaFreightbg from '../assets/images/seafreight-bg.png';
-import LandFreightbg from '../assets/images/landfreight-bg.png';
 import Container1Image from '../assets/images/container1Image.png';
 import Container2Image from '../assets/images/container2Image.png';
 import DropDownFAQ from '../components/DropDownFAQ'
 import ServicesSection from '../components/ServicesSection';
-import { Package, ShoppingCart, Truck, Factory, Building2, Plane, Anchor, ChevronRight, ShieldCheck, Clock, FileText, Check } from 'lucide-react';
+import Airplane from '../assets/images/airplane-transparent.png'
+import { Package, ShoppingCart, Truck, Factory, Building2, ShieldCheck, Clock, FileText, Check } from 'lucide-react';
 
-const services = [
-  {
-    title: 'Air Freight',
-    description: 'Fast, secure delivery for urgent or high-value cargo.',
-    details: 'Includes: Express shipping, cargo insurance, airway bills, customs assistance.',
-    bgImage: AirFreightbg,
-    icon: <Plane size={34} />,
-  },
-  {
-    title: 'Sea Freight',
-    description: 'Affordable global shipping for large or bulk goods.',
-    details: 'Includes: FCL/LCL, port-to-port service, customs clearance, document processing.',
-    bgImage: SeaFreightbg,
-    icon: <Anchor size={34} />,
-  },
-  {
-    title: 'Land Freight',
-    description: 'Nationwide delivery with flexible scheduling.',
-    details: 'Includes: Door-to-door transport, cross-border logistics, trucking, waybill & permits.',
-    bgImage: LandFreightbg,
-    icon: <Truck size={34} />,
-  },
-];
 
 const Home = () => {
   return (
@@ -46,11 +20,11 @@ const Home = () => {
           <img
             src={Airplane}
             alt="Airplane"
-            className="absolute top-20 left-10 w-[200px] h-auto object-cover z-10"
+            className="absolute top-20 left-10 w-[200px] h-auto object-cover z-1"
           />
 
           {/* Blue Container Transparent - Centered */}
-          <div className="flex justify-center items-center flex-grow z-20 px-4">
+          <div className="flex justify-center items-center flex-grow z-1 px-4">
             <div
               className="relative flex flex-col text-left rounded-2xl w-[400px] md:w-[700px] p-6"
               style={{ background: 'rgba(2, 1, 129, 0.7)' }}
@@ -304,58 +278,7 @@ const Home = () => {
 
         {/* 2nd Section  Our Services*/}
         <ServicesSection />
-        {/* <section style={{
-          background: 'linear-gradient(to top, var(--secondary-accent), var(--secondary-accent), transparent)',
-        }}>
-          <div className="bg-[var(--secondary-accent)] flex justify-center items-center flex-col py-10">
-            <h1 className="text-[var(--primary-color)] text-4xl md:text-5xl font-semibold">
-              OUR SERVICES
-            </h1>
-            <p className="text-[var(--white-color)] text-base md:text-lg text-center max-w-xl my-4">
-              We Offer End-To-End Logistics Solutions Tailored To Your Shipping Needs, Whether By Sea, Land Or Air.
-            </p> */}
-
-        {/* <div className="flex justify-center items-center flex-wrap gap-7 px-4">
-              {services.map((service, index) => (
-                <div key={index} className="flex flex-col"> */}
-        {/* Card with background image */}
-        {/* <div
-                    className="relative h-[500px] w-[375px] bg-cover bg-center text-[var(--white-color)] rounded-xl overflow-hidden "
-                    style={{ backgroundImage: `url(${service.bgImage})` }}
-                  > */}
-        {/* Gradient overlay at bottom */}
-        {/* <div
-                      className="absolute bottom-0 left-0 w-full h-72 z-0"
-                      style={{
-                        background: 'linear-gradient(to top, var(--secondary-accent), var(--secondary-accent), transparent)',
-                      }}
-                    />
-
-
-                    <div className="relative z-10 flex flex-col justify-end p-4 h-full">
-                      <div className="flex flex-col gap-1 p-4 rounded-md">
-                        {service.icon}
-                        <h1 className="text-2xl font-bold">{service.title}</h1>
-                        <h3 className="text-lg font-medium">{service.description}</h3>
-                        <p className="text-sm">{service.details}</p>
-
-                        <div className="flex gap-4 mt-4">
-                          <button className="bg-[var(--primary-color)] px-4 py-2 rounded-xl text-[var(--secondary-color)] flex items-center gap-2 cursor-pointer">
-                            Learn More <ChevronRight size={18} />
-                          </button>
-                          <button className="bg-transparent px-4 py-2 rounded-xl text-[var(--white-color)] border border-[var(--white-color)] cursor-pointer">
-                            Talk to Expert
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
+        
 
         {/* 3rd Section */}
         <section>
@@ -367,7 +290,7 @@ const Home = () => {
 
             {/* Text Content */}
             <div className='w-full md:w-1/2 p-15'>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+              <h1 className="text-4xl md:text-5xl font-bold">
                 Why Businesses Choose Us?
               </h1>
 
