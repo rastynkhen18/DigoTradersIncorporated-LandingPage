@@ -113,10 +113,10 @@ const Home = () => {
                     background: 'linear-gradient(to top, var(--secondary-accent), var(--secondary-accent), transparent)',
                 }}>
                     <div className="bg-[var(--secondary-accent)] flex justify-center items-center flex-col py-10">
-                        <h1 className="text-[var(--primary-color)] text-xl md:text-3xl font-semibold">
+                        <h1 className="text-[var(--primary-color)] text-4xl md:text-5xl lg:text-6xl font-semibold">
                             OUR SERVICES
                         </h1>
-                        <p className="text-[var(--white-color)] text-sm md:text-base leading-relaxed text-center max-w-xl my-4">
+                        <p className="text-[var(--white-color)] text-base md:text-lg lg:text-xl text-center max-w-xl my-4">
                             We Offer End-To-End Logistics Solutions Tailored To Your Shipping Needs, Whether By Sea, Land Or Air.
                         </p>
 
@@ -168,11 +168,11 @@ const Home = () => {
                     <div className="bg-[var(--primary-color)] w-full h-[23px]"></div>
 
                     {/* Content wrapper */}
-                    <div className="flex flex-reverse items-center justify-between gap-10">
+                    <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
 
                         {/* Text Content */}
-                        <div className='w-1/2 p-15'>
-                            <h1 className="md:text-6xl font-bold">
+                        <div className='w-full md:w-1/2 p-15'>
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
                                 Why Businesses Choose Us?
                             </h1>
 
@@ -183,7 +183,7 @@ const Home = () => {
                                     Safe & Secure Handling
                                     <Check className="text-green-500 w-10 h-10" />
                                 </h3>
-                                <p className="text-sm md:text-base">
+                                <p className="text-base md:text-lg lg:text-xl">
                                     No matter the size or type of shipment, your cargo is protected at every step. From packaging to transport, we follow strict safety protocols across land, sea, and air to ensure it arrives in perfect condition.
                                 </p>
                             </div>
@@ -195,7 +195,7 @@ const Home = () => {
                                     On-Time Delivery
                                     <Check className="text-green-500 w-10 h-10" />
                                 </h3>
-                                <p className="text-sm md:text-base">
+                                <p className="text-base md:text-lg lg:text-xl">
                                     We value your time. Our logistics operations are built around efficiency and smart route planning – so your shipments reach their destination on schedule, whether locally or internationally.
                                 </p>
                             </div>
@@ -207,29 +207,30 @@ const Home = () => {
                                     Hassle-Free Documentation
                                     <Check className="text-green-600 w-10 h-10" />
                                 </h3>
-                                <p className="text-sm md:text-base">
+                                <p className="text-base md:text-lg lg:text-xl">
                                     We take the burden of paperwork off your shoulders. From shipping documents to import/export permits, our team handles it all – making the logistics process smoother and faster for you.
                                 </p>
                             </div>
                         </div>
 
                         {/* Image Content */}
-                        <div className='w-1/2'>
-                            <img src={Container1Image} alt="Shipping container" className="w-full h-auto rounded-tl-[65%] shadow-md" />
+                        <div className='w-full md:w-1/2'>
+                            <img src={Container1Image} alt="Shipping container" className="w-full h-auto md:rounded-tl-[65%] shadow-md" />
                         </div>
+                        
                     </div>
                 </section>
 
 
                 {/* 4th Section */}
                 <section>
-                    <div className="flex flex-reverse items-center justify-between gap-10 bg-[var(--primary-color)]">
-                        <div className='w-1/2'>
-                            <img src={Container2Image} alt="Container2Image" className="w-full h-[650px] rounded-tr-[65%] shadow-md" />
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-10 bg-[var(--primary-color)]">
+                        <div className='w-full md:w-1/2'>
+                            <img src={Container2Image} alt="Container2Image" className="w-full h-[650px] md:rounded-tr-[65%] shadow-md" />
                         </div>
 
-                        <div className='w-1/2 p-15'>
-                            <h1 className="text-[var(--white-color)] md:text-6xl font-bold">📦 How It Works?</h1>
+                        <div className='w-full p-5 md:w-1/2 md:p-15'>
+                            <h1 className="text-[var(--white-color)] text-4xl md:text-5xl lg:text-6xl font-bold">📦 How It Works?</h1>
                             <DropDownFAQ />
                         </div>
                     </div>

@@ -6,7 +6,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className='relative top-0 right-0 flex justify-around items-center w-full h-16 px-5 bg-[var(--pwhite-color)] z-10'>
+    <header className='relative top-0 right-0 flex justify-between md:justify-around items-center w-full h-16 px-5 bg-[var(--pwhite-color)] z-10'>
       <img src={Logo} alt="Digo Traders Incorporated Logo" className='cursor-pointer w-32' />
 
       {/* Desktop Nav */}

@@ -6,7 +6,7 @@ import InstagramLogo from '../assets/images/Instagram_Glyph_White1.svg';
 const Footer = () => {
     return (
         <footer className="bg-[var(--secondary-accent)] text-[var(--white-color)] pt-10 px-6 md:px-20 pb-6">
-            <div className="grid grid-cols-1 md:grid-cols-6 gap-8 border-b border-[var(--gray-accent)] pb-10">
+            <div className="grid md:grid-cols-6 gap-8 border-b border-[var(--gray-accent)] pb-10">
 
                 {/* Logo and description */}
                 <div className="md:col-span-2">
@@ -16,27 +16,28 @@ const Footer = () => {
                     </p>
                 </div>
 
-                {/* Quick Links */}
-                <div>
-                    <h2 className="font-semibold text-lg text-[var(--primary-color)] mb-2">Quick Links</h2>
-                    <ul className="space-y-1 text-sm text-[var(--gray-color)]">
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
+                    
+                    {/* Quick Links */}
+                    <div>
+                        <h2 className="font-semibold text-lg text-[var(--primary-color)] mb-2">Quick Links</h2>
+                        <ul className="space-y-1 text-sm text-[var(--gray-color)]">
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Services</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
 
-                {/* Services */}
-                <div>
-                    <h2 className="font-semibold text-lg text-[var(--primary-color)] mb-2">Services</h2>
-                    <ul className="space-y-1 text-sm text-[var(--gray-color)]">
-                        <li>Air Freight</li>
-                        <li>Sea Freight</li>
-                        <li>Land Freight</li>
-                        <li>FCL / LCL</li>
-                    </ul>
-                </div>
+                    {/* Services */}
+                    <div>
+                        <h2 className="font-semibold text-lg text-[var(--primary-color)] mb-2">Services</h2>
+                        <ul className="space-y-1 text-sm text-[var(--gray-color)]">
+                            <li>Air Freight</li>
+                            <li>Sea Freight</li>
+                            <li>Land Freight</li>
+                            <li>FCL / LCL</li>
+                        </ul>
+                    </div>
 
                 {/* About */}
                 <div>

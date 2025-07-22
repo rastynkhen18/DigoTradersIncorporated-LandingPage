@@ -8,10 +8,10 @@ const Contact = () => {
         e.preventDefault();
 
         emailjs.sendForm(
-            "service_ndrtton",     // Replace with your actual Service ID
-            "template_tkozg1d",    // Replace with your actual Template ID
+            "service_ndrtton",     // Service ID
+            "template_tkozg1d",    // Template ID
             e.target,
-            "3kmbeJRVPlVrrqylg"      // Replace with your actual Public Key
+            "3kmbeJRVPlVrrqylg"      //Public Key
         ).then(
             (result) => {
                 alert("Message sent successfully!");
@@ -34,7 +34,7 @@ const Contact = () => {
                     All Set to Ship? Let's Get Moving!
                 </h1>
 
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10">
+                <div className="max-w-7xl mx-auto flex flex-col justify-center items-center md:flex-row gap-10">
                     {/* Left: Contact Form */}
                     <div className="w-full md:w-1/2">
                         <div className="p-6 bg-[var(--secondary-accent)] shadow-md rounded-lg border-4 border-[var(--primary-color)]">
@@ -97,12 +97,12 @@ const Contact = () => {
 
                     {/* Right: Contact Info & Map */}
                     <div className="w-full md:w-1/2 space-y-6">
-                        <p className="text-[var(--white-color)]">
+                        <p className="text-[var(--white-color)] text-base md:text-lg">
                             Whether you're ready to ship by land, sea, or air – or just have questions – we're here for you. Fill out the form to send us a quick message, or reach us directly via call, email, or visit. Our team is ready to assist you with everything from documents to deliveries.
                         </p>
 
                         <div className="space-y-4 text-[var(--white-color)]">
-                            <div className="flex flex-col md:flex-row gap-10">
+                            <div className="flex flex-col md:flex-row gap-2">
 
                                 <div className="flex items-start gap-3">
                                     <Phone size={34} />
