@@ -20,6 +20,7 @@ const Sidebar = () => {
         <NavLink to="/services/custombrokerage" className={getLinkClass}>Custom Brokerage</NavLink>
         <NavLink to="/services/fcl-lcl" className={getLinkClass}>FCL/LCL</NavLink>
         <NavLink to="/services/domestic" className={getLinkClass}>Domestic Transfer</NavLink>
+        <NavLink to="/services/freight-&-tariff-consulatation" className={getLinkClass}>Freight & Tariff Consultation</NavLink>
         <NavLink to="/services/amo-certificate" className={getLinkClass}>Renewal of AMO Certificate</NavLink>
         <NavLink to="/services/import-license" className={getLinkClass}>Accreditation of Import License</NavLink>
       </nav>
