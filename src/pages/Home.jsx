@@ -6,6 +6,7 @@ import DropDownFAQ from '../components/DropDownFAQ'
 import ServicesSection from '../components/ServicesSection';
 import Airplane from '../assets/images/airplane-transparent.png'
 import { Package, ShoppingCart, Truck, Factory, Building2, ShieldCheck, Clock, FileText, Check } from 'lucide-react';
+import Contact from '../pages/Contact';
 
 
 const Home = () => {
@@ -299,7 +300,7 @@ const Home = () => {
                 <h3 className="flex items-center text-xl font-semibold gap-2">
                   <ShieldCheck className="text-[var(--primary-color)] w-10 h-10" />
                   Safe & Secure Handling
-                  <Check className="text-green-500 w-10 h-10" />
+                  <Check className="text-[var(--green-color)]  w-10 h-10" />
                 </h3>
                 <p className="text-base md:text-lg lg:text-xl">
                   No matter the size or type of shipment, your cargo is protected at every step. From packaging to transport, we follow strict safety protocols across land, sea, and air to ensure it arrives in perfect condition.
@@ -311,7 +312,7 @@ const Home = () => {
                 <h3 className="flex items-center text-xl font-semibold gap-2">
                   <Clock className="text-[var(--primary-color)] w-10 h-10" />
                   On-Time Delivery
-                  <Check className="text-green-500 w-10 h-10" />
+                  <Check className="text-[var(--green-color)] w-10 h-10" />
                 </h3>
                 <p className="text-base md:text-lg lg:text-xl">
                   We value your time. Our logistics operations are built around efficiency and smart route planning – so your shipments reach their destination on schedule, whether locally or internationally.
@@ -323,7 +324,7 @@ const Home = () => {
                 <h3 className="flex items-center text-xl font-semibold gap-2">
                   <FileText className="text-[var(--primary-color)] w-10 h-10" />
                   Hassle-Free Documentation
-                  <Check className="text-green-600 w-10 h-10" />
+                  <Check className="text-[var(--green-color)] w-10 h-10" />
                 </h3>
                 <p className="text-base md:text-lg lg:text-xl">
                   We take the burden of paperwork off your shoulders. From shipping documents to import/export permits, our team handles it all – making the logistics process smoother and faster for you.
@@ -342,7 +343,9 @@ const Home = () => {
 
         {/* 4th Section */}
         <section>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-10 bg-[var(--primary-color)]">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-10" style={{
+                background: 'linear-gradient(to top, var(--primary-accent), var(--primary-color))'
+            }}>
             <div className='w-full md:w-1/2'>
               <img src={Container2Image} alt="Container2Image" className="w-full h-[650px] md:rounded-tr-[65%] shadow-md" />
             </div>
@@ -353,6 +356,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+        <Contact/>
       </main>
     </>
 

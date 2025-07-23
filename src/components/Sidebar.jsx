@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom';
 const Sidebar = () => {
   const baseClass = "px-4 py-2 rounded transition";
   const activeClass = "bg-[var(--primary-color)]";
-//   const hoverClass = "hover:bg-[var(--primary-color)]";
+  const hoverClass = "hover:bg-[var(--gray-accent)]";
 
   const getLinkClass = ({ isActive }) =>
-    `${baseClass} ${isActive ? activeClass : ""}`;
+    `${baseClass} ${isActive ? activeClass : hoverClass}`;
 
   return (
     <aside className="w-[500px] p-6 bg-[var(--gray-color)] flex flex-col gap-10">
