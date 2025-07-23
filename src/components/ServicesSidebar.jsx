@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Sidebar = () => {
+const ServicesSidebar = () => {
   const baseClass = "px-4 py-2 rounded transition";
   const activeClass = "bg-[var(--primary-color)] rounded-lg" ;
   const hoverClass = "hover:bg-[var(--gray-accent)] rounded-lg";
@@ -44,4 +44,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default ServicesSidebar;

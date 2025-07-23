@@ -73,7 +73,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <section
+    <section 
       style={{
         background:
           'linear-gradient(to top, var(--secondary-accent), var(--secondary-accent), transparent)',
@@ -91,7 +91,7 @@ const ServicesSection = () => {
         <div className="w-full px-4 md:hidden">
           <div className="w-full max-w-[90%] mx-auto">
             <div
-              className="relative h-[500px] bg-cover bg-center text-[var(--white-color)] rounded-xl overflow-hidden"
+              className="relative h-[500px] bg-[var(--secondary-accent)] bg-cover bg-center text-[var(--white-color)] rounded-xl overflow-hidden"
               style={{ backgroundImage: `url(${services[activeIndex].bgImage})` }}
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
@@ -124,7 +124,7 @@ const ServicesSection = () => {
           </div>
 
           {/* Dots for Navigation */}
-          <div className="flex justify-center gap-2 mt-4">
+          <div className="flex justify-center gap-2 mt-4 cursor-pointer">
             {services.map((_, index) => (
               <button
                 key={index}

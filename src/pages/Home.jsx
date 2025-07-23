@@ -333,7 +333,7 @@ const Home = () => {
             </div>
 
             {/* Image Content */}
-            <div className='w-full md:w-1/2'>
+            <div className='w-full h-full md:w-1/2'>
               <img src={Container1Image} alt="Shipping container" className="w-full h-auto md:rounded-tl-[65%] shadow-md" />
             </div>
 
