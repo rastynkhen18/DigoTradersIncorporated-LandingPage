@@ -8,7 +8,9 @@ const Seafreight = () => {
         return (
                 <div>
                         <main className="flex flex-col justify-start items-start text-left w-full max-w-[1000px] p-6 gap-6">
-                                <h1 className="text-3xl md:4xl font-bold text-[var(--white-color)] bg-[var(--primary-color)] p-3 rounded-lg w-full">Import/Export Sea Freight Consolidation</h1>
+                                <h1 className="text-3xl md:4xl font-bold text-[var(--white-color)] p-3 rounded-lg w-full" style={{
+                                        background: 'linear-gradient(to left, var(--primary-color), var(--primary-accent))'
+                                }}>Import/Export Sea Freight Consolidation</h1>
                                 <p className='text:base md:text-lg'>
                                         We combine small shipments into one container to help you save on cost — ideal for growing businesses and importers with light cargo.
                                 </p>
@@ -118,7 +120,7 @@ const Seafreight = () => {
                                                 <li>Certificate of Origin (if needed)</li>
                                         </ul>
                                 </p>
-                                <ReadyToShip/>
+                                <ReadyToShip />
 
                         </main>
                 </div>

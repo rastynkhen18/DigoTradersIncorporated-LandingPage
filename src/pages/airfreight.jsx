@@ -8,7 +8,6 @@ import {
   Plane,
   FileText,
   ShieldCheck,
-  ClipboardCheck,
   MapPin
 } from 'lucide-react'
 
@@ -57,7 +56,7 @@ const Airfreight = () => {
                 { icon: <Plane size={30} />, label: "Flight Booking" },
                 { icon: <FileText size={30} />, label: "Documentation" },
                 { icon: <ShieldCheck size={30} />, label: "Customs Clearance" },
-                { icon: <ClipboardCheck size={30} />, label: "Delivery", isLast: true },
+                { icon: <MapPin size={30} />, label: "Delivery", isLast: true },
               ].map((step, index) => (
                 <div key={index} className="relative flex items-center gap-5">
                   {/* Vertical line */}
