@@ -8,6 +8,7 @@ import Landfreight from './landfreight';
 import CustomBrokerage from './custombrokerage';
 // import FclLcl from './fcl-lcl';
 // import Domestic from './domestic';
+// import Freight&TariffConsultation from './/freight-&-tariff-consulatation';
 // import AmoCertificate from './amo-certificate';
 // import ImportLicense from './import-license';
 
@@ -28,13 +29,14 @@ const Services = () => {
         <div className="flex-1 p-6">
           <Routes>
             {/* Redirect default /services to /services/seafreight */}
-            <Route path="/" element={<Navigate to="seafreight" replace />} />
+            {/* <Route path="/" element={<Navigate to="seafreight" replace />} /> */}
             <Route path="seafreight" element={<Seafreight />} />
             <Route path="airfreight" element={<Airfreight />} />
             <Route path="landfreight" element={<Landfreight />} />
             <Route path="custombrokerage" element={<CustomBrokerage />} />
             {/* <Route path="fcl-lcl" element={<FclLcl />} /> */}
             {/* <Route path="domestic" element={<Domestic />} /> */}
+            {/* <Route path="freight-&-tariff-consulatation" element={<Freight&TariffConsultation />} /> */}
             {/* <Route path="amo-certificate" element={<AmoCertificate />} /> */}
             {/* <Route path="import-license" element={<ImportLicense />} />  */}
           </Routes>
