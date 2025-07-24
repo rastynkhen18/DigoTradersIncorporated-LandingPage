@@ -21,7 +21,7 @@ const About = () => {
             >
                 <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
 
-                <div className="relative z-10 text-start mx-8 md:ml-50">
+                <div className="relative text-start mx-8 md:ml-50">
                     <h1 className="text-4xl md:text-5xl text-[var(--primary-color)] py-4 font-bold">
                         Digo Traders Incorporated
                     </h1>
