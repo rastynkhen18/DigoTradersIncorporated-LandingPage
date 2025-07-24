@@ -16,12 +16,19 @@ const ServicesLayoutPage = () => {
   return (
     <div>
       <section
-        className="flex justify-center items-center h-[400px] bg-cover bg-center"
+        className="relative flex justify-center items-center flex-col h-[400px] bg-cover bg-center"
         style={{ backgroundImage: `url(${ServicesBackgroundImage})` }}
       >
-        <h1 className="bg-[var(--primary-accent)] text-[var(--white-color)] text-4xl px-6 py-4 rounded-md font-bold">
-          OUR SERVICES
-        </h1>
+        <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
+
+        <div className="relative text-center px-6">
+          <h1 className="text-4xl md:text-5xl text-[var(--primary-color)] py-4 font-bold">
+            SERVICES
+          </h1>
+          <p className="text-base md:text-lg text-[var(--white-color)]">
+            Trusted logistics solutions tailored to meet industry standards and business demands.
+          </p>
+        </div>
       </section>
 
       <main className="flex min-h-screen px-35">
@@ -36,7 +43,7 @@ const ServicesLayoutPage = () => {
             <Route path="domestic-transfer-services" element={<DomesticTransferServices />} />
             <Route path="freight-&-tariff-consultation" element={<FreightTariffConsultation />} />
             <Route path="amo-certificate" element={<AmoCertificate />} />
-            <Route path="import-license" element={<ImportLicense />} /> 
+            <Route path="import-license" element={<ImportLicense />} />
           </Routes>
         </div>
       </main>
