@@ -49,14 +49,14 @@ const data = [
         title: 'FCL/LCL',
         description: 'Ship your goods worldwide, whether full load or shared.',
         button: 'Read More',
-        link: 'fcl-lcl',
+        link: 'fcl_lcl',
     }, {
         img: ServicesDomesticTransfer,
         alt: 'ServicesDomesticTransfer',
         title: 'Domestic Transfer',
         description: 'Domestic transport across cities and provinces in the Philippines.',
         button: 'Read More',
-        link: 'domestic',
+        link: 'domestic-transfer-services',
     }, {
         img: ServicesFreightConsultation,
         alt: 'ServicesFreightConsultation',
@@ -90,17 +90,27 @@ const Services = () => {
 
 
                 <section
-                    className="flex justify-center items-center h-[400px] bg-cover bg-center"
+                    className="relative flex justify-center items-center flex-col h-[400px] bg-cover bg-center"
                     style={{ backgroundImage: `url(${ServicesBackgroundImage})` }}
                 >
-                    <h1 className="bg-[var(--primary-accent)] text-[var(--white-color)] text-4xl px-6 py-4 rounded-md font-bold">
-                        OUR SERVICES
-                    </h1>
+                    <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
+
+                    <div className="relative z-10 text-center px-6">
+                        <h1 className="text-4xl md:text-5xl text-[var(--primary-color)] py-4 font-bold">
+                            SERVICES
+                        </h1>
+                        <p className="text-base md:text-lg text-[var(--white-color)]">
+                            Trusted logistics solutions tailored to meet industry standards and business demands.
+                        </p>
+                    </div>
                 </section>
 
+
                 <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-16">
+                    <p className="text-base md:text-lg text-[var(--white-color)]">
+                        At DIGO Traders Incorporated, we offer a full suite of logistics and customs solutions tailored to businesses of all sizes. Whether you're importing high-value goods, moving domestic cargo, or navigating complex customs procedures, our team delivers dependable service every step of the way. We care about your cargo as much as you do — ensuring smooth, compliant, and cost-effective delivery across land, sea, and air.                    </p>
                     {data.map((item, index) => (
-                        <div key={index} className="rounded-2xl overflow-hidden"  style={{
+                        <div key={index} className="rounded-2xl overflow-hidden" style={{
                             background: 'linear-gradient(to bottom, var(--primary-accent), var(--primary-color))'
                         }}>
                             <div>

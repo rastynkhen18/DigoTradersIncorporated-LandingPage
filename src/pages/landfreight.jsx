@@ -27,7 +27,7 @@ const Landfreight = () => {
         <p className='text-base md:text-lg'>
          We offer dependable land freight solutions to move your goods safely and efficiently — from city to city, province to province, or directly from port to warehouse. Whether it's full truckload (FTL) or less-than-truckload (LTL), we’ve got you covered. </p>
 
-        <img src={ServicesLandFreightImg1} alt="Air Freight" className="w-full rounded-lg" />
+        <img src={ServicesLandFreightImg1} alt="Air Freight" className="w-full rounded-2xl" />
 
         <div className='w-full rounded-2xl' style={{
           background: 'linear-gradient(to top, var(--secondary-color), var(--secondary-accent), black)'
@@ -39,7 +39,7 @@ const Landfreight = () => {
               <p className=' text-base md:text-lg text-[var(--white-color)]'>
                 From pickup to customs to delivery — we handle it all, so your cargo arrives on time and hassle-free.
               </p>
-              <img src={ServicesLandFreightImg2} alt="Freight Process" className="w-full rounded-lg my-4" />
+              <img src={ServicesLandFreightImg2} alt="Freight Process" className="w-full rounded-2xl my-4" />
               <div className='flex justify-center items-center flex-col'>
                 <p className="text-lg font-medium text-[var(--primary-color)] text-center">Have Questions?</p>
                 <button className="mt-2 px-4 py-2 bg-[var(--primary-color)] text-[var(--white-color)] rounded-full text-center font-bold">Talk to an Expert</button>

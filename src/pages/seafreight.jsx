@@ -28,7 +28,7 @@ const Seafreight = () => {
                                                 title="FCL vs LCL"
                                                 frameBorder="0"
                                                 allowFullScreen
-                                                className="w-full h-full"
+                                                className="w-full h-full rounded-2xl"
                                         ></iframe>
                                 </div>
 
@@ -48,7 +48,7 @@ const Seafreight = () => {
                                         </ul>
                                 </p>
 
-                                <img src={SeafreightImage2} alt="Seafreight Process" className="w-full max-w-4xl mx-auto" />
+                                <img src={SeafreightImage2} alt="Seafreight Process" className="w-full max-w-4xl mx-auto rounded-2xl" />
 
                                 <h1 className="text-4xl md:5xl font-bold text-[var(--secondary-color)]">How It Works?</h1>
                                 <p className='text:base md:text-lg'>
@@ -63,7 +63,7 @@ const Seafreight = () => {
                                 </p>
 
                                 <h1 className="text-4xl text-center md:4xl font-bold text-[var(--primary-color)]">Why Choose Consolidation?</h1>
-                                <table className="w-full rounded-full">
+                                <table className="w-full rounded-2xl">
                                         <thead>
                                                 <tr>
                                                         <th className="bg-[var(--primary-color)] text-[var(--white-color)] text-center text-[20px] p-2">Benefits</th>

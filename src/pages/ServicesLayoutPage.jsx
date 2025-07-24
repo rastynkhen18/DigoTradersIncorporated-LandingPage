@@ -6,11 +6,11 @@ import Seafreight from './seafreight';
 import Airfreight from './airfreight';
 import Landfreight from './landfreight';
 import CustomBrokerage from './custombrokerage';
-// import FclLcl from './fcl-lcl';
-// import Domestic from './domestic';
-// import Freight&TariffConsultation from './/freight-&-tariff-consulatation';
-// import AmoCertificate from './amo-certificate';
-// import ImportLicense from './import-license';
+import FclLcl from './fcl_lcl';
+import DomesticTransferServices from './domesticTransferServices';
+import FreightTariffConsultation from './freightTariffConsultation';
+import AmoCertificate from './amoCertificate';
+import ImportLicense from './importLicense';
 
 const ServicesLayoutPage = () => {
   return (
@@ -32,11 +32,11 @@ const ServicesLayoutPage = () => {
             <Route path="airfreight" element={<Airfreight />} />
             <Route path="landfreight" element={<Landfreight />} />
             <Route path="custombrokerage" element={<CustomBrokerage />} />
-            {/* <Route path="fcl-lcl" element={<FclLcl />} /> */}
-            {/* <Route path="domestic" element={<Domestic />} /> */}
-            {/* <Route path="freight-&-tariff-consulatation" element={<Freight&TariffConsultation />} /> */}
-            {/* <Route path="amo-certificate" element={<AmoCertificate />} /> */}
-            {/* <Route path="import-license" element={<ImportLicense />} />  */}
+            <Route path="fcl_lcl" element={<FclLcl />} />
+            <Route path="domestic-transfer-services" element={<DomesticTransferServices />} />
+            <Route path="freight-&-tariff-consultation" element={<FreightTariffConsultation />} />
+            <Route path="amo-certificate" element={<AmoCertificate />} />
+            <Route path="import-license" element={<ImportLicense />} /> 
           </Routes>
         </div>
       </main>
