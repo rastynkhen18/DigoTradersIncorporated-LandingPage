@@ -17,8 +17,10 @@ const iconStyleGreen = "p-2 rounded-full bg-[var(--green-color)] text-[var(--whi
 const CustomBrokerage = () => {
   return (
     <div className="flex justify-center">
-      <main className="flex flex-col justify-start items-start text-left w-full max-w-[1000px] p-6 gap-6">
-        <h1 className="text-3xl md:text-4xl font-bold text-[var(--white-color)] bg-[var(--primary-color)] p-3 rounded-lg w-full">
+      <main className="flex flex-col justify-start items-start text-left w-full max-w-3xl p-6 gap-6">
+        <h1 className="text-3xl md:text-4xl font-bold text-[var(--white-color)] p-3 rounded-lg w-full" style={{
+          background: 'linear-gradient(to left, var(--primary-color), var(--primary-accent))'
+        }}>
           Custom Brokerage
         </h1>
 

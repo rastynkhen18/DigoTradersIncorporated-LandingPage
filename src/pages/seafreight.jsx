@@ -7,22 +7,22 @@ import ReadyToShip from '../components/ReadyToShip';
 const Seafreight = () => {
         return (
                 <div>
-                        <main className="flex flex-col justify-start items-start text-left w-full max-w-[1000px] p-6 gap-6">
-                                <h1 className="text-3xl md:4xl font-bold text-[var(--white-color)] p-3 rounded-lg w-full" style={{
+                        <main className="flex flex-col justify-start items-start text-left p-6 gap-6 max-w-3xl">
+                                <h1 className="text-xl md:xl font-bold text-[var(--white-color)] p-3 rounded-lg w-full" style={{
                                         background: 'linear-gradient(to left, var(--primary-color), var(--primary-accent))'
                                 }}>Import/Export Sea Freight Consolidation</h1>
-                                <p className='text:base md:text-lg'>
+                                <p className='text:base md:text-base'>
                                         We combine small shipments into one container to help you save on cost — ideal for growing businesses and importers with light cargo.
                                 </p>
 
-                                <img src={SeafreightImage1} alt="Sea Freight Consolidation Example" className="w-full max-w-4xl mx-auto" />
+                                <img src={SeafreightImage1} alt="Sea Freight Consolidation Example" className="w-full" />
 
-                                <h1 className="text-4xl md:5xl font-bold text-[var(--secondary-color)]">What is Sea Freight Consolidation?</h1>
-                                <p className='text:base md:text-lg'>
+                                <h1 className="text-xl md:xl font-bold text-[var(--secondary-color)]">What is Sea Freight Consolidation?</h1>
+                                <p className='text:base md:text-base'>
                                         Sea freight consolidation is a logistics service where shipments from multiple customers are combined into one container — also known as Less than Container Load (LCL). Instead of paying for an entire container, you only pay for the space you need. This allows importers and exporters to ship internationally by sea without the high costs of Full Container Load (FCL) shipping.
                                 </p>
 
-                                <div className="aspect-video w-full max-w-4xl mx-auto">
+                                <div className="aspect-video w-full ">
                                         <iframe
                                                 src="https://www.youtube.com/embed/1Zla30BpI_k?si=ruMzYks4YtcGh5ij"
                                                 title="FCL vs LCL"
@@ -32,13 +32,13 @@ const Seafreight = () => {
                                         ></iframe>
                                 </div>
 
-                                <h1 className="text-4xl md:5xl font-bold text-[var(--secondary-color)]">FCL vs LCL Shipment: Cost Calculation & Break‑Even</h1>
-                                <p className='text:base md:text-lg'>
+                                <h1 className="text-xl md:xl font-bold text-[var(--secondary-color)]">FCL vs LCL Shipment: Cost Calculation & Break‑Even</h1>
+                                <p className='text:base md:text-base'>
                                         <strong>Why it’s useful:</strong> Excellent explanation of the cost comparison between Full Container Load (FCL) and Less than Container Load (LCL). Walks through volume-based pricing and when LCL makes sense.
                                 </p>
 
-                                <h1 className="text-4xl md:5xl font-bold text-[var(--secondary-color)]">Who Is This For?</h1>
-                                <p className='text:base md:text-lg'>
+                                <h1 className="text-xl md:xl font-bold text-[var(--secondary-color)]">Who Is This For?</h1>
+                                <p className='text:base md:tex-base'>
                                         Our consolidation service is best suited for:
                                         <ul className="list-none list-inside mt-2">
                                                 <li>✅ Small to Medium Enterprises (SMEs) who don’t ship large volumes</li>
@@ -48,10 +48,10 @@ const Seafreight = () => {
                                         </ul>
                                 </p>
 
-                                <img src={SeafreightImage2} alt="Seafreight Process" className="w-full max-w-4xl mx-auto rounded-2xl" />
+                                <img src={SeafreightImage2} alt="Seafreight Process" className="w-full  rounded-2xl" />
 
-                                <h1 className="text-4xl md:5xl font-bold text-[var(--secondary-color)]">How It Works?</h1>
-                                <p className='text:base md:text-lg'>
+                                <h1 className="text-xl md:xl font-bold text-[var(--secondary-color)]">How It Works?</h1>
+                                <p className='text:base md:text-base'>
                                         We handle the entire process from pickup to port:
                                         <ul className="list-decimal list-inside mt-2">
                                                 <li>Cargo Collection – We receive your goods from your supplier or warehouse.</li>
@@ -62,7 +62,7 @@ const Seafreight = () => {
                                         </ul>
                                 </p>
 
-                                <h1 className="text-4xl text-center md:4xl font-bold text-[var(--primary-color)]">Why Choose Consolidation?</h1>
+                                <h1 className="text-xl md:xl text-center md:4xl font-bold text-[var(--primary-color)]">Why Choose Consolidation?</h1>
                                 <table className="w-full rounded-2xl">
                                         <thead>
                                                 <tr>
@@ -94,8 +94,8 @@ const Seafreight = () => {
                                                 </tr>
                                         </tbody>
                                 </table>
-                                <h1 className="text-4xl md:5xl font-bold text-[var(--secondary-color)]">🌍 Available Routes</h1>
-                                <p className='text:base md:text-lg'>
+                                <h1 className="text-xl md:xl font-bold text-[var(--secondary-color)]">🌍 Available Routes</h1>
+                                <p className='text:base md:text-base'>
                                         We consolidate shipments to and from major ports such as:
                                         <ul className="list-disc list-inside mt-2">
                                                 <li>Manila</li>
@@ -109,8 +109,8 @@ const Seafreight = () => {
                                         Need a specific port? Contact us for a custom quote.
                                 </p>
 
-                                <h1 className="text-4xl md:5xl font-bold text-[var(--secondary-color)]">📂 Documents We Handle</h1>
-                                <p className='text:base md:text-lg'>
+                                <h1 className="text-xl md:xl font-bold text-[var(--secondary-color)]">📂 Documents We Handle</h1>
+                                <p className='text:base md:text-base'>
                                         We assist in preparing and filing all necessary documents for LCL shipments:
                                         <ul className="list-disc list-inside mt-2">
                                                 <li>Commercial Invoice</li>
@@ -121,7 +121,6 @@ const Seafreight = () => {
                                         </ul>
                                 </p>
                                 <ReadyToShip />
-
                         </main>
                 </div>
         );

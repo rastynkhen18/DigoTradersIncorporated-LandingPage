@@ -47,11 +47,14 @@ body {
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
   font-family: system-ui, sans-serif;
+ 
 }
 
 html {
   scroll-behavior: smooth;
 }
+
+
 
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

@@ -18,13 +18,15 @@ const iconStyleGreen = "p-2 rounded-full bg-[var(--green-color)] text-[var(--whi
 const Airfreight = () => {
   return (
     <div className="flex justify-center">
-      <main className="flex flex-col justify-start items-start text-left w-full max-w-[1000px] p-6 gap-6">
-        <h1 className="text-3xl md:text-4xl font-bold text-[var(--white-color)] bg-[var(--primary-color)] p-3 rounded-lg w-full">
+      <main className="flex flex-col justify-start items-start text-left w-full max-w-3xl p-6 gap-6">
+        <h1 className="text-xl md:xl font-bold text-[var(--white-color)] p-3 rounded-lg w-full" style={{
+          background: 'linear-gradient(to left, var(--primary-color), var(--primary-accent))'
+        }}>
           Air Freight
         </h1>
 
-        <h2 className="text-2xl md:text-4xl font-bold">Fast Air Shipping - We Handle Everything For You</h2>
-        <p className='text-base md:text-lg'>
+        <h2 className="text-xl md:xl font-bold">Fast Air Shipping - We Handle Everything For You</h2>
+        <p className='text-base md:text-base'>
           Need your goods delivered quickly? We offer end-to-end international air freight services — managing every step so you don't have to.
         </p>
 
@@ -36,19 +38,19 @@ const Airfreight = () => {
 
           <section className='flex flex-row m-5'>
             <div className="p-5">
-              <h2 className="text-4xl md:text-5xl font-bold text-[var(--primary-color)]">How Our Air Freight Process Works</h2>
-              <p className=' text-base md:text-lg text-[var(--white-color)]'>
+              <h2 className="text-xl md:xl font-bold text-[var(--primary-color)]">How Our Air Freight Process Works</h2>
+              <p className=' text-base md:text-base text-[var(--white-color)]'>
                 From pickup to customs to delivery — we handle it all, so your cargo arrives on time and hassle-free.
               </p>
               <img src={ServicesAirFreightImg2} alt="Freight Process" className="w-full rounded-lg my-4" />
               <div className='flex justify-center items-center flex-col'>
-                <p className="text-lg font-medium text-[var(--primary-color)] text-center">Have Questions?</p>
+                <p className="text-base font-medium text-[var(--primary-color)] text-center">Have Questions?</p>
                 <button className="mt-2 px-4 py-2 bg-[var(--primary-color)] text-[var(--white-color)] rounded-full text-center font-bold">Talk to an Expert</button>
               </div>
 
             </div>
 
-            <div className="bg-[var(--white-color)] flex flex-col gap-5 pt-10 px-5 rounded-lg">
+            <div className="bg-[var(--white-color)] flex flex-col gap-5 p-5 rounded-lg">
               {/* Steps with icon and label side-by-side */}
               {[
                 { icon: <Truck size={30} />, label: "Cargo Pick-up" },
@@ -75,7 +77,7 @@ const Airfreight = () => {
                   </div>
 
                   {/* Label */}
-                  <p className="text-base md:text-lg font-bold pr-15">{step.label}</p>
+                  <p className="text-base md:text-base font-bold pr-15">{step.label}</p>
                 </div>
               ))}
             </div>
@@ -83,38 +85,38 @@ const Airfreight = () => {
 
 
 
-          <div className='p-5'>
-            <h2 className="text-4xl font-bold mt-6 text-[var(--primary-color)]">STEP BY STEP PROCESS</h2>
+          <div className='p-5 md:p-10'>
+            <h2 className="text-xl md:xl font-bold mt-6 text-[var(--primary-color)]">STEP BY STEP PROCESS</h2>
 
             <div className="mt-4 space-y-4">
               <div>
-                <h3 className="text-3xl font-bold text-[var(--white-color)]">1. Cargo Pick-Up</h3>
-                <p className='text-base md:text-lg text-[var(--white-color)]'>We collect your goods from your supplier or warehouse, ensuring safe handling from the start.</p>
+                <h3 className="text-xl md:xl font-bold text-[var(--white-color)]">1. Cargo Pick-Up</h3>
+                <p className='text-base md:text-base text-[var(--white-color)]'>We collect your goods from your supplier or warehouse, ensuring safe handling from the start.</p>
               </div>
 
               <div>
-                <h3 className="text-3xl  font-bold text-[var(--white-color)]">2. Packaging & Labeling</h3>
-                <p className='text-base md:text-lg text-[var(--white-color)]'>Items are packed and labeled professionally, ready for international air transport.</p>
+                <h3 className="text-xl md:xl  font-bold text-[var(--white-color)]">2. Packaging & Labeling</h3>
+                <p className='text-base md:text-base text-[var(--white-color)]'>Items are packed and labeled professionally, ready for international air transport.</p>
               </div>
 
               <div>
-                <h3 className="text-3xl font-bold text-[var(--white-color)]">3. Flight Booking & Coordination</h3>
-                <p className='text-base md:text-lg text-[var(--white-color)]'>We secure and manage the next available flight to minimize delays.</p>
+                <h3 className="text-xl md:xl font-bold text-[var(--white-color)]">3. Flight Booking & Coordination</h3>
+                <p className='text-base md:text-base text-[var(--white-color)]'>We secure and manage the next available flight to minimize delays.</p>
               </div>
 
               <div>
-                <h3 className="text-3xl  font-bold text-[var(--white-color)]">4. Complete Documentation</h3>
-                <p className='text-base md:text-lg text-[var(--white-color)]'>Includes commercial invoices, airway bills, and customs forms — handled by us.</p>
+                <h3 className="text-xl md:xl font-bold text-[var(--white-color)]">4. Complete Documentation</h3>
+                <p className='text-base md:text-base text-[var(--white-color)]'>Includes commercial invoices, airway bills, and customs forms — handled by us.</p>
               </div>
 
               <div>
-                <h3 className="text-3xl font-bold text-[var(--white-color)]">5. Customs Clearance</h3>
-                <p className='text-base md:text-lg text-[var(--white-color)]'>We ensure full compliance and manage all duties and taxes for import/export.</p>
+                <h3 className="text-xl md:xl font-bold text-[var(--white-color)]">5. Customs Clearance</h3>
+                <p className='text-base md:text-base text-[var(--white-color)]'>We ensure full compliance and manage all duties and taxes for import/export.</p>
               </div>
 
               <div>
-                <h3 className="text-3xl  font-bold text-[var(--white-color)]">6. Airport-to-Door Delivery</h3>
-                <p className='text-base md:text-lg text-[var(--white-color)]'>After arrival, we handle ground delivery to you or your client directly.</p>
+                <h3 className="text-xl md:xl  font-bold text-[var(--white-color)]">6. Airport-to-Door Delivery</h3>
+                <p className='text-base md:text-base text-[var(--white-color)]'>After arrival, we handle ground delivery to you or your client directly.</p>
               </div>
             </div>
           </div>
@@ -124,8 +126,8 @@ const Airfreight = () => {
 
 
         <section className="mt-8 w-full">
-          <h2 className="text-3xl font-bold w-full">An Ideal Shipping Solution For:</h2>
-          <ul className="list-none text-lg mt-2 font-semibold">
+          <h2 className="text-xl md:xl font-bold w-full">An Ideal Shipping Solution For:</h2>
+          <ul className="list-none text-base mt-2 font-semibold">
             <li>✅ Businesses with urgent international shipments</li>
             <li>✅ Light and high-value goods</li>
             <li>✅ E-commerce, electronics, and pharma cargo</li>

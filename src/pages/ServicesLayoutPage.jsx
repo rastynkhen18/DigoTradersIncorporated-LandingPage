@@ -31,7 +31,7 @@ const ServicesLayoutPage = () => {
         </div>
       </section>
 
-      <main className="flex min-h-screen px-35">
+      <main className="flex min-h-screen">
         <Sidebar />
         <div className="flex-1 p-6">
           <Routes>

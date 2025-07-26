@@ -18,14 +18,16 @@ const iconStyleGreen = "p-2 rounded-full bg-[var(--green-color)] text-[var(--whi
 const Landfreight = () => {
   return (
     <div className="flex justify-center">
-      <main className="flex flex-col justify-start items-start text-left w-full max-w-[1000px] p-6 gap-6">
-        <h1 className="text-3xl md:text-4xl font-bold text-[var(--white-color)] bg-[var(--primary-color)] p-3 rounded-lg w-full">
+      <main className="flex flex-col justify-start items-start text-left w-full max-w-3xl p-6 gap-6">
+        <h1 className="text-3xl md:text-4xl font-bold text-[var(--white-color)] p-3 rounded-lg w-full" style={{
+          background: 'linear-gradient(to left, var(--primary-color), var(--primary-accent))'
+        }}>
           Land Freight
         </h1>
 
         <h2 className="text-2xl md:text-4xl font-bold">Reliable Domestic Transportation Across the Philippines</h2>
         <p className='text-base md:text-lg'>
-         We offer dependable land freight solutions to move your goods safely and efficiently — from city to city, province to province, or directly from port to warehouse. Whether it's full truckload (FTL) or less-than-truckload (LTL), we’ve got you covered. </p>
+          We offer dependable land freight solutions to move your goods safely and efficiently — from city to city, province to province, or directly from port to warehouse. Whether it's full truckload (FTL) or less-than-truckload (LTL), we’ve got you covered. </p>
 
         <img src={ServicesLandFreightImg1} alt="Air Freight" className="w-full rounded-2xl" />
 
@@ -51,9 +53,9 @@ const Landfreight = () => {
               {/* Steps with icon and label side-by-side */}
               {[
                 { icon: <Warehouse size={30} />, label: "Port-to-Warehouse Delivery" },
-                { icon: <Navigation size={30} />, label: "City-to-City & Provincial Transport" }, 
-                { icon: <Boxes size={30} />, label: "Full Truckload (FTL) or Partial Loads (LTL)" }, 
-                { icon: <DoorOpen size={30} />, label: "Door-to-Door Cargo Movement" }, 
+                { icon: <Navigation size={30} />, label: "City-to-City & Provincial Transport" },
+                { icon: <Boxes size={30} />, label: "Full Truckload (FTL) or Partial Loads (LTL)" },
+                { icon: <DoorOpen size={30} />, label: "Door-to-Door Cargo Movement" },
                 { icon: <FileText size={30} />, label: "Documentation & Compliance" },
                 { icon: <MapPin size={30} />, label: "Delivery", isLast: true },
               ].map((step, index) => (
@@ -89,7 +91,7 @@ const Landfreight = () => {
               <div>
                 <h3 className="text-3xl font-bold text-[var(--white-color)]">1. Port-to-Warehouse Delivery</h3>
                 <p className='text-base md:text-lg text-[var(--white-color)]'>We collect your goods from your supplier or warehouse
-Our team arranges pick-up at your location, ensuring safe handling from the start.</p>
+                  Our team arranges pick-up at your location, ensuring safe handling from the start.</p>
               </div>
 
               <div>
@@ -115,7 +117,7 @@ Our team arranges pick-up at your location, ensuring safe handling from the star
               <div>
                 <h3 className="text-3xl  font-bold text-[var(--white-color)]">6. Delivery</h3>
                 <p className='text-base md:text-lg text-[var(--white-color)]'>We deliver your shipment to its final destination
-Once your goods arrive, we handle ground delivery directly to you or your client.</p>
+                  Once your goods arrive, we handle ground delivery directly to you or your client.</p>
               </div>
             </div>
           </div>
