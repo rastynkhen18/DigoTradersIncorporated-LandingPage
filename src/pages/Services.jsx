@@ -126,6 +126,7 @@ const Services = () => {
                                 <Link
                                     to={item.link}
                                     className="inline-block bg-[var(--white-color)] text-[var(--primary-color)] px-4 py-2 w-full text-center font-bold rounded-full cursor-pointer"
+                                    reloadDocument
                                 >
                                     {item.button}
                                 </Link>

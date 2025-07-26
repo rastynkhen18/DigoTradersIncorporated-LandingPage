@@ -17,13 +17,13 @@ const services = [
 
 const getLinkClass = ({ isActive }) =>
   isActive
-    ? 'text-[var(--primary-color)]'
+    ? 'text-[var(--primary-color)] '
     : 'text-inherit';
 
 const getDropdownLinkClass = ({ isActive }) =>
   `block w-full text-left px-4 py-2 transition-colors ${isActive
-    ? 'text-[var(--primary-color)] bg-gray-50'
-    : 'text-[var(--secondary-color)] hover:bg-gray-100'
+    ? 'text-[var(--primary-color)] bg-gray-50 font-bold text-xs'
+    : 'text-[#1e1e1e] hover:bg-gray-100 font-normal text-xs leading-[1]'
   }`;
 
 const Header = () => {
@@ -77,7 +77,7 @@ const Header = () => {
           <img
             src={Logo}
             alt="Digo Traders Incorporated Logo"
-            className="cursor-pointer w-32"
+            className="cursor-pointer w-18"
           />
         </Link>
 
@@ -173,11 +173,11 @@ const Header = () => {
       {/* Mobile Menu */}
       <div
         ref={mobileMenuRef}
-        className={`absolute z-40 top-16 left-0 w-full ${scrolled ? 'bg-[var(--white-color)]' : 'bg-black/30 backdrop-blur-3xl'
+        className={`absolute z-40 top-16 left-0 w-full ${scrolled ? 'bg-[var(--white-color)] text-[var(--secondary-color)]' : 'bg-[var(--white-color)] text-[var(--secondary-color)]'
           } flex flex-col items-center gap-6 py-8 font-bold transition-all duration-300 md:hidden ${isOpen
             ? 'translate-y-0 opacity-100'
             : '-translate-y-[130%] opacity-0 pointer-events-none'
-          } ${scrolled ? 'text-[var(--secondary-color)]' : 'text-[var(--white-color)]'}`}
+          } ${scrolled ? 'text-[var(--secondary-color)]' : 'text-[var(--secondary-color)]'}`}
       >
         <NavLink to="/" className={getLinkClass} onClick={() => setIsOpen(false)} reloadDocument>
           Home

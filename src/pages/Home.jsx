@@ -52,11 +52,14 @@ const Home = () => {
           />
 
           {/* Blue Container Transparent */}
-          <div className="flex justify-center items-center flex-grow z-1 px-4">
+          <div className="flex 
+           justify-center items-center flex-grow z-1 px-4"  >
             <div
-              className="relative flex flex-col text-left rounded-2xl w-[400px] md:w-[700px] p-6"
-              style={{ background: 'rgba(2, 1, 129, 0.7)' }}
+              className=" flex flex-col text-left rounded-2xl "
+              style={{ background: 'rgba(2, 1, 129, 0.7)' }} 
             >
+              <div className='p-6'>
+  
               <h1 className="text-[var(--white-color)] font-bold text-4xl md:text-5xl">
                 Go Beyond Borders with
                 <mark className="bg-transparent text-[var(--primary-color)]"> Digo Traders</mark>
@@ -64,12 +67,17 @@ const Home = () => {
               <p className="text-[var(--white-color)] mt-4 mb-5 text-base md:text-lg md:max-w-xl">
                 From <mark className="bg-transparent text-[var(--primary-color)]">small packages to large cargo</mark> — Digo Traders ships by land, air and sea to support businesses of every size.
               </p>
+              </div>
 
-              {/* Gradient Effect*/}
-              <div className="absolute bottom-0 left-1 h-10 p-3 w-[380px] md:w-[500px] rounded-2xl bg-[linear-gradient(to_right,var(--secondary-color),var(--primary-accent))] flex justify-end items-center">
+              <div className='w-full pr-[20%]'>
+              <div className="h-10 w-full rounded-2xl bg-[linear-gradient(to_right,var(--secondary-color),var(--primary-accent))] flex justify-end items-center">
                 <Package size={30} className="text-[var(--white-color)] left-2 sm:left-3" />
               </div>
-            </div>
+              </div>
+              </div>
+              {/* Gradient Effect*/}
+            
+           
           </div>
 
           {/* Who We Serve Section */}

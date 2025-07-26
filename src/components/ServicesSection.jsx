@@ -43,7 +43,7 @@ const ServicesSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % services.length);
-    }, 5000); // every 5 seconds
+    }, 6000);
 
     return () => clearInterval(interval);
   }, []);
@@ -75,22 +75,21 @@ const ServicesSection = () => {
 
   return (
     <section 
-      style={{
-        background:
-          'linear-gradient(to top, var(--secondary-accent), var(--secondary-accent), transparent)',
-      }}
+    style={{
+      background: 'linear-gradient(to top, var(--secondary-color), var(--secondary-accent), black)'
+    }}
     >
       <div className="bg-[var(--secondary-accent)] flex justify-center items-center flex-col py-10">
-        <h1 className="text-[var(--primary-color)] text-4xl md:text-5xl font-bold">
+        <h1 className="text-[var(--primary-color)] text-2xl md:text-3xl font-bold">
           OUR SERVICES
         </h1>
-        <p className="text-[var(--white-color)] text-base md:text-lg text-center max-w-xl my-4">
+        <p className="text-[var(--white-color)] text-sm md:text-base text-center max-w-xl my-3 mx-15 ">
           We Offer End-To-End Logistics Solutions Tailored To Your Shipping Needs, Whether By Sea, Land Or Air.
         </p>
 
         {/* Mobile View with Dots and Swipe */}
         <div className="w-full px-4 md:hidden">
-          <div className="w-full max-w-[90%] mx-auto">
+          <div className="w-full">
             <div
               className="relative h-[500px] bg-[var(--secondary-accent)] bg-cover bg-center text-[var(--white-color)] rounded-xl overflow-hidden"
               style={{ backgroundImage: `url(${services[activeIndex].bgImage})` }}
@@ -112,10 +111,10 @@ const ServicesSection = () => {
                   <h3 className="text-lg font-medium">{services[activeIndex].description}</h3>
                   <p className="text-sm">{services[activeIndex].details}</p>
                   <div className="flex gap-4 mt-4">
-                  <Link to="/services" reloadDocument><button className="bg-[var(--primary-color)] px-4 py-2 rounded-xl text-[var(--secondary-color)] flex items-center gap-2 cursor-pointer">
+                  <Link to="/services" reloadDocument><button className="text-sm bg-[var(--primary-color)] pl-4 pr-3 py-2 rounded-xl text-[var(--secondary-color)] flex items-center cursor-pointer">
                       Learn More <ChevronRight size={18} />
                     </button></Link>
-                    <Link to="/contact" reloadDocument><button className="bg-transparent px-4 py-2 rounded-xl text-[var(--white-color)] border border-[var(--white-color)] cursor-pointer">
+                    <Link to="/contact" reloadDocument><button className="text-sm bg-transparent px-4 py-2 rounded-xl text-[var(--white-color)] border border-[var(--white-color)] cursor-pointer">
                       Talk to Expert
                     </button></Link>
                   </div>

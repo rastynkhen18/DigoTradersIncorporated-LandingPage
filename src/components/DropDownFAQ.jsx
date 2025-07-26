@@ -5,11 +5,11 @@ const faqs = [
   {
     question: "Step 1: Consultation & Requirements Gathering",
     answer: `
-  📞 You contact Digo Traders via email or phone.
+  You contact Digo Traders via email or phone.
   
-  📝 You explain what kind of goods you're importing, where they're coming from, and your timeline.
+  You explain what kind of goods you're importing, where they're coming from, and your timeline.
   
-  💬 Digo Traders will advise you on:
+  Digo Traders will advise you on:
     • The best shipping method (sea or air)
     • Required documents
     • Estimated costs and timeline
@@ -19,7 +19,7 @@ const faqs = [
   {
     question: "Step 2: Import License & AMO Assistance (if needed)",
     answer: `
-  🧾 If you’re a new importer:
+  If you’re a new importer:
   
     • Digo helps you apply for an Import License  
     • They assist with renewal of the AMO Certificate if it’s expired
@@ -28,10 +28,10 @@ const faqs = [
   {
     question: "Step 3: Freight Arrangement",
     answer: `
-  ✈️ If air freight:  
+  If air freight:  
     • They coordinate international air shipment.
   
-  ⛴️ If sea freight:  
+  If sea freight:  
     • Choose between:  
       – FCL (Full Container Load) — for big shipments  
       – LCL (Less than Container Load) — for small shipments  
@@ -41,18 +41,18 @@ const faqs = [
   {
     question: "Step 4: Customs Brokerage",
     answer: `
-  📋 Digo Traders handles:
+  Digo Traders handles:
     • Import declaration  
     • Customs taxes & tariffs  
     • Permits and paperwork
   
-  🚫 You don’t have to deal with customs — they handle it for you.
+  You don’t have to deal with customs — they handle it for you.
   `
   },
   {
     question: "Step 5: Domestic Transfer & Land Transportation",
     answer: `
-  🚚 Once cleared, your goods are:
+  Once cleared, your goods are:
     • Transferred locally (from port to city/province)  
     • Delivered via truck to your warehouse or business location
   `
@@ -60,9 +60,9 @@ const faqs = [
   {
     question: "Step 6: Final Delivery & Support",
     answer: `
-  📦 You receive your goods at your preferred location.
+  You receive your goods at your preferred location.
   
-  📞 Digo provides post-delivery support or freight consultation for future shipments.
+  Digo provides post-delivery support or freight consultation for future shipments.
   `
   }
 
