@@ -35,7 +35,7 @@ const About = () => {
             <section className="flex flex-col md:flex-row justify-between items-center w-full gap-1 p-16">
                 <div className="w-full md:w-1/2">
                     <img src={Logo} alt="Digo Traders Inc." className="w-40 h-auto mb-4" />
-                    <p className="text-base md:text-lg text-left font-semibold">
+                    <p className="text-base md:text-base text-left font-semibold">
                         DIGO Traders Incorporated is a Philippine-based logistics company committed to making import, export, and domestic shipping easier for businesses of all sizes. Whether you're transporting goods across borders or across cities, we handle every step with accuracy, speed, and transparency.
                     </p>
                 </div>

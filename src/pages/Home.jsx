@@ -134,7 +134,7 @@ const Home = () => {
           <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
 
             {/* Text Content */}
-            <div className='w-full md:w-1/2 p-15'>
+            <div className='w-full md:w-1/2 p-5'>
               <h1 className="text-4xl md:text-5xl font-bold">
                 Why Businesses Choose Us?
               </h1>
@@ -180,7 +180,6 @@ const Home = () => {
             <div className='w-full h-full md:w-1/2'>
               <img src={Container1Image} alt="Shipping container" className="w-full h-auto md:rounded-tl-[65%] shadow-md" />
             </div>
-
           </div>
         </section>
 
@@ -201,7 +200,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="py-12 px-4 " style={{
+        <section className='p-6' style={{
           background: 'linear-gradient(to top, var(--secondary-color), var(--secondary-accent), black)'
         }}>
           <h1 className="text-[var(--primary-color)] text-5xl font-bold mb-10 text-center">

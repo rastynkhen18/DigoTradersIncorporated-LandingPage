@@ -14,31 +14,31 @@ const ServicesSidebar = () => {
       {/* Services Section */}
       <nav className="flex flex-col gap-1">
         <h2 className="text-xl font-bold mb-1">Our Services</h2>
-        <NavLink to="/services/seafreight" className={getLinkClass}>Sea Freight</NavLink>
-        <NavLink to="/services/airfreight" className={getLinkClass}>Air Freight</NavLink>
-        <NavLink to="/services/landfreight" className={getLinkClass}>Land Freight</NavLink>
-        <NavLink to="/services/custombrokerage" className={getLinkClass}>Custom Brokerage</NavLink>
-        <NavLink to="/services/fcl_lcl" className={getLinkClass}>FCL/LCL</NavLink>
-        <NavLink to="/services/domestic-transfer-services" className={getLinkClass}>Domestic Transfer</NavLink>
-        <NavLink to="/services/freight-&-tariff-consultation" className={getLinkClass}>Freight & Tariff Consultation</NavLink>
-        <NavLink to="/services/amo-certificate" className={getLinkClass}>Renewal of AMO Certificate</NavLink>
-        <NavLink to="/services/import-license" className={getLinkClass}>Accreditation of Import License</NavLink>
+        <NavLink to="/services/seafreight" className={getLinkClass} reloadDocument>Sea Freight</NavLink>
+        <NavLink to="/services/airfreight" className={getLinkClass} reloadDocument>Air Freight</NavLink>
+        <NavLink to="/services/landfreight" className={getLinkClass} reloadDocument>Land Freight</NavLink>
+        <NavLink to="/services/custombrokerage" className={getLinkClass} reloadDocument>Custom Brokerage</NavLink>
+        <NavLink to="/services/fcl_lcl" className={getLinkClass} reloadDocument>FCL/LCL</NavLink>
+        <NavLink to="/services/domestic-transfer-services" className={getLinkClass} reloadDocument>Domestic Transfer</NavLink>
+        <NavLink to="/services/freight-&-tariff-consultation" className={getLinkClass} reloadDocument>Freight & Tariff Consultation</NavLink>
+        <NavLink to="/services/amo-certificate" className={getLinkClass} reloadDocument>Renewal of AMO Certificate</NavLink>
+        <NavLink to="/services/import-license" className={getLinkClass} reloadDocument>Accreditation of Import License</NavLink>
       </nav>
 
       {/* About Section */}
       <nav className="flex flex-col gap-1">
         <h2 className="text-xl font-bold mb-1">About</h2>
-        <NavLink to="/about" className={getLinkClass}>Mission/Vision</NavLink>
-        <NavLink to="/about" className={getLinkClass}>About Digo Traders</NavLink>
+        <NavLink to="/about" className={getLinkClass} reloadDocument>Mission/Vision</NavLink>
+        <NavLink to="/about" className={getLinkClass} reloadDocument>About Digo Traders</NavLink>
       </nav>
 
       {/* Contact Section */}
       <nav className="flex flex-col gap-1">
         <h2 className="text-xl font-bold mb-1">Contact Us</h2>
-        <NavLink to="/contact" className={getLinkClass}>Email</NavLink>
-        <NavLink to="/contact" className={getLinkClass}>Facebook</NavLink>
-        <NavLink to="/contact" className={getLinkClass}>Tel. No</NavLink>
-        <NavLink to="/contact" className={getLinkClass}>Mobile No</NavLink>
+        <NavLink to="/contact" className={getLinkClass} reloadDocument>Email</NavLink>
+        <NavLink to="/contact" className={getLinkClass} reloadDocument>Facebook</NavLink>
+        <NavLink to="/contact" className={getLinkClass} reloadDocument>Tel. No</NavLink>
+        <NavLink to="/contact" className={getLinkClass} reloadDocument>Mobile No</NavLink>
       </nav>
     </aside>
   );

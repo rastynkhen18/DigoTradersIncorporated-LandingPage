@@ -31,9 +31,9 @@ const ServicesLayoutPage = () => {
         </div>
       </section>
 
-      <main className="flex min-h-screen">
+      <main className="flex min-h-screen gap-5">
         <Sidebar />
-        <div className="flex-1 p-6">
+        <div>
           <Routes>
             <Route path="seafreight" element={<Seafreight />} />
             <Route path="airfreight" element={<Airfreight />} />

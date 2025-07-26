@@ -112,10 +112,10 @@ const ServicesSection = () => {
                   <h3 className="text-lg font-medium">{services[activeIndex].description}</h3>
                   <p className="text-sm">{services[activeIndex].details}</p>
                   <div className="flex gap-4 mt-4">
-                  <Link to="/services"><button className="bg-[var(--primary-color)] px-4 py-2 rounded-xl text-[var(--secondary-color)] flex items-center gap-2 cursor-pointer">
+                  <Link to="/services" reloadDocument><button className="bg-[var(--primary-color)] px-4 py-2 rounded-xl text-[var(--secondary-color)] flex items-center gap-2 cursor-pointer">
                       Learn More <ChevronRight size={18} />
                     </button></Link>
-                    <Link to="/contact"><button className="bg-transparent px-4 py-2 rounded-xl text-[var(--white-color)] border border-[var(--white-color)] cursor-pointer">
+                    <Link to="/contact" reloadDocument><button className="bg-transparent px-4 py-2 rounded-xl text-[var(--white-color)] border border-[var(--white-color)] cursor-pointer">
                       Talk to Expert
                     </button></Link>
                   </div>
@@ -162,10 +162,10 @@ const ServicesSection = () => {
                     <h3 className="text-lg font-medium">{service.description}</h3>
                     <p className="text-sm">{service.details}</p>
                     <div className="flex gap-4 mt-4">
-                    <Link to="/services"><button className="bg-[var(--primary-color)] px-4 py-2 rounded-xl text-[var(--secondary-color)] flex items-center gap-2 cursor-pointer">
+                    <Link to="/services" reloadDocument><button className="bg-[var(--primary-color)] px-4 py-2 rounded-xl text-[var(--secondary-color)] flex items-center gap-2 cursor-pointer">
                         Learn More <ChevronRight size={18} />
                       </button></Link>
-                      <Link to="/contact"><button className="bg-transparent px-4 py-2 rounded-xl text-[var(--white-color)] border border-[var(--white-color)] cursor-pointer">
+                      <Link to="/contact" reloadDocument><button className="bg-transparent px-4 py-2 rounded-xl text-[var(--white-color)] border border-[var(--white-color)] cursor-pointer">
                         Talk to Expert
                       </button></Link>
                     </div>

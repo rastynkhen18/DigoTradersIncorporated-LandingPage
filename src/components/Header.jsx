@@ -21,10 +21,9 @@ const getLinkClass = ({ isActive }) =>
     : 'text-inherit';
 
 const getDropdownLinkClass = ({ isActive }) =>
-  `block w-full text-left px-4 py-2 transition-colors ${
-    isActive
-      ? 'text-[var(--primary-color)] bg-gray-50'
-      : 'text-[var(--secondary-color)] hover:bg-gray-100'
+  `block w-full text-left px-4 py-2 transition-colors ${isActive
+    ? 'text-[var(--primary-color)] bg-gray-50'
+    : 'text-[var(--secondary-color)] hover:bg-gray-100'
   }`;
 
 const Header = () => {
@@ -68,14 +67,13 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled
           ? 'bg-[var(--white-color)] text-[var(--secondary-color)] shadow-md'
           : 'bg-white/30 backdrop-blur-md text-[var(--white-color)]'
-      }`}
+        }`}
     >
       <div className="flex justify-between md:justify-around items-center h-16 px-5">
-        <Link to="/">
+        <Link to="/" reloadDocument>
           <img
             src={Logo}
             alt="Digo Traders Incorporated Logo"
@@ -85,19 +83,18 @@ const Header = () => {
 
         {/* Desktop Nav */}
         <nav
-          className={`hidden md:flex justify-center items-center gap-10 font-bold ${
-            scrolled
+          className={`hidden md:flex justify-center items-center gap-10 font-bold ${scrolled
               ? 'text-[var(--secondary-color)]'
               : 'text-[var(--white-color)]'
-          }`}
+            }`}
         >
-          <NavLink to="/" className={getLinkClass}>
+          <NavLink to="/" className={getLinkClass} reloadDocument>
             Home
           </NavLink>
-          <NavLink to="/about" className={getLinkClass}>
-          About
+          <NavLink to="/about" className={getLinkClass} reloadDocument>
+            About
           </NavLink>
-          <NavLink to="/contact" className={getLinkClass}>
+          <NavLink to="/contact" className={getLinkClass} reloadDocument>
             Contact
           </NavLink>
 
@@ -110,16 +107,14 @@ const Header = () => {
           >
             <button
               type="button"
-              className={`flex items-center gap-1 focus:outline-none ${
-                servicesOpen ? 'text-[var(--primary-color)]' : ''
-              }`}
+              className={`flex items-center gap-1 focus:outline-none ${servicesOpen ? 'text-[var(--primary-color)]' : ''
+                }`}
             >
-               <NavLink to="/services" className={getLinkClass}>Services</NavLink>
+              <NavLink to="/services" className={getLinkClass} reloadDocument>Services</NavLink>
               <ChevronDown
                 size={16}
-                className={`transition-transform duration-200 ${
-                  servicesOpen ? 'rotate-180' : ''
-                }`}
+                className={`transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''
+                  }`}
               />
             </button>
 
@@ -134,6 +129,7 @@ const Header = () => {
                     to={s.to}
                     className={getDropdownLinkClass}
                     onClick={() => setServicesOpen(false)}
+                    reloadDocument
                   >
                     {s.label}
                   </NavLink>
@@ -156,21 +152,19 @@ const Header = () => {
             <X
               size={28}
               onClick={() => setIsOpen(false)}
-              className={`cursor-pointer ${
-                scrolled
+              className={`cursor-pointer ${scrolled
                   ? 'text-[var(--secondary-color)]'
                   : 'text-[var(--secondary-color)]'
-              }`}
+                }`}
             />
           ) : (
             <Menu
               size={28}
               onClick={() => setIsOpen(true)}
-              className={`cursor-pointer ${
-                scrolled
+              className={`cursor-pointer ${scrolled
                   ? 'text-[var(--secondary-color)]'
                   : 'text-[var(--secondary-color)]'
-              }`}
+                }`}
             />
           )}
         </div>
@@ -179,21 +173,19 @@ const Header = () => {
       {/* Mobile Menu */}
       <div
         ref={mobileMenuRef}
-        className={`absolute z-40 top-16 left-0 w-full ${
-          scrolled ? 'bg-[var(--white-color)]' : 'bg-black/30 backdrop-blur-3xl'
-        } flex flex-col items-center gap-6 py-8 font-bold transition-all duration-300 md:hidden ${
-          isOpen
+        className={`absolute z-40 top-16 left-0 w-full ${scrolled ? 'bg-[var(--white-color)]' : 'bg-black/30 backdrop-blur-3xl'
+          } flex flex-col items-center gap-6 py-8 font-bold transition-all duration-300 md:hidden ${isOpen
             ? 'translate-y-0 opacity-100'
             : '-translate-y-[130%] opacity-0 pointer-events-none'
-        } ${scrolled ? 'text-[var(--secondary-color)]' : 'text-[var(--white-color)]'}`}
+          } ${scrolled ? 'text-[var(--secondary-color)]' : 'text-[var(--white-color)]'}`}
       >
-        <NavLink to="/" className={getLinkClass} onClick={() => setIsOpen(false)}>
+        <NavLink to="/" className={getLinkClass} onClick={() => setIsOpen(false)} reloadDocument>
           Home
         </NavLink>
-        <NavLink to="/about" className={getLinkClass} onClick={() => setIsOpen(false)}>
+        <NavLink to="/about" className={getLinkClass} onClick={() => setIsOpen(false)} reloadDocument>
           About
         </NavLink>
-        <NavLink to="/contact" className={getLinkClass} onClick={() => setIsOpen(false)}>
+        <NavLink to="/contact" className={getLinkClass} onClick={() => setIsOpen(false)} reloadDocument>
           Contact
         </NavLink>
 
@@ -203,12 +195,11 @@ const Header = () => {
           className="flex items-center gap-1"
           onClick={() => setMobileServicesOpen((p) => !p)}
         >
-           <NavLink to="/services" className={getLinkClass}>Services</NavLink>
+          <NavLink to="/services" className={getLinkClass} reloadDocument>Services</NavLink>
           <ChevronDown
             size={16}
-            className={`transition-transform duration-200 ${
-              mobileServicesOpen ? 'rotate-180' : ''
-            }`}
+            className={`transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''
+              }`}
           />
         </button>
 
@@ -222,6 +213,7 @@ const Header = () => {
                 onClick={() => {
                   setIsOpen(false);
                   setMobileServicesOpen(false);
+                  reloadDocument
                 }}
               >
                 {s.label}

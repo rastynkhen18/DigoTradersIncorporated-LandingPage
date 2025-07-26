@@ -17,7 +17,7 @@ const iconStyleGreen = "p-2 rounded-full bg-[var(--green-color)] text-[var(--whi
 
 const Airfreight = () => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-start items-start">
       <main className="flex flex-col justify-start items-start text-left w-full max-w-3xl p-6 gap-6">
         <h1 className="text-xl md:xl font-bold text-[var(--white-color)] p-3 rounded-lg w-full" style={{
           background: 'linear-gradient(to left, var(--primary-color), var(--primary-accent))'
@@ -36,7 +36,7 @@ const Airfreight = () => {
           background: 'linear-gradient(to top, var(--secondary-color), var(--secondary-accent), black)'
         }}>
 
-          <section className='flex flex-row m-5'>
+          <section className='flex flex-col md:flex-row m-5'>
             <div className="p-5">
               <h2 className="text-xl md:xl font-bold text-[var(--primary-color)]">How Our Air Freight Process Works</h2>
               <p className=' text-base md:text-base text-[var(--white-color)]'>
