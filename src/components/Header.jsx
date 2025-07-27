@@ -17,7 +17,7 @@ const services = [
 
 const getLinkClass = ({ isActive }) =>
   isActive
-    ? 'text-[var(--primary-color)] '
+    ? 'border-b-2 border-[var(--primary-color)]'
     : 'text-inherit';
 
 const getDropdownLinkClass = ({ isActive }) =>
@@ -68,8 +68,8 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled
-          ? 'bg-[var(--white-color)] text-[var(--secondary-color)] shadow-md'
-          : 'bg-white/30 backdrop-blur-md text-[var(--white-color)]'
+        ? 'bg-[var(--white-color)] text-[var(--secondary-color)] shadow-md'
+        : 'bg-white/30 backdrop-blur-md text-[var(--white-color)]'
         }`}
     >
       <div className="flex justify-between md:justify-around items-center h-16 px-5">
@@ -84,8 +84,8 @@ const Header = () => {
         {/* Desktop Nav */}
         <nav
           className={`hidden md:flex justify-center items-center gap-10 font-bold ${scrolled
-              ? 'text-[var(--secondary-color)]'
-              : 'text-[var(--white-color)]'
+            ? 'text-[var(--secondary-color)]'
+            : 'text-[var(--white-color)]'
             }`}
         >
           <NavLink to="/" className={getLinkClass} reloadDocument>
@@ -153,8 +153,8 @@ const Header = () => {
               size={28}
               onClick={() => setIsOpen(false)}
               className={`cursor-pointer ${scrolled
-                  ? 'text-[var(--secondary-color)]'
-                  : 'text-[var(--secondary-color)]'
+                ? 'text-[var(--secondary-color)]'
+                : 'text-[var(--secondary-color)]'
                 }`}
             />
           ) : (
@@ -162,8 +162,8 @@ const Header = () => {
               size={28}
               onClick={() => setIsOpen(true)}
               className={`cursor-pointer ${scrolled
-                  ? 'text-[var(--secondary-color)]'
-                  : 'text-[var(--secondary-color)]'
+                ? 'text-[var(--secondary-color)]'
+                : 'text-[var(--secondary-color)]'
                 }`}
             />
           )}

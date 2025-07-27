@@ -41,7 +41,7 @@ const Home = () => {
           className="w-full h-[100vh] lg:h-[95vh] bg-cover bg-center flex flex-col justify-between"
           style={{ backgroundImage: `url(${HomePageBackground})` }}
         >
-            {/* <div className="absolute inset-0 bg-black opacity-50 z-0"></div> */}
+          {/* <div className="absolute inset-0 bg-black opacity-50 z-0"></div> */}
 
 
           {/* Airplane Image */}
@@ -56,28 +56,26 @@ const Home = () => {
            justify-center items-center flex-grow z-1 px-4"  >
             <div
               className=" flex flex-col text-left rounded-2xl "
-              style={{ background: 'rgba(2, 1, 129, 0.7)' }} 
+              style={{ background: 'rgba(2, 1, 129, 0.7)' }}
             >
               <div className='p-6'>
-  
-              <h1 className="text-[var(--white-color)] font-bold text-4xl md:text-5xl">
-                Go Beyond Borders with
-                <mark className="bg-transparent text-[var(--primary-color)]"> Digo Traders</mark>
-              </h1>
-              <p className="text-[var(--white-color)] mt-4 mb-5 text-base md:text-lg md:max-w-xl">
-                From <mark className="bg-transparent text-[var(--primary-color)]">small packages to large cargo</mark> — Digo Traders ships by land, air and sea to support businesses of every size.
-              </p>
+
+                <h1 className="text-[var(--white-color)] font-bold text-4xl md:text-5xl">
+                  Go Beyond Borders with
+                  <mark className="bg-transparent text-[var(--primary-color)]"> Digo Traders</mark>
+                </h1>
+                <p className="text-[var(--white-color)] mt-4 mb-5 text-base md:text-lg md:max-w-xl">
+                  From <mark className="bg-transparent text-[var(--primary-color)]">small packages to large cargo</mark> — Digo Traders ships by land, air and sea to support businesses of every size.
+                </p>
               </div>
 
               <div className='w-full pr-[20%]'>
-              <div className="h-10 w-full rounded-2xl bg-[linear-gradient(to_right,var(--secondary-color),var(--primary-accent))] flex justify-end items-center">
-                <Package size={30} className="text-[var(--white-color)] left-2 sm:left-3" />
+                <div className="h-10 w-full rounded-2xl bg-[linear-gradient(to_right,var(--secondary-color),var(--primary-accent))] flex justify-end items-center">
+                  <Package size={30} className="text-[var(--white-color)] left-2 sm:left-3" />
+                </div>
               </div>
-              </div>
-              </div>
-              {/* Gradient Effect*/}
-            
-           
+            </div>
+            {/* Gradient Effect*/}
           </div>
 
           {/* Who We Serve Section */}
