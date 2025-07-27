@@ -1,7 +1,7 @@
 import React from 'react'
 import ServicesBackgroundImage from '../assets/images/services-bg.png';
 import ContactImage from '../assets/images/contactImg.png';
-import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
 import FacebookLogo from '../assets/images/Facebook_Logo_Secondary1.svg';
 import InstagramLogo from '../assets/images/Instagram_Glyph_White1.svg';
 
