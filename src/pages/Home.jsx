@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import HomePageBackground from '../assets/images/homepage-img.png';
 import Container1Image from '../assets/images/container1Image.png';
 import Container2Image from '../assets/images/container2Image.png';

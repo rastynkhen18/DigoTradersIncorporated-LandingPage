@@ -175,8 +175,8 @@ const Header = () => {
         ref={mobileMenuRef}
         className={`absolute z-40 top-16 left-0 w-full ${scrolled ? 'bg-[var(--white-color)] text-[var(--secondary-color)]' : 'bg-[var(--white-color)] text-[var(--secondary-color)]'
           } flex flex-col items-center gap-6 py-8 font-bold transition-all duration-300 md:hidden ${isOpen
-            ? 'translate-y-0 opacity-100'
-            : '-translate-y-[130%] opacity-0 pointer-events-none'
+            ? 'translate-x-0 opacity-100'
+            : '-translate-x-[130%] opacity-0 pointer-events-none'
           } ${scrolled ? 'text-[var(--secondary-color)]' : 'text-[var(--secondary-color)]'}`}
       >
         <NavLink to="/" className={getLinkClass} onClick={() => setIsOpen(false)} reloadDocument>
