@@ -9,7 +9,7 @@ import ServicesSection from '../components/ServicesSection';
 import Airplane from '../assets/images/airplane-transparent.png'
 import { Package, ShoppingCart, Truck, Factory, Building2, ShieldCheck, Clock, FileText, Check } from 'lucide-react';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import emailjs from '@emailjs/browser'; //Update
+import emailjs from '@emailjs/browser';
 
 
 const Home = () => {
