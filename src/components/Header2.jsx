@@ -116,7 +116,7 @@ const Header = () => {
                             <NavLink to="/services" className={getLinkClass}>Services</NavLink>
                             <ChevronDown
                                 size={16}
-                                className={`transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''
+                                className={`transition-transform duration-200 cursor-pointer ${servicesOpen ? 'rotate-180' : ''
                                     }`}
                             />
                         </button>
@@ -207,7 +207,7 @@ const Header = () => {
                     </span>
                     <ChevronDown
                         size={16}
-                        className={`transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''}`}
+                        className={`transition-transform duration-200 cursor-pointer ${mobileServicesOpen ? 'rotate-180' : ''}`}
                     />
                 </button>
 

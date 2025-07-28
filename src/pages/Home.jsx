@@ -178,7 +178,7 @@ const Home = () => {
         <section className='p-6' style={{
           background: 'linear-gradient(to top, var(--secondary-color), var(--secondary-accent), black)'
         }}>
-          <h1 className="text-[var(--primary-color)] text-5xl font-bold mb-10 text-center">
+          <h1 className="text-[var(--primary-color)] text-xl md:text-3xl font-bold mb-10 text-center">
             All Set to Ship? Let's Get Moving!
           </h1>
 
