@@ -2,15 +2,15 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import ServicesBackgroundImage from '../assets/images/services-bg.png';
 import Sidebar from '../components/ServicesSidebar';
-import Seafreight from './seafreight';
-import Airfreight from './airfreight';
-import Landfreight from './landfreight';
-import CustomBrokerage from './custombrokerage';
-import FclLcl from './fcl_lcl';
-import DomesticTransferServices from './domesticTransferServices';
-import FreightTariffConsultation from './freightTariffConsultation';
-import AmoCertificate from './amoCertificate';
-import ImportLicense from './importLicense';
+import Seafreight from '../pages/ServicesPages/seafreight';
+import Airfreight from '../pages/ServicesPages/airfreight';
+import Landfreight from '../pages/ServicesPages/landfreight';
+import CustomBrokerage from '../pages/ServicesPages/custombrokerage';
+import FclLcl from '../pages/ServicesPages/fcl_lcl';
+import DomesticTransferServices from '../pages/ServicesPages/domesticTransferServices';
+import FreightTariffConsultation from '../pages/ServicesPages/freightTariffConsultation';
+import AmoCertificate from '../pages/ServicesPages/amoCertificate';
+import ImportLicense from '../pages/ServicesPages/importLicense';
 
 const ServicesLayoutPage = () => {
   return (

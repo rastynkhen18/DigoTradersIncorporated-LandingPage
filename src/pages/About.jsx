@@ -16,16 +16,16 @@ const About = () => {
     return (
         <div>
             <section
-                className="relative flex justify-center items-start flex-col h-[400px] bg-cover bg-center"
+                className="relative flex justify-center items-start flex-col h-[300px] bg-cover bg-center"
                 style={{ backgroundImage: `url(${ServicesBackgroundImage})` }}
             >
                 <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
 
-                <div className="relative text-start mx-8 md:ml-50">
-                    <h1 className="text-4xl md:text-5xl text-[var(--primary-color)] py-4 font-bold">
+                <div className="relative text-start mx-8 pt-16 md:ml-50">
+                    <h1 className="text-xl md:text-3xl text-[var(--primary-color)] py-1 font-bold">
                         Digo Traders Incorporated
                     </h1>
-                    <p className="text-base md:text-lg text-[var(--white-color)]">
+                    <p className="text-sm md:text-base text-[var(--white-color)]">
                         Trusted Logistics, Seamless Customs, Nationwide Delivery.
                     </p>
                 </div>

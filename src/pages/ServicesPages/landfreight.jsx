@@ -1,7 +1,7 @@
 import React from 'react';
-import ServicesLandFreightImg1 from '../assets/images/servicesLandFreightImg1.png';
-import ServicesLandFreightImg2 from '../assets/images/servicesLandFreightImg2.png';
-import ReadyToShip from '../components/ReadyToShip';
+import ServicesLandFreightImg1 from '../../assets/images/servicesLandFreightImg1.png';
+import ServicesLandFreightImg2 from '../../assets/images/servicesLandFreightImg2.png';
+import ReadyToShip from '../../components/ReadyToShip';
 import {
   Warehouse,
   Navigation,

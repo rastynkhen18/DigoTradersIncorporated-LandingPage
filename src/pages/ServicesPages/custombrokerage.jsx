@@ -1,7 +1,7 @@
 import React from 'react';
-import CustomBrokerageImg1 from '../assets/images/servicesCustomBrokerageImg1.png';
-import CustomBrokerageImg2 from '../assets/images/servicesCustomBrokerageImg2.png';
-import ReadyToShip from '../components/ReadyToShip';
+import CustomBrokerageImg1 from '../../assets/images/servicesCustomBrokerageImg1.png';
+import CustomBrokerageImg2 from '../../assets/images/servicesCustomBrokerageImg2.png';
+import ReadyToShip from '../../components/ReadyToShip';
 import {
   FileText,
   ReceiptText,

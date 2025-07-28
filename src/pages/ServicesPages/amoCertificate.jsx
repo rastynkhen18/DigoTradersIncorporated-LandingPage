@@ -1,6 +1,6 @@
 import React from 'react'
-import AmoCertificateRenewalImage from '../assets/images/servicesRenewal.png';
-import LetsRenewAmoCertificate from '../components/LetsRenewAmoCertificate';
+import AmoCertificateRenewalImage from '../../assets/images/servicesRenewal.png';
+import LetsRenewAmoCertificate from '../../components/LetsRenewAmoCertificate';
 
 const amoCertificate = () => {
     return (

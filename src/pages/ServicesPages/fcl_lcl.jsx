@@ -1,7 +1,7 @@
 import React from 'react'
-import FclImage1 from '../assets/images/servicesFcl-img.png';
-import FclImage2 from '../assets/images/servicesFcl-img2.png';
-import ReadyToShip from '../components/ReadyToShip';
+import FclImage1 from '../../assets/images/servicesFcl-img.png';
+import FclImage2 from '../../assets/images/servicesFcl-img2.png';
+import ReadyToShip from '../../components/ReadyToShip';
 import { Package, ShieldCheck, Timer } from 'lucide-react';
 
 

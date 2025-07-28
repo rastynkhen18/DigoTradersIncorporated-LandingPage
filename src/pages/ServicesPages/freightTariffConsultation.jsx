@@ -1,6 +1,6 @@
 import React from 'react'
-import FreightConsultationImage from '../assets/images/servicesFreightConsultation.png';
-import LetsTalkStrategy from '../components/LetsTalkStrategy';
+import FreightConsultationImage from '../../assets/images/servicesFreightConsultation.png';
+import LetsTalkStrategy from '../../components/LetsTalkStrategy';
 
 const freightTariffConsultation = () => {
     return (

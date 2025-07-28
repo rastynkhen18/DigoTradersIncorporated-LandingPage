@@ -38,11 +38,9 @@ const Home = () => {
     <>
       <main >
         <section
-          className="w-full h-[100vh] lg:h-[95vh] bg-cover bg-center flex flex-col justify-between"
+          className="w-full h-[100vh] lg:h-[95vh] bg-cover bg-center flex flex-col justify-center items-center"
           style={{ backgroundImage: `url(${HomePageBackground})` }}
         >
-          {/* <div className="absolute inset-0 bg-black opacity-50 z-0"></div> */}
-
 
           {/* Airplane Image */}
           <img
@@ -53,7 +51,7 @@ const Home = () => {
 
           {/* Blue Container Transparent */}
           <div className="flex 
-           justify-center items-center flex-grow z-1 px-4"  >
+           justify-center items-center flex-grow z-1 px-4 max-w-[650px] mt-15"  >
             <div
               className=" flex flex-col text-left rounded-2xl "
               style={{ background: 'rgba(2, 1, 129, 0.7)' }}
@@ -70,7 +68,7 @@ const Home = () => {
               </div>
 
               <div className='w-full pr-[20%]'>
-                <div className="h-10 w-full rounded-2xl bg-[linear-gradient(to_right,var(--secondary-color),var(--primary-accent))] flex justify-end items-center">
+                <div className="h-10 w-full rounded-full bg-[linear-gradient(to_right,var(--secondary-color),var(--primary-accent))] flex justify-end items-center px-3">
                   <Package size={30} className="text-[var(--white-color)] left-2 sm:left-3" />
                 </div>
               </div>

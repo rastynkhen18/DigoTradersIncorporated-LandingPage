@@ -1,7 +1,7 @@
 import React from 'react';
-import SeafreightImage1 from '../assets/images/seafreight-img1.png';
-import SeafreightImage2 from '../assets/images/seafreight-img2.png';
-import ReadyToShip from '../components/ReadyToShip';
+import SeafreightImage1 from '../../assets/images/seafreight-img1.png';
+import SeafreightImage2 from '../../assets/images/seafreight-img2.png';
+import ReadyToShip from '../../components/ReadyToShip';
 
 
 const Seafreight = () => {

@@ -21,9 +21,9 @@ const getLinkClass = ({ isActive }) =>
     : 'text-inherit';
 
 const getDropdownLinkClass = ({ isActive }) =>
-  `block w-full text-left px-4 py-2 transition-colors ${isActive
-    ? 'text-[var(--primary-color)] bg-gray-50 font-bold text-xs'
-    : 'text-[#1e1e1e] hover:bg-gray-100 font-normal text-xs leading-[1]'
+  `block w-full text-left py-2 transition-colors ${isActive
+    ? 'text-[var(--primary-color)] bg-gray-50 font-bold text-sm'
+    : 'text-[#1e1e1e] hover:bg-gray-100 font-normal text-sm leading-[1] px-5'
   }`;
 
 const Header = () => {
@@ -69,7 +69,7 @@ const Header = () => {
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled
         ? 'bg-[var(--white-color)] text-[var(--secondary-color)] shadow-md'
-        : 'bg-white/30 backdrop-blur-md text-[var(--white-color)]'
+        : 'bg-black/30 backdrop-blur-md text-[var(--white-color)]'
         }`}
     >
       <div className="flex justify-between md:justify-around items-center h-16 px-5">
@@ -83,7 +83,7 @@ const Header = () => {
 
         {/* Desktop Nav */}
         <nav
-          className={`hidden md:flex justify-center items-center gap-10 font-bold ${scrolled
+          className={`hidden md:flex justify-center items-center gap-10 ${scrolled
             ? 'text-[var(--secondary-color)]'
             : 'text-[var(--white-color)]'
             }`}
@@ -141,9 +141,9 @@ const Header = () => {
 
         {/* Desktop Button */}
         <div className="hidden md:block">
-          <button className="bg-[var(--primary-color)] text-[var(--white-color)] px-6 py-2 rounded-full cursor-pointer">
+          <Link to="/about" reloadDocument><button className="bg-[var(--primary-color)] text-[var(--white-color)] px-6 py-2 rounded-full cursor-pointer">
             Learn More
-          </button>
+          </button></Link>
         </div>
 
         {/* Burger Icon */}
@@ -174,9 +174,9 @@ const Header = () => {
       <div
         ref={mobileMenuRef}
         className={`absolute z-40 top-16 left-0 w-full ${scrolled ? 'bg-[var(--white-color)] text-[var(--secondary-color)]' : 'bg-[var(--white-color)] text-[var(--secondary-color)]'
-          } flex flex-col items-center gap-6 py-8 font-bold transition-all duration-300 md:hidden ${isOpen
+          } flex flex-col items-start gap-6 px-10 py-5  transition-all duration-300 md:hidden ${isOpen
             ? 'translate-x-0 opacity-100'
-            : '-translate-x-[130%] opacity-0 pointer-events-none'
+            : '-translate-x-[-130%] opacity-0 pointer-events-none'
           } ${scrolled ? 'text-[var(--secondary-color)]' : 'text-[var(--secondary-color)]'}`}
       >
         <NavLink to="/" className={getLinkClass} onClick={() => setIsOpen(false)} reloadDocument>
@@ -189,22 +189,26 @@ const Header = () => {
           Contact
         </NavLink>
 
-        {/* Services (mobile accordion) */}
+      
         <button
           type="button"
-          className="flex items-center gap-1"
+          className="flex items-center justify-between gap-1 w-full"
           onClick={() => setMobileServicesOpen((p) => !p)}
         >
-          <NavLink to="/services" className={getLinkClass} reloadDocument>Services</NavLink>
+          <span className="flex-1 text-left">
+            <NavLink to="/services" className={getLinkClass} reloadDocument>
+              Services
+            </NavLink>
+          </span>
           <ChevronDown
             size={16}
-            className={`transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''
-              }`}
+            className={`transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''}`}
           />
         </button>
 
+
         {mobileServicesOpen && (
-          <div className="w-full flex flex-col gap-2 px-6">
+          <div className="w-full flex flex-col gap-1">
             {services.map((s) => (
               <NavLink
                 key={s.to}
@@ -222,9 +226,9 @@ const Header = () => {
           </div>
         )}
 
-        <button className="bg-[var(--primary-color)] text-[var(--white-color)] px-6 py-2 rounded-full cursor-pointer">
+        <Link to="/about" reloadDocument><button className="bg-[var(--primary-color)] text-[var(--white-color)] px-6 py-2 rounded-full cursor-pointer">
           Learn More
-        </button>
+        </button></Link>
       </div>
     </header>
   );

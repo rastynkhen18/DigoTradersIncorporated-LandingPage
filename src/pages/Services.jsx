@@ -90,50 +90,61 @@ const Services = () => {
 
 
                 <section
-                    className="relative flex justify-center items-center flex-col h-[400px] bg-cover bg-center"
+                    className="relative flex justify-center items-center flex-col h-[300px] bg-cover bg-center"
                     style={{ backgroundImage: `url(${ServicesBackgroundImage})` }}
                 >
-                    <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
+                    <div className="absolute inset-0 bg-black opacity-70 z-0" />
 
-                    <div className="relative text-center px-6">
-                        <h1 className="text-4xl md:text-5xl text-[var(--primary-color)] py-4 font-bold">
+                    <div className="relative text-center px-6 pt-16">
+                        <h1 className="text-xl md:text-3xl text-[var(--primary-color)] py-1 font-bold">
                             SERVICES
                         </h1>
-                        <p className="text-base md:text-lg text-[var(--white-color)]">
+                        <p className="text-sm md:text-base text-[var(--white-color)]">
                             Trusted logistics solutions tailored to meet industry standards and business demands.
                         </p>
                     </div>
                 </section>
 
-                <div className='flex justify-center items-center text-justify mt-15 mx-15 md:mx-35'>
-                    <p className="text-base md:text-lg text-[var(--white-color)]">
-                        At DIGO Traders Incorporated, we offer a full suite of logistics and customs solutions tailored to businesses of all sizes. Whether you're importing high-value goods, moving domestic cargo, or navigating complex customs procedures, our team delivers dependable service every step of the way. We care about your cargo as much as you do — ensuring smooth, compliant, and cost-effective delivery across land, sea, and air.
-                    </p>
-                </div>
-                <section className="grid grid-cols-1 md:grid-cols-3 gap-6 p-16 md:mx-20">
 
+                <section className='p-5 md:p-10 md:mx-20'>
+                    <div className='flex justify-center items-center text-justify my-5'>
+                        <p className="text-sm md:text-lg text-[var(--white-color)]">
+                            At DIGO Traders Incorporated, we provide reliable logistics and customs solutions for businesses of all sizes. From land to sea and air, we ensure smooth, compliant, and cost-effective delivery every step of the way.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {data.map((item, index) => (
+                            <div
+                                key={index}
+                                className="rounded-2xl overflow-hidden flex flex-col h-full"
+                                style={{
+                                    background: 'linear-gradient(to bottom, var(--primary-accent), var(--primary-color))',
+                                }}
+                            >
+                                {/* Image container with aspect ratio */}
+                                <div className="aspect-[4/3] w-full">
+                                    <img src={item.img} alt={item.alt} className="w-full h-full object-cover" />
+                                </div>
 
-                    {data.map((item, index) => (
-                        <div key={index} className="rounded-2xl overflow-hidden" style={{
-                            background: 'linear-gradient(to bottom, var(--primary-accent), var(--primary-color))'
-                        }}>
-                            <div>
-                                <img src={item.img} alt={item.alt} className="w-full h-48 object-cover" />
+                                {/* Content section */}
+                                <div className="p-10 text-[var(--primary-color)] flex flex-col justify-between flex-1">
+                                    <div>
+                                        <h1 className="text-xl font-bold mb-2 text-[var(--white-color)]">{item.title}</h1>
+                                        <p className="mb-4 text-[var(--white-color)]">{item.description}</p>
+                                    </div>
+                                    <Link
+                                        to={item.link}
+                                        className="inline-block bg-[var(--white-color)] text-[var(--primary-color)] px-4 py-2 w-full text-center font-bold rounded-full cursor-pointer mt-auto transition-all duration-300 ease-in-out hover:bg-[var(--secondary-color)] hover:text-[var(--white-color)]"
+                                        reloadDocument
+                                    >
+                                        {item.button}
+                                    </Link>
+                                </div>
                             </div>
-                            <div className="p-4 text-[var(--primary-color)]">
-                                <h1 className="text-xl font-bold mb-2 text-[var(--white-color)]">{item.title}</h1>
-                                <p className="mb-4 text-[var(--white-color)]">{item.description}</p>
-                                <Link
-                                    to={item.link}
-                                    className="inline-block bg-[var(--white-color)] text-[var(--primary-color)] px-4 py-2 w-full text-center font-bold rounded-full cursor-pointer"
-                                    reloadDocument
-                                >
-                                    {item.button}
-                                </Link>
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </section>
+
             </main>
         </div>
     )

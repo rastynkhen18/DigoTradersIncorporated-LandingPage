@@ -1,6 +1,6 @@
 import React from 'react'
-import DomesticTransferServicesImage from '../assets/images/servicesDomesticTransferImg2.png';
-import ReadyToShip from '../components/ReadyToShip';
+import DomesticTransferServicesImage from '../../assets/images/servicesDomesticTransferImg2.png';
+import ReadyToShip from '../../components/ReadyToShip';
 
 
 

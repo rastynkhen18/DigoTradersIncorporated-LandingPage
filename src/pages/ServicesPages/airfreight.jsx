@@ -1,7 +1,7 @@
 import React from 'react';
-import ServicesAirFreightImg1 from '../assets/images/servicesAirFreightImg1.png';
-import ServicesAirFreightImg2 from '../assets/images/servicesAirFreightImg2.png';
-import ReadyToShip from '../components/ReadyToShip';
+import ServicesAirFreightImg1 from '../../assets/images/servicesAirFreightImg1.png';
+import ServicesAirFreightImg2 from '../../assets/images/servicesAirFreightImg2.png';
+import ReadyToShip from '../../components/ReadyToShip';
 import {
   Truck,
   Package,

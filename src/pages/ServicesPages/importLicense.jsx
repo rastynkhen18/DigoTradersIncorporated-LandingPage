@@ -1,6 +1,6 @@
 import React from 'react'
-import AccreditationOfImportLicenseImage from '../assets/images/servicesAccreditation.png';
-import LetsRenewAmoCertificate from '../components/LetsRenewAmoCertificate';
+import AccreditationOfImportLicenseImage from '../../assets/images/servicesAccreditation.png';
+import LetsRenewAmoCertificate from '../../components/LetsRenewAmoCertificate';
 
 const importLicense = () => {
     return (

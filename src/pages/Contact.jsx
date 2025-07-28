@@ -32,17 +32,17 @@ const Contact = () => {
         <div>
 
             <section
-                className="relative flex justify-center items-center flex-col h-[400px] bg-cover bg-center"
+                className="relative flex justify-center items-center flex-col h-[300px] bg-cover bg-center"
                 style={{ backgroundImage: `url(${ServicesBackgroundImage})` }}
             >
                 <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
 
-                <div className="relative text-center px-6">
-                    <h1 className="text-4xl md:text-5xl text-[var(--primary-color)] py-4 font-bold">
+                <div className="relative text-center px-6 pt-16">
+                    <h1 className="text-xl md:text-3xl text-[var(--primary-color)] py-1 font-bold">
                         Contact Us
                     </h1>
-                    <p className="text-base md:text-lg text-[var(--white-color)]">
-                       Whether you have a question about our services, need a quote, or want you to discuss your shipping requirments - our team is ready to assist you. 
+                    <p className="text-sm md:text-base text-[var(--white-color)]">
+                        Whether you have a question about our services, need a quote, or want you to discuss your shipping requirments - our team is ready to assist you.
                     </p>
                 </div>
             </section>
@@ -130,8 +130,8 @@ const Contact = () => {
                             <div>
                                 <h2 className="text-xl font-semibold mb-1">Stay Connected</h2>
                                 <div className="flex gap-4 items-center">
-                                        <img src={FacebookLogo} alt="Facebook" className="w-6 h-6" />
-                                        <img src={InstagramLogo} alt="Instagram" className="w-6 h-6" />
+                                    <img src={FacebookLogo} alt="Facebook" className="w-6 h-6" />
+                                    <img src={InstagramLogo} alt="Instagram" className="w-6 h-6" />
                                 </div>
                             </div>
                         </div>
