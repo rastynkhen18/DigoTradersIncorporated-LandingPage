@@ -1,4 +1,5 @@
 import React from 'react'
+import Header2 from '../components/Header2';
 import ServicesBackgroundImage from '../assets/images/services-bg.png';
 import ContactImage from '../assets/images/contactImg.png';
 import emailjs from '@emailjs/browser';
@@ -35,7 +36,9 @@ const Contact = () => {
                 className="relative flex justify-center items-center flex-col h-[300px] bg-cover bg-center"
                 style={{ backgroundImage: `url(${ServicesBackgroundImage})` }}
             >
-                <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
+                <div className="absolute inset-0 bg-black opacity-70 z-0" />
+
+                <Header2 />
 
                 <div className="relative text-center px-6 pt-16">
                     <h1 className="text-xl md:text-3xl text-[var(--primary-color)] py-1 font-bold">

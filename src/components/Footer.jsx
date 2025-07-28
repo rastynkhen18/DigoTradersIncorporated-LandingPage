@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../assets/DigoTradersIncLogo.svg';
+import Logo from '../assets/DigoTradersIncorporatedLogo.svg';
 import FacebookLogo from '../assets/images/Facebook_Logo_Secondary1.svg';
 import InstagramLogo from '../assets/images/Instagram_Glyph_White1.svg';
 
@@ -9,8 +9,9 @@ const Footer = () => {
             <div className="grid md:grid-cols-6 gap-4 border-b border-[var(--gray-accent)] pb-10">
 
                 {/* Logo and description */}
-                <div className="col-span-3 md:col-span-2 flex flex-col items-center text-center md:items-start md:text-left w-[166px]">
-                    <img src={Logo} alt="Digo Traders Inc." className="w-36 mb-4" />
+                <div className="col-span-3 md:col-span-2 flex flex-col justify-center items-center text-justify gap-1 w-full md:justify-start md:items-start md:text-left md:max-w-[330px]">
+                    <img src={Logo} alt="Digo Traders Inc." className="w-36" />
+                    <h1 className="tracking-[0.3em]">TRADERS INC.</h1>
                     <p className="flex text-[var(--gray-color)] text-sm">
                         Digo Traders Inc. helps individuals and businesses with local and international import and export, managing everything from paperwork to delivery.
                     </p>
@@ -20,7 +21,7 @@ const Footer = () => {
                 <div className='w-full'>
                     <h2 className="font-semibold text-base text-[var(--primary-color)] mb-2">Quick Links</h2>
                     <ul className="space-y-1 text-sm text-[var(--gray-color)]">
-                    <li>Home</li>
+                        <li>Home</li>
                         <li>About</li>
                         <li>Services</li>
                         <li>Contact</li>

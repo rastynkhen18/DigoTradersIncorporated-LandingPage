@@ -1,4 +1,5 @@
 import React from 'react'
+import Header2 from '../components/Header2';
 import ServicesBackgroundImage from '../assets/images/services-bg.png';
 import Logo from '../assets/DigoTradersIncLogo.svg';
 import AboutImage from '../assets/images/aboutImg.png';
@@ -11,6 +12,39 @@ import {
     FileText,
 } from 'lucide-react';
 
+const services = [
+    {
+        title: 'Land Freight',
+        description: 'Nationwide delivery.',
+        icon: <Truck size={40} />,
+    },
+    {
+        title: 'Air Freight',
+        description: 'Fast Global Shipping.',
+        icon: <Plane size={40} />,
+    },
+    {
+        title: 'Sea Freight',
+        description: 'Affordable bulk transport.',
+        icon: <Anchor size={40} />,
+    },
+    {
+        title: 'Compliance',
+        description: 'Clearance & legal docs.',
+        icon: <Scale size={40} />,
+    },
+    {
+        title: 'Door-to-door',
+        description: 'Part to destination, handled.',
+        icon: <MapPin size={40} />,
+    },
+    {
+        title: 'Licensing',
+        description: 'Permits, papers, done.',
+        icon: <FileText size={40} />,
+    },
+];
+
 
 const About = () => {
     return (
@@ -19,7 +53,9 @@ const About = () => {
                 className="relative flex justify-center items-start flex-col h-[300px] bg-cover bg-center"
                 style={{ backgroundImage: `url(${ServicesBackgroundImage})` }}
             >
-                <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
+                <div className="absolute inset-0 bg-black opacity-70 z-0" />
+
+                <Header2 />
 
                 <div className="relative text-start mx-8 pt-16 md:ml-50">
                     <h1 className="text-xl md:text-3xl text-[var(--primary-color)] py-1 font-bold">
@@ -32,16 +68,18 @@ const About = () => {
             </section>
 
 
-            <section className="flex flex-col md:flex-row justify-between items-center w-full gap-1 p-16">
-                <div className="w-full md:w-1/2">
-                    <img src={Logo} alt="Digo Traders Inc." className="w-40 h-auto mb-4" />
-                    <p className="text-base md:text-base text-left font-semibold">
-                        DIGO Traders Incorporated is a Philippine-based logistics company committed to making import, export, and domestic shipping easier for businesses of all sizes. Whether you're transporting goods across borders or across cities, we handle every step with accuracy, speed, and transparency.
-                    </p>
-                </div>
+            <section className="flex justify-center items-center">
+                <div className='flex flex-col md:flex-row justify-center items-center gap-15 p-16 w-full max-w-[1024px]'>
+                    <div className="w-full md:w-1/2">
+                        <img src={Logo} alt="Digo Traders Inc." className="w-40 h-auto mb-4" />
+                        <p className="text-sm md:text-base text-justify">
+                            DIGO Traders Incorporated is a Philippine-based logistics company committed to making import, export, and domestic shipping easier for businesses of all sizes. Whether you're transporting goods across borders or across cities, we handle every step with accuracy, speed, and transparency.
+                        </p>
+                    </div>
 
-                <div className="w-full md:w-1/2 flex justify-center">
-                    <img src={AboutImage} alt="About" className="w-full" />
+                    <div className="w-full md:w-1/2 flex justify-center">
+                        <img src={AboutImage} alt="About" className="w-full" />
+                    </div>
                 </div>
             </section>
 
@@ -50,58 +88,50 @@ const About = () => {
                 style={{
                     background: 'linear-gradient(to top, var(--secondary-color), var(--secondary-accent), black)',
                 }}
-                className="py-12 px-6"
+                className='flex justify-center items-center'
             >
-                <h1 className="text-4xl md:text-5xl text-[var(--white-color)] font-semibold mb-10 text-center">
-                    We Specialize In:
-                </h1>
+                <div className='flex flex-col md:flex-col justify-center items-center gap-5 p-5 w-full max-w-[1024px]'>
 
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-                    <div className="bg-[var(--primary-color)] text-[var(--white-color)] rounded-2xl p-6 shadow-lg flex items-start gap-4">
-                        <Truck size={40} />
-                        <div>
-                            <h1 className="text-2xl font-semibold mb-1">Land Freight</h1>
-                            <p>Nationwide delivery.</p>
+                    <h1 className="text-xl md:text-2xl text-[var(--primary-color)] font-semibold text-center">
+                        We Specialize In:
+                    </h1>
+
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+                        {services.map((service, index) => (
+                            <div
+                                key={index}
+                                className="bg-[var(--primary-color)] text-[var(--white-color)] rounded-2xl p-6 shadow-lg flex items-start gap-4"
+                            >
+                                {service.icon}
+                                <div>
+                                    <h1 className="text-base md:text-base font-semibold mb-1">{service.title}</h1>
+                                    <p className='text-sm md:text-sm'>{service.description}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className='flex flex-col md:flex-row justify-center items-center gap-15 p-16 w-full max-w-[1024px]'>
+                        <div className="w-full md:w-1/2">
+                            <h1 className="text-base md:text-base  text-[var(--primary-color)]">MISSION</h1>
+                            <p className='text-sm md:text-sm text-[var(--white-color)]'>Our mission is to source and deliver high-quality products from international markets efficiently, ethically, and cost-effectively, meeting the needs of our clients while fostering strong relationships with global suppliers.
+                            </p>
+                        </div>
+
+                        <div className="w-full md:w-1/2 flex justify-center">
+                            <img src={AboutImage} alt="About" className="w-full" />
                         </div>
                     </div>
 
-                    <div className="bg-[var(--primary-color)] text-[var(--white-color)] rounded-2xl p-6 shadow-lg flex items-start gap-4">
-                        <Plane size={40} />
-                        <div>
-                            <h1 className="text-2xl font-semibold mb-1">Air Freight</h1>
-                            <p>Fast Global Shipping.</p>
-                        </div>
-                    </div>
 
-                    <div className="bg-[var(--primary-color)] text-[var(--white-color)] rounded-2xl p-6 shadow-lg flex items-start gap-4">
-                        <Anchor size={40} />
-                        <div>
-                            <h1 className="text-2xl font-semibold mb-1">Sea Freight</h1>
-                            <p>Affordable bulk transport.</p>
+                    <div className='flex flex-col md:flex-row-reverse justify-center items-center gap-15 p-16 w-full max-w-[1024px]'>
+                        <div className="w-full md:w-1/2">
+                            <h1 className="text-base md:text-base text-[var(--primary-color)]">VISION</h1>
+                            <p className='text-sm md:text-sm text-[var(--white-color)]'>Our vision is to be a trusted global leader in import and export, connecting markets and delivering value with integrity, efficiency, and innovation."</p>
                         </div>
-                    </div>
 
-                    <div className="bg-[var(--primary-color)] text-[var(--white-color)] rounded-2xl p-6 shadow-lg flex items-start gap-4">
-                        <Scale size={40} />
-                        <div>
-                            <h1 className="text-2xl font-semibold mb-1">Compliance</h1>
-                            <p>Clearance & legal docs.</p>
-                        </div>
-                    </div>
-
-                    <div className="bg-[var(--primary-color)] text-[var(--white-color)] rounded-2xl p-6 shadow-lg flex items-start gap-4">
-                        <MapPin size={40} />
-                        <div>
-                            <h1 className="text-2xl font-semibold mb-1">Door-to-door</h1>
-                            <p>Part to destination, handled.</p>
-                        </div>
-                    </div>
-
-                    <div className="bg-[var(--primary-color)] text-[var(--white-color)] rounded-2xl p-6 shadow-lg flex items-start gap-4">
-                        <FileText size={40} />
-                        <div>
-                            <h1 className="text-2xl font-semibold mb-1">Licensing</h1>
-                            <p>Permits, papers, done.</p>
+                        <div className="w-full md:w-1/2 flex justify-center">
+                            <img src={AboutImage} alt="About" className="w-full" />
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Header2 from '../components/Header2';
 import ServicesBackgroundImage from '../assets/images/services-bg.png';
 import ServicesSeaFreight from '../assets/images/servicesSeaFreight.png'
 import ServicesAirFreight from '../assets/images/servicesAirFreight.png'
@@ -94,6 +95,8 @@ const Services = () => {
                     style={{ backgroundImage: `url(${ServicesBackgroundImage})` }}
                 >
                     <div className="absolute inset-0 bg-black opacity-70 z-0" />
+
+                    <Header2 />
 
                     <div className="relative text-center px-6 pt-16">
                         <h1 className="text-xl md:text-3xl text-[var(--primary-color)] py-1 font-bold">

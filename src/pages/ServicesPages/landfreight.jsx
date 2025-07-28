@@ -62,7 +62,7 @@ const Landfreight = () => {
                 <div key={index} className="relative flex items-center gap-5">
                   {/* Vertical line */}
                   {index < 5 && (
-                    <div className="absolute left-6 top-[40%] translate-y-1/2 w-1 h-full bg-[var(--primary-color)] z-0"></div>
+                    <div className="absolute left-6 top-[30%] translate-y-1/2 w-1 h-full bg-[var(--primary-color)] z-0"></div>
                   )}
 
                   {/* Icon */}

@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from '../components/Header';
 import HomePageBackground from '../assets/images/homepage-img.png';
 import Container1Image from '../assets/images/container1Image.png';
 import Container2Image from '../assets/images/container2Image.png';
@@ -8,9 +9,6 @@ import Airplane from '../assets/images/airplane-transparent.png'
 import { Package, ShoppingCart, Truck, Factory, Building2, ShieldCheck, Clock, FileText, Check } from 'lucide-react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import emailjs from '@emailjs/browser'; //Update
-
-
-
 
 
 const Home = () => {
@@ -41,6 +39,7 @@ const Home = () => {
           className="w-full h-[100vh] lg:h-[95vh] bg-cover bg-center flex flex-col justify-center items-center"
           style={{ backgroundImage: `url(${HomePageBackground})` }}
         >
+          <Header />
 
           {/* Airplane Image */}
           <img
@@ -79,8 +78,10 @@ const Home = () => {
           {/* Who We Serve Section */}
           <div className="w-full">
             {/* Top Divider */}
-            <div className="w-full h-[20px] bg-[var(--primary-color)]" />
-
+            <div className="w-full h-[23px]" style={{
+              background: 'linear-gradient(to left, var(--primary-accent), var(--primary-color))'
+            }} />
+            
             {/* Content */}
             <div className="w-full bg-[var(--white-color)] text-center flex flex-col items-center">
               <h2 className="text-2xl md:text-3xl font-bold text-[var(--primary-color)] m-2">
@@ -120,7 +121,9 @@ const Home = () => {
             </div>
 
             {/* Bottom Divider */}
-            <div className="w-full h-[20px] bg-[var(--primary-color)]" />
+            <div className="w-full h-[23px]" style={{
+              background: 'linear-gradient(to left, var(--primary-accent), var(--primary-color))'
+            }} />
           </div>
         </section>
 
@@ -132,7 +135,9 @@ const Home = () => {
         {/* 3rd Section */}
         <section>
           {/* Top divider bar */}
-          <div className="bg-[var(--primary-color)] w-full h-[23px]"></div>
+          <div className="w-full h-[23px]" style={{
+            background: 'linear-gradient(to left, var(--primary-accent), var(--primary-color))'
+          }} />
 
           {/* Content wrapper */}
           <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">

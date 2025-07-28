@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import Header2 from '../components/Header2';
 import ServicesBackgroundImage from '../assets/images/services-bg.png';
 import Sidebar from '../components/ServicesSidebar';
 import Seafreight from '../pages/ServicesPages/seafreight';
@@ -32,6 +33,7 @@ const ServicesLayoutPage = () => {
       </section>
 
       <main className="flex min-h-screen gap-5">
+        <Header2/>
         <Sidebar />
         <div>
           <Routes>

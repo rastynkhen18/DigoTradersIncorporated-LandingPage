@@ -17,12 +17,12 @@ const services = [
 
 const getLinkClass = ({ isActive }) =>
   isActive
-    ? 'border-b-2 border-[var(--primary-color)]'
+    ? 'border-b-2 border-[var(--primary-color)] m-0 p-0'
     : 'text-inherit';
 
 const getDropdownLinkClass = ({ isActive }) =>
   `block w-full text-left py-2 transition-colors ${isActive
-    ? 'text-[var(--primary-color)] bg-gray-50 font-bold text-sm'
+    ? 'text-[var(--primary-color)] bg-gray-50 font-bold text-sm px-5'
     : 'text-[#1e1e1e] hover:bg-gray-100 font-normal text-sm leading-[1] px-5'
   }`;
 
@@ -69,32 +69,35 @@ const Header = () => {
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled
         ? 'bg-[var(--white-color)] text-[var(--secondary-color)] shadow-md'
-        : 'bg-black/30 backdrop-blur-md text-[var(--white-color)]'
+        : 'text-[var(--white-color)]'
         }`}
     >
       <div className="flex justify-between md:justify-around items-center h-16 px-5">
-        <Link to="/" reloadDocument>
-          <img
-            src={Logo}
-            alt="Digo Traders Incorporated Logo"
-            className="cursor-pointer w-18"
-          />
-        </Link>
+        <div>
+          <Link to="/" reloadDocument>
+            <img
+              src={Logo}
+              alt="Digo Traders Incorporated Logo"
+              className="cursor-pointer w-18"
+            />
+          </Link>
+        </div>
+
 
         {/* Desktop Nav */}
         <nav
           className={`hidden md:flex justify-center items-center gap-10 ${scrolled
             ? 'text-[var(--secondary-color)]'
-            : 'text-[var(--white-color)]'
+            : 'text-[var(--secondary-color)]'
             }`}
         >
-          <NavLink to="/" className={getLinkClass} reloadDocument>
+          <NavLink to="/" className={getLinkClass}>
             Home
           </NavLink>
-          <NavLink to="/about" className={getLinkClass} reloadDocument>
+          <NavLink to="/about" className={getLinkClass}>
             About
           </NavLink>
-          <NavLink to="/contact" className={getLinkClass} reloadDocument>
+          <NavLink to="/contact" className={getLinkClass}>
             Contact
           </NavLink>
 
@@ -110,7 +113,7 @@ const Header = () => {
               className={`flex items-center gap-1 focus:outline-none ${servicesOpen ? 'text-[var(--primary-color)]' : ''
                 }`}
             >
-              <NavLink to="/services" className={getLinkClass} reloadDocument>Services</NavLink>
+              <NavLink to="/services" className={getLinkClass}>Services</NavLink>
               <ChevronDown
                 size={16}
                 className={`transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''
@@ -141,7 +144,9 @@ const Header = () => {
 
         {/* Desktop Button */}
         <div className="hidden md:block">
-          <Link to="/about" reloadDocument><button className="bg-[var(--primary-color)] text-[var(--white-color)] px-6 py-2 rounded-full cursor-pointer">
+          <Link to="/about"><button className="text-[var(--white-color)] px-6 py-2 rounded-full cursor-pointer" style={{
+            background: 'linear-gradient(to left, var(--primary-accent), var(--primary-color))'
+          }}>
             Learn More
           </button></Link>
         </div>
@@ -153,8 +158,8 @@ const Header = () => {
               size={28}
               onClick={() => setIsOpen(false)}
               className={`cursor-pointer ${scrolled
-                ? 'text-[var(--secondary-color)]'
-                : 'text-[var(--secondary-color)]'
+                ? 'text-[var(--primary-color)]'
+                : 'text-[var(--primary-color)]'
                 }`}
             />
           ) : (
@@ -162,8 +167,8 @@ const Header = () => {
               size={28}
               onClick={() => setIsOpen(true)}
               className={`cursor-pointer ${scrolled
-                ? 'text-[var(--secondary-color)]'
-                : 'text-[var(--secondary-color)]'
+                ? 'text-[var(--primary-color)]'
+                : 'text-[var(--primary-color)]'
                 }`}
             />
           )}
@@ -179,24 +184,24 @@ const Header = () => {
             : '-translate-x-[-130%] opacity-0 pointer-events-none'
           } ${scrolled ? 'text-[var(--secondary-color)]' : 'text-[var(--secondary-color)]'}`}
       >
-        <NavLink to="/" className={getLinkClass} onClick={() => setIsOpen(false)} reloadDocument>
+        <NavLink to="/" className={getLinkClass} onClick={() => setIsOpen(false)}>
           Home
         </NavLink>
-        <NavLink to="/about" className={getLinkClass} onClick={() => setIsOpen(false)} reloadDocument>
+        <NavLink to="/about" className={getLinkClass} onClick={() => setIsOpen(false)}>
           About
         </NavLink>
-        <NavLink to="/contact" className={getLinkClass} onClick={() => setIsOpen(false)} reloadDocument>
+        <NavLink to="/contact" className={getLinkClass} onClick={() => setIsOpen(false)}>
           Contact
         </NavLink>
 
-      
+
         <button
           type="button"
           className="flex items-center justify-between gap-1 w-full"
           onClick={() => setMobileServicesOpen((p) => !p)}
         >
           <span className="flex-1 text-left">
-            <NavLink to="/services" className={getLinkClass} reloadDocument>
+            <NavLink to="/services" className={getLinkClass}>
               Services
             </NavLink>
           </span>
@@ -226,7 +231,9 @@ const Header = () => {
           </div>
         )}
 
-        <Link to="/about" reloadDocument><button className="bg-[var(--primary-color)] text-[var(--white-color)] px-6 py-2 rounded-full cursor-pointer">
+        <Link to="/about"><button className="text-[var(--white-color)] px-6 py-2 rounded-full cursor-pointer" style={{
+          background: 'linear-gradient(to left, var(--primary-accent), var(--primary-color))'
+        }}>
           Learn More
         </button></Link>
       </div>
