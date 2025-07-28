@@ -109,7 +109,7 @@ const Home = () => {
           <div className="flex flex-col-reverse md:flex-row items-center justify-between h-auto md:h-[100vh]">
 
             {/* Text Content */}
-            <div className="w-full md:w-1/2 px-10 text-justify">
+            <div className="flex flex-col gap-5 md:gap-5 w-full p-10 md:w-1/2">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-left">
                 Why Businesses Choose Us?
               </h1>
@@ -165,19 +165,31 @@ const Home = () => {
 
         {/* 4th Section */}
         <section>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-10" style={{
-            background: 'linear-gradient(to top, var(--primary-accent), var(--primary-color))'
-          }}>
-            <div className='w-full md:w-1/2'>
-              <img src={Container2Image} alt="Container2Image" className="w-full h-[650px] md:rounded-tr-[65%] shadow-md" />
+          <div
+            className="flex flex-col md:flex-row items-center justify-between gap-10 md:h-[100vh]"
+            style={{
+              background: 'linear-gradient(to top, var(--primary-accent), var(--primary-color))'
+            }}
+          >
+            {/* Image Section */}
+            <div className="flex w-full md:w-1/2 h-[300px] md:h-full overflow-hidden">
+              <img
+                src={Container2Image}
+                alt="Container2Image"
+                className="w-full h-full object-cover md:rounded-tr-[65%] shadow-md"
+              />
             </div>
 
-            <div className='w-full p-5 md:w-1/2 md:p-15'>
-              <h1 className="text-[var(--white-color)] text-4xl md:text-5xl lg:text-6xl font-bold">📦 How It Works?</h1>
+            {/* Text Section */}
+            <div className="flex flex-col w-full md:w-1/2 p-5 md:p-14">
+              <h1 className="text-[var(--white-color)] text-4xl md:text-5xl lg:text-6xl font-bold">
+                📦 How It Works?
+              </h1>
               <DropDownFAQ />
             </div>
           </div>
         </section>
+
 
         <section className='p-6' style={{
           background: 'linear-gradient(to top, var(--secondary-color), var(--secondary-accent), black)'

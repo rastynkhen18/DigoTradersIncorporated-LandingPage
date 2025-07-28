@@ -87,7 +87,7 @@ const DropdownFAQ = () => {
         return (
           <div
             key={index}
-            className="text-[var(--secondary-color)] border-none rounded-xl shadow-sm bg-[var(--white-color)] p-4 transition-all duration-300"
+            className="text-[var(--secondary-color)] border-none rounded-xl shadow-sm bg-[var(--white-color)] p-4 sm:p-2  transition-all duration-300"
           >
             <button
               onClick={() => toggleDropdown(index)}
