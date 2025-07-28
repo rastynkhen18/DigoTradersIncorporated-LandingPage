@@ -101,7 +101,7 @@ const Contact = () => {
 
                                 <button
                                     type="submit"
-                                    className="w-1/4 text-[var(--white-color)] py-2 px-4 rounded-full transition cursor-pointer"
+                                    className="w-full text-[var(--white-color)] py-2 px-4 rounded-full transition cursor-pointer"
                                     style={{
                                         background: 'linear-gradient(to right, var(--primary-color), var(--primary-accent))'
                                     }}

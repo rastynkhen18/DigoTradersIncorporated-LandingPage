@@ -103,19 +103,19 @@ const Home = () => {
           background: 'linear-gradient(to left, var(--primary-accent), var(--primary-color))'
         }} />
 
-        {/* 3rd Section */}
+
         <section>
           {/* Content wrapper */}
-          <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+          <div className="flex flex-col-reverse md:flex-row items-center justify-between h-auto md:h-[100vh]">
 
             {/* Text Content */}
-            <div className='w-full md:w-1/2 px-25 text-justify'>
-              <h1 className="text-2xl md:text-3xl lg:4xl font-bold">
+            <div className="w-full md:w-1/2 px-10 text-justify">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-left">
                 Why Businesses Choose Us?
               </h1>
 
               {/* Card 1 */}
-              <div className='py-5'>
+              <div>
                 <h3 className="flex items-center text-xl font-semibold gap-2">
                   <ShieldCheck className="text-[var(--primary-color)] w-10 h-10" />
                   Safe & Secure Handling
@@ -127,7 +127,7 @@ const Home = () => {
               </div>
 
               {/* Card 2 */}
-              <div className='py-5'>
+              <div>
                 <h3 className="flex items-center text-xl font-semibold gap-2">
                   <Clock className="text-[var(--primary-color)] w-10 h-10" />
                   On-Time Delivery
@@ -139,7 +139,7 @@ const Home = () => {
               </div>
 
               {/* Card 3 */}
-              <div className='py-5'>
+              <div>
                 <h3 className="flex items-center text-xl font-semibold gap-2">
                   <FileText className="text-[var(--primary-color)] w-10 h-10" />
                   Hassle-Free Documentation
@@ -152,8 +152,12 @@ const Home = () => {
             </div>
 
             {/* Image Content */}
-            <div className='w-full h-full md:w-1/2'>
-              <img src={Container1Image} alt="Shipping container" className="w-full h-auto md:rounded-tl-[65%] shadow-md" />
+            <div className="w-full md:w-1/2 h-[300px] md:h-full overflow-hidden">
+              <img
+                src={Container1Image}
+                alt="Shipping container"
+                className="w-full h-full object-cover md:rounded-tl-[65%] shadow-md"
+              />
             </div>
           </div>
         </section>
@@ -196,7 +200,7 @@ const Home = () => {
                       type="text"
                       placeholder="Your Name"
                       name='name'
-                      className="w-full px-4 py-2 border border-[var(--gray-color)] rounded-md bg-[var(--white-color)] placeholder-[var(--gray-color)] focus:outline-none"
+                      className="w-full px-4 py-2 border border-[var(--gray-color)] rounded-md bg-[var(--white-color)] placeholder-[var(--gray-color)] focus:outline"
                     />
                   </div>
 
