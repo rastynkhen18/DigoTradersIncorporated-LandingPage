@@ -110,7 +110,7 @@ const ServicesSection = () => {
                   <h1 className="text-2xl font-bold">{services[activeIndex].title}</h1>
                   <h3 className="text-lg font-medium">{services[activeIndex].description}</h3>
                   <p className="text-sm">{services[activeIndex].details}</p>
-                  <div className="flex gap-4 mt-4">
+                  <div className="flex justify-center items-center gap-4 mt-4">
                   <Link to="/services" reloadDocument><button className="text-sm bg-[var(--primary-color)] pl-4 pr-3 py-2 rounded-xl text-[var(--secondary-color)] flex items-center cursor-pointer">
                       Learn More <ChevronRight size={18} />
                     </button></Link>

@@ -82,10 +82,10 @@ const Home = () => {
             <div className="w-full h-[23px]" style={{
               background: 'linear-gradient(to left, var(--primary-accent), var(--primary-color))'
             }} />
-            
+
             {/* Content */}
-            <WhoWeServeSlideshow/>
-      
+            <WhoWeServeSlideshow />
+
 
             {/* Bottom Divider */}
             <div className="w-full h-[23px]" style={{
@@ -98,20 +98,19 @@ const Home = () => {
         {/* 2nd Section  Our Services*/}
         <ServicesSection />
 
+        {/* Top divider bar */}
+        <div className="w-full h-[23px]" style={{
+          background: 'linear-gradient(to left, var(--primary-accent), var(--primary-color))'
+        }} />
 
         {/* 3rd Section */}
         <section>
-          {/* Top divider bar */}
-          <div className="w-full h-[23px]" style={{
-            background: 'linear-gradient(to left, var(--primary-accent), var(--primary-color))'
-          }} />
-
           {/* Content wrapper */}
           <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
 
             {/* Text Content */}
-            <div className='w-full md:w-1/2 p-5'>
-              <h1 className="text-4xl md:text-5xl font-bold">
+            <div className='w-full md:w-1/2 px-25 text-justify'>
+              <h1 className="text-2xl md:text-3xl lg:4xl font-bold">
                 Why Businesses Choose Us?
               </h1>
 
@@ -122,7 +121,7 @@ const Home = () => {
                   Safe & Secure Handling
                   <Check className="text-[var(--green-color)]  w-10 h-10" />
                 </h3>
-                <p className="text-base md:text-lg lg:text-xl">
+                <p className="text-sm md:text-base lg:text-lg">
                   No matter the size or type of shipment, your cargo is protected at every step. From packaging to transport, we follow strict safety protocols across land, sea, and air to ensure it arrives in perfect condition.
                 </p>
               </div>
@@ -134,7 +133,7 @@ const Home = () => {
                   On-Time Delivery
                   <Check className="text-[var(--green-color)] w-10 h-10" />
                 </h3>
-                <p className="text-base md:text-lg lg:text-xl">
+                <p className="text-sm md:text-base lg:text-lg">
                   We value your time. Our logistics operations are built around efficiency and smart route planning – so your shipments reach their destination on schedule, whether locally or internationally.
                 </p>
               </div>
@@ -146,7 +145,7 @@ const Home = () => {
                   Hassle-Free Documentation
                   <Check className="text-[var(--green-color)] w-10 h-10" />
                 </h3>
-                <p className="text-base md:text-lg lg:text-xl">
+                <p className="text-sm md:text-base lg:text-lg">
                   We take the burden of paperwork off your shoulders. From shipping documents to import/export permits, our team handles it all – making the logistics process smoother and faster for you.
                 </p>
               </div>

@@ -158,8 +158,8 @@ const Header = () => {
               size={28}
               onClick={() => setIsOpen(false)}
               className={`cursor-pointer ${scrolled
-                ? 'text-[var(--primary-color)]'
-                : 'text-[var(--primary-color)]'
+                ? 'text-[var(--secondary-color)]'
+                : 'text-[var(--secondary-color)]'
                 }`}
             />
           ) : (
@@ -167,8 +167,8 @@ const Header = () => {
               size={28}
               onClick={() => setIsOpen(true)}
               className={`cursor-pointer ${scrolled
-                ? 'text-[var(--primary-color)]'
-                : 'text-[var(--primary-color)]'
+                ? 'text-[var(--secondary-color)]'
+                : 'text-[var(--secondary-color)]'
                 }`}
             />
           )}
