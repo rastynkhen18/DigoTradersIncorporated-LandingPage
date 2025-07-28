@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import Header2 from '../components/Header2';
 import ServicesBackgroundImage from '../assets/images/services-bg.png';
 import Sidebar from '../components/ServicesSidebar';
@@ -13,7 +13,7 @@ import FreightTariffConsultation from '../pages/ServicesPages/freightTariffConsu
 import AmoCertificate from '../pages/ServicesPages/amoCertificate';
 import ImportLicense from '../pages/ServicesPages/importLicense';
 
-const ServicesLayoutPage = () => {
+const ServicesRoutes = () => {
   return (
     <div>
       <section
@@ -53,4 +53,4 @@ const ServicesLayoutPage = () => {
   );
 };
 
-export default ServicesLayoutPage;
+export default ServicesRoutes;
