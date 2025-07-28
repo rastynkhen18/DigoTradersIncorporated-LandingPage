@@ -1,6 +1,6 @@
 import React from 'react';
-import ServicesAirFreightImg1 from '../../assets/images/servicesAirFreightImg1.png';
-import ServicesAirFreightImg2 from '../../assets/images/servicesAirFreightImg2.png';
+import ServicesAirFreightImg1 from '../../assets/images/servicesAirfreightImg1.png';
+import ServicesAirFreightImg2 from '../../assets/images/servicesAirfreightImg2.png';
 import ReadyToShip from '../../components/ReadyToShip';
 import {
   Truck,
