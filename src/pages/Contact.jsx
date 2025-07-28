@@ -50,20 +50,23 @@ const Contact = () => {
                 </div>
             </section>
 
-            <section className=" max-w-[1024px] gap-5 p-5 flex flex-col justify-center items-center md:flex-row bg-[var(--accent-color)]" > 
-                <div className="flex flex-col justify-center items-center md:flex-row gap-10">
+
+
+            <section className="min-h-screen w-full flex justify-center items-center p-6">
+                <div className="max-w-[1024px] flex flex-col justify-center items-center md:flex-row gap-10">
+                    {/* Left: Form */}
                     <div className="w-full md:w-1/2">
                         <div className="p-6 bg-[var(--white-color)] shadow-md rounded-2xl border-4 border-[var(--primary-color)]">
                             <p className="text-base md:text-lg text-left mb-2 font-bold">Have a question?</p>
                             <h1 className="text-[var(--primary-color)] md:text-4xl font-bold mb-6 text-left">Send us a Message.</h1>
 
-                            <form onSubmit={sendEmail} className="space-y-4">
+                            <form onSubmit={sendEmail}>
                                 <div>
                                     <label className="block text-sm font-medium text-[var(--white-color)] mb-1">Name</label>
                                     <input
                                         type="text"
                                         placeholder="Your Name"
-                                        name='name'
+                                        name="name"
                                         className="w-full px-4 py-2 border border-[var(--gray-color)] rounded-md bg-[var(--gray-color)] placeholder-[var(--gray-accent)] focus:outline-none"
                                     />
                                 </div>
@@ -73,7 +76,7 @@ const Contact = () => {
                                     <input
                                         type="email"
                                         placeholder="e.g support@digotraders.com"
-                                        name='email'
+                                        name="email"
                                         className="w-full px-4 py-2 border border-[var(--gray-color)] rounded-md bg-[var(--gray-color)] placeholder-[var(--gray-accent)] focus:outline-none"
                                     />
                                 </div>
@@ -83,7 +86,7 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         placeholder="Title"
-                                        name='subject'
+                                        name="subject"
                                         className="w-full px-4 py-2 border border-[var(--gray-color)] rounded-md bg-[var(--gray-color)] placeholder-[var(--gray-accent)] focus:outline-none"
                                     />
                                 </div>
@@ -92,7 +95,7 @@ const Contact = () => {
                                     <label className="block text-sm font-medium text-[var(--white-color)] mb-1">Message</label>
                                     <textarea
                                         placeholder="Type here..."
-                                        name='message'
+                                        name="message"
                                         rows="4"
                                         className="w-full px-4 py-2 border border-[var(--gray-color)] rounded-md bg-[var(--gray-color)] placeholder-[var(--gray-accent)] focus:outline-none"
                                     ></textarea>
@@ -102,7 +105,7 @@ const Contact = () => {
                                     type="submit"
                                     className="w-full text-[var(--white-color)] py-2 px-4 rounded-full transition cursor-pointer"
                                     style={{
-                                        background: 'linear-gradient(to right, var(--primary-color), var(--primary-accent))'
+                                        background: 'linear-gradient(to right, var(--primary-color), var(--primary-accent))',
                                     }}
                                 >
                                     Submit
@@ -111,12 +114,13 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div className="w-full md:w-1/2 space-y-6 text-[var(--white-color)] ">
+                    {/* Right: Contact Info */}
+                    <div className="w-full md:w-1/2 text-[var(--white-color)] flex flex-col gap-5">
                         <div>
                             <img src={ContactImage} alt="ContactImage" className="w-full" />
                         </div>
 
-                        <div className="bg-[var(--primary-color)] rounded-2xl p-6 space-y-6">
+                        <div className="flex flex-col gap-5 bg-[var(--primary-color)] rounded-2xl p-6">
                             <div>
                                 <h2 className="text-xl font-semibold mb-1">Our Office</h2>
                                 <p>2442 Park Avenue, Torred Bldg. Pasay City</p>
@@ -132,8 +136,12 @@ const Contact = () => {
                             <div>
                                 <h2 className="text-xl font-semibold mb-1">Stay Connected</h2>
                                 <div className="flex gap-4 items-center cursor-pointer">
-                                    <a href="https://www.facebook.com/profile.php?id=61577367794634" target='_blank'><img src={FacebookLogo} alt="Facebook" className="w-6 h-6" /></a>
-                                    <a href=""><img src={InstagramLogo} alt="Instagram" className="w-6 h-6" /></a>
+                                    <a href="https://www.facebook.com/profile.php?id=61577367794634" target="_blank" rel="noreferrer">
+                                        <img src={FacebookLogo} alt="Facebook" className="w-6 h-6" />
+                                    </a>
+                                    <a href="">
+                                        <img src={InstagramLogo} alt="Instagram" className="w-6 h-6" />
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -152,6 +160,7 @@ const Contact = () => {
                     referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
             </section>
+
         </div>
     )
 }

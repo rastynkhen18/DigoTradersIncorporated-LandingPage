@@ -10,6 +10,8 @@ const clientData = [
 ];
 
 const WhoWeServeSlideshow = () => {
+  const repeatedClients = [...clientData, ...clientData, ...clientData]; // 3× for seamless scroll
+
   return (
     <div className="overflow-hidden relative w-full bg-[var(--white-color)] py-6 flex flex-col items-center text-center">
       <h2 className="text-2xl md:text-3xl font-bold text-[var(--primary-color)] mb-4">
@@ -18,21 +20,22 @@ const WhoWeServeSlideshow = () => {
 
       <div className="relative w-full">
         {/* Gradient overlays */}
-        <div className="absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-white to-transparent z-10" />
-        <div className="absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-white to-transparent z-10" />
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-white to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-white to-transparent z-10" />
 
         {/* Sliding track */}
-        <div className="slideshow-track flex gap-12 text-[var(--gray-color)] font-semibold text-lg whitespace-nowrap px-6">
-          {/* Duplicate the list twice for seamless loop */}
-          {[...clientData, ...clientData].map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors shrink-0"
-            >
-              {item.icon}
-              <p className="text-sm md:text-lg">{item.label}</p>
-            </div>
-          ))}
+        <div className="slideshow-viewport">
+          <div className="slideshow-track">
+            {repeatedClients.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors shrink-0 text-[var(--gray-color)] font-semibold px-6"
+              >
+                {item.icon}
+                <p className="text-sm md:text-lg">{item.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -40,18 +43,26 @@ const WhoWeServeSlideshow = () => {
         Trusted by Small Businesses, E-Commerce Stores, and Corporations
       </p>
 
-      {/* Animation */}
       <style jsx>{`
-        .slideshow-track {
-          animation: scroll-left 25s linear infinite;
+        .slideshow-viewport {
+          overflow: hidden;
+          width: 100%;
         }
 
-        @keyframes scroll-left {
-          from {
+        .slideshow-track {
+          display: flex;
+          gap: 3rem;
+          width: max-content;
+          will-change: transform;
+          animation: scroll-infinite 20s linear infinite;
+        }
+
+        @keyframes scroll-infinite {
+          0% {
             transform: translateX(0%);
           }
-          to {
-            transform: translateX(-50%);
+          100% {
+            transform: translateX(-33.3333%);
           }
         }
       `}</style>
