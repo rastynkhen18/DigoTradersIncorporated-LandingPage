@@ -77,7 +77,7 @@ const DropdownFAQ = () => {
   };
 
   return (
-    <div className="mt-10 space-y-4">
+    <div className="flex flex-col gap-4">
       {faqs.map((faq, index) => {
         const isOpen = index === openIndex;
         const height = isOpen
@@ -87,7 +87,7 @@ const DropdownFAQ = () => {
         return (
           <div
             key={index}
-            className="text-[var(--secondary-color)] border-none rounded-xl shadow-sm bg-[var(--white-color)] p-4 sm:p-2  transition-all duration-300"
+            className="text-[var(--secondary-color)] border-none rounded-xl shadow-sm bg-[var(--white-color)] p-4 sm:p-2 lg:p-4 transition-all duration-300"
           >
             <button
               onClick={() => toggleDropdown(index)}

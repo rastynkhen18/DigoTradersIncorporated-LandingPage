@@ -50,9 +50,8 @@ const Contact = () => {
                 </div>
             </section>
 
-            <section className="py-12 px-4 bg-[var(--accent-color)]" >
-
-                <div className="max-w-7xl mx-auto flex flex-col justify-center items-center md:flex-row gap-10">
+            <section className=" max-w-[1024px] gap-5 p-5 flex flex-col justify-center items-center md:flex-row bg-[var(--accent-color)]" > 
+                <div className="flex flex-col justify-center items-center md:flex-row gap-10">
                     <div className="w-full md:w-1/2">
                         <div className="p-6 bg-[var(--white-color)] shadow-md rounded-2xl border-4 border-[var(--primary-color)]">
                             <p className="text-base md:text-lg text-left mb-2 font-bold">Have a question?</p>
@@ -138,9 +137,6 @@ const Contact = () => {
                                 </div>
                             </div>
                         </div>
-
-
-
                     </div>
                 </div>
             </section>

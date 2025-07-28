@@ -96,11 +96,11 @@ const About = () => {
                         We Specialize In:
                     </h1>
 
-                    <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 w-full">
                         {services.map((service, index) => (
                             <div
                                 key={index}
-                                className="bg-[var(--primary-color)] text-[var(--white-color)] rounded-2xl p-6 shadow-lg flex items-start gap-4"
+                                className="w-full bg-[var(--primary-color)] text-[var(--white-color)] rounded-2xl p-6 shadow-lg flex items-center gap-4"
                             >
                                 {service.icon}
                                 <div>
@@ -112,9 +112,9 @@ const About = () => {
                     </div>
 
                     <div className='flex flex-col md:flex-row justify-center items-center gap-15 p-16 w-full max-w-[1024px]'>
-                        <div className="w-full md:w-1/2">
-                            <h1 className="text-base md:text-7xl text-[var(--primary-color)]">MISSION</h1>
-                            <p className='text-sm md:text-lg text-[var(--white-color)]'>Our mission is to source and deliver high-quality products from international markets efficiently, ethically, and cost-effectively, meeting the needs of our clients while fostering strong relationships with global suppliers.
+                        <div className="flex flex-col gap-5 w-full md:w-1/2">
+                            <h1 className="text-lg md:text-4xl text-[var(--primary-color)]">MISSION</h1>
+                            <p className='text-sm md:text-base text-[var(--white-color)]'>Our mission is to source and deliver high-quality products from international markets efficiently, ethically, and cost-effectively, meeting the needs of our clients while fostering strong relationships with global suppliers.
                             </p>
                         </div>
 
@@ -125,9 +125,9 @@ const About = () => {
 
 
                     <div className='flex flex-col md:flex-row-reverse justify-center items-center gap-15 p-16 w-full max-w-[1024px]'>
-                        <div className="w-full md:w-1/2">
-                            <h1 className="text-base md:text-7xl text-[var(--primary-color)]">VISION</h1>
-                            <p className='text-sm md:text-lg text-[var(--white-color)]'>Our vision is to be a trusted global leader in import and export, connecting markets and delivering value with integrity, efficiency, and innovation."</p>
+                        <div className="flex flex-col gap-5 w-full md:w-1/2">
+                            <h1 className="text-lg md:text-4xl text-[var(--primary-color)]">VISION</h1>
+                            <p className='text-sm md:text-base text-[var(--white-color)]'>Our vision is to be a trusted global leader in import and export, connecting markets and delivering value with integrity, efficiency, and innovation."</p>
                         </div>
 
                         <div className="w-full md:w-1/2 flex justify-center">
