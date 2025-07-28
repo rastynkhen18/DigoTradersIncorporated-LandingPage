@@ -115,7 +115,7 @@ const Services = () => {
                             At DIGO Traders Incorporated, we provide reliable logistics and customs solutions for businesses of all sizes. From land to sea and air, we ensure smooth, compliant, and cost-effective delivery every step of the way.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                         {data.map((item, index) => (
                             <div
                                 key={index}

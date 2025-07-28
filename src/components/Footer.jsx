@@ -49,10 +49,10 @@ const Footer = () => {
                 </div>
 
                 {/* Follow Us */}
-                <div className="col-span-3 md:col-span-1 flex flex-col items-center text-center mt-4 md:mt-0 md:items-start md:text-left w-[166px]">
+                <div className="col-span-3 md:col-span-1 flex flex-col items-center text-center mt-4 md:mt-0 md:items-start md:text-left mx-auto md:mx-0">
                     <h2 className="font-semibold text-lg text-[var(--primary-color)] mb-2">Follow Us</h2>
-                    <div className="flex space-x-4">
-                        <a href="#" aria-label="Facebook">
+                    <div className="flex space-x-4 cursor-pointer">
+                        <a href="https://www.facebook.com/profile.php?id=61577367794634" target='_blank' aria-label="Facebook">
                             <img src={FacebookLogo} alt="Facebook" className="w-6 h-6 hover:opacity-80" />
                         </a>
                         <a href="#" aria-label="Instagram">

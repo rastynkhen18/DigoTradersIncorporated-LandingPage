@@ -132,9 +132,9 @@ const Contact = () => {
 
                             <div>
                                 <h2 className="text-xl font-semibold mb-1">Stay Connected</h2>
-                                <div className="flex gap-4 items-center">
-                                    <img src={FacebookLogo} alt="Facebook" className="w-6 h-6" />
-                                    <img src={InstagramLogo} alt="Instagram" className="w-6 h-6" />
+                                <div className="flex gap-4 items-center cursor-pointer">
+                                    <a href="https://www.facebook.com/profile.php?id=61577367794634" target='_blank'><img src={FacebookLogo} alt="Facebook" className="w-6 h-6" /></a>
+                                    <a href=""><img src={InstagramLogo} alt="Instagram" className="w-6 h-6" /></a>
                                 </div>
                             </div>
                         </div>

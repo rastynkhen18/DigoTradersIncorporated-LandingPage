@@ -113,8 +113,8 @@ const About = () => {
 
                     <div className='flex flex-col md:flex-row justify-center items-center gap-15 p-16 w-full max-w-[1024px]'>
                         <div className="w-full md:w-1/2">
-                            <h1 className="text-base md:text-base  text-[var(--primary-color)]">MISSION</h1>
-                            <p className='text-sm md:text-sm text-[var(--white-color)]'>Our mission is to source and deliver high-quality products from international markets efficiently, ethically, and cost-effectively, meeting the needs of our clients while fostering strong relationships with global suppliers.
+                            <h1 className="text-base md:text-7xl text-[var(--primary-color)]">MISSION</h1>
+                            <p className='text-sm md:text-lg text-[var(--white-color)]'>Our mission is to source and deliver high-quality products from international markets efficiently, ethically, and cost-effectively, meeting the needs of our clients while fostering strong relationships with global suppliers.
                             </p>
                         </div>
 
@@ -126,8 +126,8 @@ const About = () => {
 
                     <div className='flex flex-col md:flex-row-reverse justify-center items-center gap-15 p-16 w-full max-w-[1024px]'>
                         <div className="w-full md:w-1/2">
-                            <h1 className="text-base md:text-base text-[var(--primary-color)]">VISION</h1>
-                            <p className='text-sm md:text-sm text-[var(--white-color)]'>Our vision is to be a trusted global leader in import and export, connecting markets and delivering value with integrity, efficiency, and innovation."</p>
+                            <h1 className="text-base md:text-7xl text-[var(--primary-color)]">VISION</h1>
+                            <p className='text-sm md:text-lg text-[var(--white-color)]'>Our vision is to be a trusted global leader in import and export, connecting markets and delivering value with integrity, efficiency, and innovation."</p>
                         </div>
 
                         <div className="w-full md:w-1/2 flex justify-center">

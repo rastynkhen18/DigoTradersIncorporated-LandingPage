@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../components/Header';
 import HomePageBackground from '../assets/images/homepage-img.png';
+import WhoWeServeSlideshow from '../components/WhoWeServe';
 import Container1Image from '../assets/images/container1Image.png';
 import Container2Image from '../assets/images/container2Image.png';
 import DropDownFAQ from '../components/DropDownFAQ'
@@ -83,42 +84,8 @@ const Home = () => {
             }} />
             
             {/* Content */}
-            <div className="w-full bg-[var(--white-color)] text-center flex flex-col items-center">
-              <h2 className="text-2xl md:text-3xl font-bold text-[var(--primary-color)] m-2">
-                Who We Serve
-              </h2>
-
-              <div className="grid grid-cols-5 md:grid-cols-5 md:gap-6 text-[var(--gray-color)]">
-                <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
-                  <Package size={34} />
-                  <p className="text-sm md:text-lg">SMEs</p>
-                </div>
-
-                <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
-                  <ShoppingCart size={34} />
-                  <p className="text-sm md:text-lg">E-Commerce</p>
-                </div>
-
-                <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
-                  <Truck size={34} />
-                  <p className="text-sm md:text-lg">Distributors</p>
-                </div>
-
-                <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
-                  <Factory size={34} />
-                  <p className="text-sm md:text-lg">Manufacturer</p>
-                </div>
-
-                <div className="flex flex-col md:flex-row items-center gap-2 cursor-pointer hover:text-[var(--primary-color)] transition-colors">
-                  <Building2 size={34} />
-                  <p className="text-sm md:text-lg">Large Enterprises</p>
-                </div>
-              </div>
-
-              <p className="text-xs md:text-sm text-[var(--gray-color)] m-3">
-                Trusted by Small Businesses, E-Commerce Stores, and Corporations
-              </p>
-            </div>
+            <WhoWeServeSlideshow/>
+      
 
             {/* Bottom Divider */}
             <div className="w-full h-[23px]" style={{

@@ -47,7 +47,7 @@ const CustomBrokerage = () => {
 
             </div>
 
-            <div className="bg-[var(--white-color)] flex flex-col gap-5 pt-10 px-5 rounded-lg">
+            <div className="bg-[var(--white-color)] flex flex-col gap-5 p-5 px-5 rounded-lg">
               {/* Steps with icon and label side-by-side */}
               {[
                 { icon: <FileText size={30} />, label: "Complete Documentation" },
