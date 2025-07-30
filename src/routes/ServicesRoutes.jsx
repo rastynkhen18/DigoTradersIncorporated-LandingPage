@@ -35,7 +35,7 @@ const ServicesRoutes = () => {
 						<Route path="landfreight" element={<Landfreight />} />
 						<Route path="custombrokerage" element={<CustomBrokerage />} />
 						<Route path="fcl_lcl" element={<FclLcl />} />
-						<Route path="domestic-transport" element={<DomesticTransferServices />} />
+						<Route path="domestic-transfer-services" element={<DomesticTransferServices />} />
 						<Route path="freight-&-tariff-consultation" element={<FreightTariffConsultation />} />
 						<Route path="amo-certificate" element={<AmoCertificate />} />
 						<Route path="import-license" element={<ImportLicense />} />
