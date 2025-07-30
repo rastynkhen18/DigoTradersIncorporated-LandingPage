@@ -29,7 +29,7 @@ const ServicesSidebar = () => {
 					FCL/LCL
 				</NavLink>
 				<NavLink to="/services/domestic-transfer-services" className={getLinkClass} reloadDocument>
-					Domestic Transfer
+					Domestic Transport
 				</NavLink>
 				<NavLink to="/services/freight-&-tariff-consultation" className={getLinkClass} reloadDocument>
 					Freight & Tariff Consultation
