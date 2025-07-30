@@ -23,7 +23,6 @@ const getDropdownLinkClass = ({ isActive }) =>
 	}`;
 
 const Header = () => {
-	const sample = "Hello";
 	const [isOpen, setIsOpen] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
 	const [servicesOpen, setServicesOpen] = useState(false); // desktop dropdown
