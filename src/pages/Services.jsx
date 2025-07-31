@@ -14,20 +14,20 @@ import ServicesAccreditation from "../assets/images/servicesAccreditation.png";
 
 const data = [
 	{
-		img: ServicesSeaFreight,
-		alt: "ServicesSeaFreight",
-		title: "Sea Freight",
-		description: "Save costs by combining small shipments into one container - ideal for light cargo.",
-		button: "Read More",
-		link: "seafreight",
-	},
-	{
 		img: ServicesAirFreight,
 		alt: "ServicesAirFreight",
 		title: "Air Freight",
 		description: "For faster deliveries, We manage shipping goods via air cargo internationally.",
 		button: "Read More",
 		link: "airfreight",
+	},
+	{
+		img: ServicesSeaFreight,
+		alt: "ServicesSeaFreight",
+		title: "Sea Freight",
+		description: "Save costs by combining small shipments into one container - ideal for light cargo.",
+		button: "Read More",
+		link: "seafreight",
 	},
 	{
 		img: ServicesLandFreight,
@@ -81,7 +81,8 @@ const data = [
 		img: ServicesAccreditation,
 		alt: "ServicesAccreditation",
 		title: "Accreditation of Import License",
-		description: "If your business is new to importing, we help you get your import license and become registered with customs.",
+		description: "We help new importers secure their import license, register with customs, and manage renewal to stay compliant.",
+		// description: "If your business is new to importing, we help you get your import license and become registered with customs.",
 		button: "Read More",
 		link: "import-license",
 	},
@@ -109,7 +110,7 @@ const Services = () => {
 				<section className="p-5 md:p-10 md:mx-20">
 					<div className="flex justify-center items-center text-justify my-5">
 						<p className="text-sm md:text-lg text-[var(--white-color)]">
-							At DIGO Traders Incorporated, we provide reliable logistics and customs solutions for businesses of all sizes. From land to sea and air, we ensure smooth, compliant, and cost-effective
+							At DIGO Traders Incorporated, we provide reliable logistics and customs solutions for businesses of all sizes. From air to sea and land, we ensure smooth, compliant, and cost-effective
 							delivery every step of the way.
 						</p>
 					</div>

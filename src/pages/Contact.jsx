@@ -44,11 +44,11 @@ const Contact = () => {
 				</div>
 			</section>
 
-			<section className="min-h-screen w-full flex justify-center items-center p-5">
-				<div className="max-w-[1024px] flex flex-col justify-center items-center md:flex-row gap-5">
+			<section className=" w-full flex justify-center items-center p-5">
+				<div className="max-w-[1024]  h-full flex flex-col   md:flex-row gap-5">
 					{/* Left: Form */}
-					<div className="w-full md:w-1/2">
-						<div className="py-7 px-5 bg-[var(--white-color)] shadow-md rounded-xl border-2 border-[var(--primary-color)]">
+					<div className="w-full h-full  ">
+						<div className="py-7 px-5  bg-[var(--white-color)] shadow-md rounded-xl border-2 border-[var(--primary-color)]">
 							<p className="text-sm md:text-base text-left mb-2 font-bold">Have a question?</p>
 							<h1 className="text-[var(--primary-color)] md:text-xl font-bold mb-6 text-left">Send us a Message.</h1>
 
@@ -107,20 +107,20 @@ const Contact = () => {
 					</div>
 
 					{/* Right: Contact Info */}
-					<div className="w-full md:w-1/2 text-[var(--white-color)] flex flex-col gap-5">
+					<div className="w-full h-auto flex justify-between text-[var(--white-color)] flex-col  gap-5">
 						<div>
-							<img src={ContactImage} alt="ContactImage" className="w-full" />
+							<img src={ContactImage} alt="ContactImage" className="w-full aspect-video" />
 						</div>
 
 						<div
-							className="flex flex-col gap-5  rounded-xl p-6"
+							className="flex h-full flex-col justify-between rounded-xl p-6"
 							style={{
 								background: "linear-gradient(to right, var(--primary-color), var(--primary-accent))",
 							}}
 						>
 							<div>
 								<h2 className="text-xl font-semibold mb-1">Our Office</h2>
-								<p>2442 Park Avenue, Torred Bldg. Pasay City</p>
+								<p className="text-sm">2442 Park Avenue, Torred Bldg. Pasay City</p>
 							</div>
 
 							<div>

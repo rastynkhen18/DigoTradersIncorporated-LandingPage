@@ -78,7 +78,7 @@ const ServicesSection = () => {
 			>
 				<h1 className="text-[var(--primary-color)] text-2xl md:text-3xl font-bold">OUR SERVICES</h1>
 				<p className="text-[var(--white-color)] text-sm md:text-base text-center max-w-xl my-3 mx-15 ">
-					We Offer End-To-End Logistics Solutions Tailored To Your Shipping Needs, Whether By Sea, Land Or Air.
+					We Offer End-To-End Logistics Solutions Tailored To Your Shipping Needs, Whether By Air, Sea Or Land.
 				</p>
 
 				{/* Mobile View with Dots and Swipe */}

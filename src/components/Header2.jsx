@@ -4,8 +4,9 @@ import Logo from "../assets/DigoTradersIncorporatedLogo.svg";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const services = [
-	{ to: "/services/seafreight", label: "Sea Freight" },
 	{ to: "/services/airfreight", label: "Air Freight" },
+	{ to: "/services/seafreight", label: "Sea Freight" },
+
 	{ to: "/services/landfreight", label: "Land Freight" },
 	{ to: "/services/custombrokerage", label: "Custom Brokerage" },
 	{ to: "/services/fcl_lcl", label: "FCL/LCL" },

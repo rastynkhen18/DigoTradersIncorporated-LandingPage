@@ -47,7 +47,7 @@ const Home = () => {
 									<mark className="bg-transparent text-[var(--primary-color)]"> Digo Traders</mark>
 								</h1>
 								<p className="text-[var(--white-color)]  text-sm md:text-base md:max-w-xl text-justify pt-4">
-									From <mark className="bg-transparent text-[var(--primary-color)]">small packages to large cargo</mark> — Digo Traders ships by land, air and sea to support businesses of every size.
+									From <mark className="bg-transparent text-[var(--primary-color)]">small packages to large cargo</mark> — Digo Traders ships by Air, Sea and Land to support businesses of every size.
 								</p>
 							</div>
 
