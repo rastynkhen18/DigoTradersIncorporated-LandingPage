@@ -67,7 +67,7 @@ const Contact = () => {
 									<label className="block text-sm font-medium  text-slate-600  mb-2">Email</label>
 									<input
 										type="email"
-										placeholder="e.g support@digotraders.com"
+										placeholder="e.g your-email@gmail.com"
 										name="email"
 										className="w-full p-2 text-sm border border-[var(--gray-color)] rounded-md bg-[#e2e2e2] placeholder-[var(--gray-accent)] placeholder:text-sm focus:outline-none mb-2"
 									/>
