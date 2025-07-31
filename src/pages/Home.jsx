@@ -17,7 +17,7 @@ const Home = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
+    emailjs.sendForm( 
       "service_ndrtton",     // Service ID
       "template_tkozg1d",    // Template ID
       e.target,
