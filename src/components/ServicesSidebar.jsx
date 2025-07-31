@@ -13,11 +13,12 @@ const ServicesSidebar = () => {
 			{/* Services Section */}
 			<nav className="flex flex-col gap-1 ">
 				<h2 className="text-base font-bold mb-3 ">Our Services</h2>
-				<NavLink to="/services/seafreight" className={getLinkClass} reloadDocument>
-					Sea Freight
-				</NavLink>
+
 				<NavLink to="/services/airfreight" className={getLinkClass} reloadDocument>
 					Air Freight
+				</NavLink>
+				<NavLink to="/services/seafreight" className={getLinkClass} reloadDocument>
+					Sea Freight
 				</NavLink>
 				<NavLink to="/services/landfreight" className={getLinkClass} reloadDocument>
 					Land Freight
