@@ -202,7 +202,7 @@ const Home = () => {
 										<label className=" text-sm md:text-sm font-normal text-[var(--white-color)] mb-1">Email</label>
 										<input
 											type="email"
-											placeholder="support@digotraders.com"
+											placeholder="e.g your-email@gmail.com"
 											name="email"
 											className="w-full p-2 md:placeholder:text-xs placeholder:text-xs text-xs md:text-xs border border-[var(--gray-color)] rounded-md bg-[var(--white-color)] placeholder-[var(--gray-color)] focus:outline"
 										/>
