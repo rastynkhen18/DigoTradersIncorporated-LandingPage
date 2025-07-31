@@ -7,11 +7,6 @@ import { Truck, Plane, Anchor, Scale, MapPin, FileText } from "lucide-react";
 
 const services = [
 	{
-		title: "Land Freight",
-		description: "Nationwide delivery.",
-		icon: <Truck size={40} />,
-	},
-	{
 		title: "Air Freight",
 		description: "Fast Global Shipping.",
 		icon: <Plane size={40} />,
@@ -20,6 +15,11 @@ const services = [
 		title: "Sea Freight",
 		description: "Affordable bulk transport.",
 		icon: <Anchor size={40} />,
+	},
+	{
+		title: "Land Freight",
+		description: "Nationwide delivery.",
+		icon: <Truck size={40} />,
 	},
 	{
 		title: "Compliance",
