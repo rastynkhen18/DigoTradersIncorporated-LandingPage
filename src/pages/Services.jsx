@@ -11,6 +11,7 @@ import ServicesDomesticTransfer from "../assets/images/servicesDomesticTransfer.
 import ServicesFreightConsultation from "../assets/images/servicesFreightConsultation.png";
 import ServicesRenewal from "../assets/images/servicesRenewal.png";
 import ServicesAccreditation from "../assets/images/servicesAccreditation.png";
+import FadeInOnView from "../components/FadeInOnView";
 
 const data = [
 	{
@@ -109,13 +110,18 @@ const Services = () => {
 
 				<section className="p-5 md:p-10 md:mx-20">
 					<div className="flex justify-center items-center text-justify my-5">
-						<p className="text-sm md:text-lg text-[var(--white-color)]">
-							At DIGO Traders Incorporated, we provide reliable logistics and customs solutions for businesses of all sizes. From air to sea and land, we ensure smooth, compliant, and cost-effective
-							delivery every step of the way.
-						</p>
+						<FadeInOnView>
+							<p className="text-sm md:text-lg text-[var(--white-color)]">
+								At DIGO Traders Incorporated, we provide reliable logistics and customs solutions for businesses of all sizes. From air to sea and land, we ensure smooth, compliant, and cost-effective
+								delivery every step of the way.
+							</p>
+						</FadeInOnView>
 					</div>
+
+					
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 						{data.map((item, index) => (
+							<FadeInOnView delay={0.2}>
 							<div
 								key={index}
 								className="rounded-2xl overflow-hidden flex flex-col h-full "
@@ -143,6 +149,7 @@ const Services = () => {
 									</Link>
 								</div>
 							</div>
+							</FadeInOnView>
 						))}
 					</div>
 				</section>

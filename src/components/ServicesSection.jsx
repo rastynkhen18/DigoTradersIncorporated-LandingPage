@@ -4,6 +4,7 @@ import AirFreightbg from "../assets/images/airfreight-bg.png";
 import SeaFreightbg from "../assets/images/seafreight-bg.png";
 import LandFreightbg from "../assets/images/landfreight-bg.png";
 import { Truck, Plane, Anchor, ChevronRight } from "lucide-react";
+import FadeInOnView from "../components/FadeInOnView";
 
 const services = [
 	{
@@ -76,11 +77,17 @@ const ServicesSection = () => {
 					background: "linear-gradient(to top, var(--secondary-color), var(--secondary-accent), black)",
 				}}
 			>
-				<h1 className="text-[var(--primary-color)] text-2xl md:text-3xl font-bold">OUR SERVICES</h1>
+				<FadeInOnView>
+					<h1 className="text-[var(--primary-color)] text-2xl md:text-3xl font-bold">OUR SERVICES</h1>
+				</FadeInOnView>
+
+				<FadeInOnView delay={0.1}>
 				<p className="text-[var(--white-color)] text-sm md:text-base text-center max-w-xl my-3 mx-15 ">
 					We Offer End-To-End Logistics Solutions Tailored To Your Shipping Needs, Whether By Air, Sea Or Land.
 				</p>
+				</FadeInOnView>
 
+				<FadeInOnView>
 				{/* Mobile View with Dots and Swipe */}
 				<div className="w-full px-4 md:hidden">
 					<div className="w-full">
@@ -129,7 +136,9 @@ const ServicesSection = () => {
 						))}
 					</div>
 				</div>
-
+				</FadeInOnView>
+				
+				<FadeInOnView>
 				{/* Desktop View */}
 				<div className="hidden md:flex justify-center items-center flex-wrap gap-7 px-4">
 					{services.map((service, index) => (
@@ -157,12 +166,13 @@ const ServicesSection = () => {
 												<button className="bg-transparent px-4 py-2 rounded-xl text-[var(--white-color)] border border-[var(--white-color)] cursor-pointer">Talk to Expert</button>
 											</Link>
 										</div>
-									</div>
+									</div>			
 								</div>
 							</div>
 						</div>
-					))}
+					))}	
 				</div>
+				</FadeInOnView>
 			</div>
 		</section>
 	);

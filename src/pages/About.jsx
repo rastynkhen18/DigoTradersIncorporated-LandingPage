@@ -4,6 +4,8 @@ import ServicesBackgroundImage from "../assets/images/services-bg.png";
 import Logo from "../assets/DigoTradersIncLogo.svg";
 import AboutImage from "../assets/images/aboutImg.png";
 import { Truck, Plane, Anchor, Scale, MapPin, FileText } from "lucide-react";
+import FadeInOnView from "../components/FadeInOnView";
+
 
 const services = [
 	{
@@ -55,15 +57,22 @@ const About = () => {
 			<section className="flex justify-center items-center">
 				<div className="flex flex-col md:flex-row justify-center items-center gap-5 md:p-16 p-5 w-full max-w-[1024px]">
 					<div className="w-full md:w-1/2">
-						<img src={Logo} alt="Digo Traders Inc." className="w-40 h-auto mb-4" />
-						<p className="text-sm md:text-base text-justify">
-							DIGO Traders Incorporated is a Philippine-based logistics company committed to making import, export, and domestic shipping easier for businesses of all sizes. Whether you're
-							transporting goods across borders or across cities, we handle every step with accuracy, speed, and transparency.
-						</p>
+						<FadeInOnView>
+							<img src={Logo} alt="Digo Traders Inc." className="w-40 h-auto mb-4" />
+						</FadeInOnView>
+
+						<FadeInOnView delay={0.2}>
+							<p className="text-sm md:text-base text-justify">
+								DIGO Traders Incorporated is a Philippine-based logistics company committed to making import, export, and domestic shipping easier for businesses of all sizes. Whether you're
+								transporting goods across borders or across cities, we handle every step with accuracy, speed, and transparency.
+							</p>
+						</FadeInOnView>
 					</div>
 
 					<div className="w-full md:w-1/2 flex justify-center">
-						<img src={AboutImage} alt="About" className="w-full" />
+						<FadeInOnView delay={0.3}>
+							<img src={AboutImage} alt="About" className="w-full" />
+						</FadeInOnView>
 					</div>
 				</div>
 			</section>
@@ -75,48 +84,70 @@ const About = () => {
 				className="flex justify-center items-center"
 			>
 				<div className="flex flex-col md:flex-col justify-center items-center  p-5 w-full max-w-[1024px]">
-					<h1 className="text-xl md:text-2xl text-[var(--primary-color)] font-semibold text-center p-5">We Specialize In:</h1>
+					<FadeInOnView>
+						<h1 className="text-xl md:text-2xl text-[var(--primary-color)] font-semibold text-center p-5">We Specialize In:</h1>
+					</FadeInOnView>
 
-					<div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 w-full">
-						{services.map((service, index) => (
-							<div
-								key={index}
-								className="w-full text-[var(--white-color)] rounded-2xl p-4 shadow-lg flex items-center gap-4 bg-gradient-to-r"
-								style={{
-									background: "linear-gradient(to bottom, var(--primary-accent), var(--primary-color))",
-								}}
-							>
-								{service.icon}
-								<div>
-									<h1 className="text-base md:text-base font-semibold mb-1">{service.title}</h1>
-									<p className="text-sm md:text-sm">{service.description}</p>
+					<FadeInOnView>
+						<div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 w-full">
+							{services.map((service, index) => (
+								<div
+									key={index}
+									className="w-full text-[var(--white-color)] rounded-2xl p-4 shadow-lg flex items-center gap-4 bg-gradient-to-r"
+									style={{
+										background: "linear-gradient(to bottom, var(--primary-accent), var(--primary-color))",
+									}}
+								>
+									{service.icon}
+									<div>
+										<h1 className="text-base md:text-base font-semibold mb-1">{service.title}</h1>
+										<p className="text-sm md:text-sm">{service.description}</p>
+									</div>
 								</div>
-							</div>
-						))}
-					</div>
+							))}
+						</div>
+					</FadeInOnView>
+
 
 					<div className="flex flex-col md:flex-row justify-center items-center md:p-16  w-full max-w-[1024px]">
 						<div className="flex flex-col gap-5 w-full md:w-1/2 p-5">
-							<h1 className="text-xl md:text-3xl font-bold text-[var(--primary-color)]">Mission</h1>
-							<p className="text-sm md:text-sm text-[var(--white-color)] text-justify">
-								Our mission is to source and deliver high-quality products from international markets efficiently, ethically, and cost-effectively, meeting the needs of our clients while fostering
-								strong relationships with global suppliers.
-							</p>
+							<FadeInOnView>
+								<h1 className="text-xl md:text-3xl font-bold text-[var(--primary-color)]">Mission</h1>
+							</FadeInOnView>
+
+							<FadeInOnView>
+								<p className="text-sm md:text-sm text-[var(--white-color)] text-justify">
+									Our mission is to source and deliver high-quality products from international markets efficiently, ethically, and cost-effectively, meeting the needs of our clients while fostering
+									strong relationships with global suppliers.
+								</p>
+							</FadeInOnView>
+
 						</div>
 
 						<div className="w-full md:w-1/2 mt-10 flex justify-center">
-							<img src={AboutImage} alt="About" className="w-full" />
+							<FadeInOnView>
+								<img src={AboutImage} alt="About" className="w-full" />
+							</FadeInOnView>
+
 						</div>
 					</div>
 					<div className="flex flex-col-reverse md:flex-row justify-center items-center  md:p-16  w-full max-w-[1024px]">
 						<div className="w-full md:w-1/2 mt-10 flex justify-center">
-							<img src={AboutImage} alt="About" className="w-full" />
+							<FadeInOnView>
+								<img src={AboutImage} alt="About" className="w-full" />
+							</FadeInOnView>
+
 						</div>
 						<div className="flex flex-col gap-5 w-full md:w-1/2 p-5">
-							<h1 className="text-xl md:text-3xl font-bold text-[var(--primary-color)]">Vision</h1>
-							<p className="text-sm md:text-sm text-[var(--white-color)] text-justify">
-								Our vision is to be a trusted global leader in import and export, connecting markets and delivering value with integrity, efficiency, and innovation."
-							</p>
+							<FadeInOnView>
+								<h1 className="text-xl md:text-3xl font-bold text-[var(--primary-color)]">Vision</h1>
+							</FadeInOnView>
+
+							<FadeInOnView>
+								<p className="text-sm md:text-sm text-[var(--white-color)] text-justify">
+									Our vision is to be a trusted global leader in import and export, connecting markets and delivering value with integrity, efficiency, and innovation."
+								</p>
+							</FadeInOnView>
 						</div>
 					</div>
 				</div>
