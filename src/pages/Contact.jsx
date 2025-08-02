@@ -63,6 +63,7 @@ const Contact = () => {
 											type="text"
 											placeholder="Your Name"
 											name="name"
+											required
 											className="w-full p-2 text-sm border border-[var(--gray-color)] rounded-md bg-[#e2e2e2] placeholder-[var(--gray-accent)] placeholder:text-sm focus:outline-none mb-2"
 										/>
 									</div>
@@ -73,6 +74,7 @@ const Contact = () => {
 											type="email"
 											placeholder="e.g your-email@gmail.com"
 											name="email"
+											required
 											className="w-full p-2 text-sm border border-[var(--gray-color)] rounded-md bg-[#e2e2e2] placeholder-[var(--gray-accent)] placeholder:text-sm focus:outline-none mb-2"
 										/>
 									</div>
@@ -83,6 +85,7 @@ const Contact = () => {
 											type="text"
 											placeholder="Title"
 											name="subject"
+											required
 											className="w-full p-2 text-sm border border-[var(--gray-color)] rounded-md bg-[#e2e2e2] placeholder-[var(--gray-accent)] placeholder:text-sm focus:outline-none mb-2"
 										/>
 									</div>
@@ -93,6 +96,7 @@ const Contact = () => {
 											placeholder="Type here..."
 											name="message"
 											rows="4"
+											required
 											className="w-full p-2 text-sm border border-[var(--gray-color)] rounded-md bg-[#e2e2e2] placeholder-[var(--gray-accent)] placeholder:text-sm focus:outline-none mb-2"
 										></textarea>
 									</div>

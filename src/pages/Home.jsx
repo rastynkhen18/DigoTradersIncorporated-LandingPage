@@ -15,7 +15,7 @@ import FadeInOnView from "../components/FadeInOnView";
 const Home = () => {
 	const sendEmail = (e) => {
 		e.preventDefault();
-
+		
 		emailjs.sendForm("service_ndrtton", "template_tkozg1d", e.target, "3kmbeJRVPlVrrqylg").then(
 			(result) => {
 				alert("Message sent successfully!");
@@ -232,6 +232,7 @@ const Home = () => {
 												type="text"
 												placeholder="e.g John Doe"
 												name="name"
+												required
 												className="w-full p-2 md:placeholder:text-xs placeholder:text-xs text-xs md:text-xs border border-[var(--gray-color)] rounded-md bg-[var(--white-color)] placeholder-[var(--gray-color)] focus:outline"
 											/>
 										</div>
@@ -242,6 +243,7 @@ const Home = () => {
 												type="email"
 												placeholder="e.g your-email@gmail.com"
 												name="email"
+												required
 												className="w-full p-2 md:placeholder:text-xs placeholder:text-xs text-xs md:text-xs border border-[var(--gray-color)] rounded-md bg-[var(--white-color)] placeholder-[var(--gray-color)] focus:outline"
 											/>
 										</div>
@@ -252,6 +254,7 @@ const Home = () => {
 												type="text"
 												placeholder="Title"
 												name="subject"
+												required
 												className="w-full p-2 md:placeholder:text-xs placeholder:text-xs text-xs md:text-xs border border-[var(--gray-color)] rounded-md bg-[var(--white-color)] placeholder-[var(--gray-color)] focus:outline"
 											/>
 										</div>
@@ -262,6 +265,7 @@ const Home = () => {
 												placeholder="Type here..."
 												name="message"
 												rows="4"
+												required
 												className="w-full p-2 md:placeholder:text-xs placeholder:text-xs text-xs md:text-xs border border-[var(--gray-color)] rounded-md bg-[var(--white-color)] placeholder-[var(--gray-color)] focus:outline"
 											></textarea>
 										</div>
