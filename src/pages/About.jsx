@@ -3,6 +3,10 @@ import Header2 from "../components/Header2";
 import ServicesBackgroundImage from "../assets/images/services-bg.png";
 import Logo from "../assets/DigoTradersIncLogo.svg";
 import AboutImage from "../assets/images/aboutImg.png";
+// import MissionImage from "../assets/images/seafreight-img2.png";
+// import VisionImage from "../assets/images/servicesFcl-img2.png";
+import MissionImage from "../assets/images/mission-image.png";
+import VisionImage from "../assets/images/vision-image.png";
 import { Truck, Plane, Anchor, Scale, MapPin, FileText } from "lucide-react";
 import FadeInOnView from "../components/FadeInOnView";
 
@@ -126,7 +130,7 @@ const About = () => {
 
 						<div className="w-full md:w-1/2 mt-10 flex justify-center">
 							<FadeInOnView>
-								<img src={AboutImage} alt="About" className="w-full" />
+								<img src={MissionImage} alt="About" className="w-full" />
 							</FadeInOnView>
 
 						</div>
@@ -134,7 +138,7 @@ const About = () => {
 					<div className="flex flex-col-reverse md:flex-row justify-center items-center  md:p-16  w-full max-w-[1024px]">
 						<div className="w-full md:w-1/2 mt-10 flex justify-center">
 							<FadeInOnView>
-								<img src={AboutImage} alt="About" className="w-full" />
+								<img src={VisionImage} alt="About" className="w-full" />
 							</FadeInOnView>
 
 						</div>
