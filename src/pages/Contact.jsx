@@ -14,15 +14,15 @@ const Contact = () => {
 
 		emailjs
 			.sendForm(
-				"service_ndrtton", // Service ID
-				"template_tkozg1d", // Template ID
+				import.meta.env.VITE_EMAILJS_SERVICE_ID,
+				import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
 				e.target,
-				"3kmbeJRVPlVrrqylg" //Public Key
+				import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 			)
 			.then(
 				(result) => {
 					alert("Message sent successfully!");
-					e.target.reset(); // clear the form
+					e.target.reset();
 				},
 				(error) => {
 					alert("Oops! Something went wrong.");

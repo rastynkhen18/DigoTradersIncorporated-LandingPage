@@ -15,19 +15,26 @@ import FadeInOnView from "../components/FadeInOnView";
 const Home = () => {
 	const sendEmail = (e) => {
 		e.preventDefault();
-		
-		emailjs.sendForm("service_ndrtton", "template_tkozg1d", e.target, "3kmbeJRVPlVrrqylg").then(
-			(result) => {
-				alert("Message sent successfully!");
-				e.target.reset();
-			},
-			(error) => {
-				alert("Oops! Something went wrong.");
-				console.error(error.text);
-			}
-		);
-	};
 
+		emailjs
+			.sendForm(
+				import.meta.env.VITE_EMAILJS_SERVICE_ID,
+				import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+				e.target,
+				import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+			)
+			.then(
+				(result) => {
+					alert("Message sent successfully!");
+					e.target.reset();
+				},
+				(error) => {
+					alert("Oops! Something went wrong.");
+					console.error(error.text);
+				}
+			);
+	};
+	
 	return (
 		<>
 			<main>
@@ -74,7 +81,7 @@ const Home = () => {
 
 						{/* Content */}
 						<WhoWeServeSlideshow />
-						
+
 
 						{/* Bottom Divider */}
 						<div

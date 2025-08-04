@@ -87,7 +87,7 @@ const ServicesSection = () => {
 				</p>
 				</FadeInOnView>
 
-				<FadeInOnView>
+				<FadeInOnView delay={0.2}>
 				{/* Mobile View with Dots and Swipe */}
 				<div className="w-full px-4 md:hidden">
 					<div className="w-full">
