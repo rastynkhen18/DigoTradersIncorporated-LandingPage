@@ -112,43 +112,42 @@ const Services = () => {
 					<div className="flex justify-center items-center text-justify my-5">
 						<FadeInOnView>
 							<p className="text-sm md:text-lg text-[var(--white-color)]">
-								At DIGO Traders Incorporated, we provide reliable logistics and customs solutions for businesses of all sizes. From air to sea and land, we ensure smooth, compliant, and cost-effective
+								At DIGO Traders Incorporated, we provide reliable logistics and customs solutions for businesses of all sizes. From air, sea and land, we ensure smooth, compliant, and cost-effective
 								delivery every step of the way.
 							</p>
 						</FadeInOnView>
 					</div>
 
-					
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 						{data.map((item, index) => (
 							<FadeInOnView delay={0.2}>
-							<div
-								key={index}
-								className="rounded-2xl overflow-hidden flex flex-col h-full "
-								style={{
-									background: "linear-gradient(to bottom, var(--primary-accent), var(--primary-color))",
-								}}
-							>
-								{/* Image container with aspect ratio */}
-								<div className="aspect-[4/3] w-full">
-									<img src={item.img} alt={item.alt} className="w-full h-full object-cover" />
-								</div>
-
-								{/* Content section */}
-								<div className="p-10 text-[var(--primary-color)] flex flex-col justify-between flex-1">
-									<div>
-										<h1 className="text-xl font-bold mb-2 text-[var(--white-color)]">{item.title}</h1>
-										<p className="mb-4 text-[var(--white-color)]">{item.description}</p>
+								<div
+									key={index}
+									className="rounded-2xl overflow-hidden flex flex-col h-full "
+									style={{
+										background: "linear-gradient(to bottom, var(--primary-accent), var(--primary-color))",
+									}}
+								>
+									{/* Image container with aspect ratio */}
+									<div className="aspect-[4/3] w-full">
+										<img src={item.img} alt={item.alt} className="w-full h-full object-cover" />
 									</div>
-									<Link
-										to={item.link}
-										className="inline-block bg-[var(--white-color)] text-[var(--primary-color)] px-4 py-2 w-full text-center font-bold rounded-full cursor-pointer mt-auto transition-all duration-300 ease-in-out hover:bg-[var(--secondary-color)] hover:text-[var(--white-color)]"
-										reloadDocument
-									>
-										{item.button}
-									</Link>
+
+									{/* Content section */}
+									<div className="p-10 text-[var(--primary-color)] flex flex-col justify-between flex-1">
+										<div>
+											<h1 className="text-xl font-bold mb-2 text-[var(--white-color)]">{item.title}</h1>
+											<p className="mb-4 text-[var(--white-color)]">{item.description}</p>
+										</div>
+										<Link
+											to={item.link}
+											className="inline-block bg-[var(--white-color)] text-[var(--primary-color)] px-4 py-2 w-full text-center font-bold rounded-full cursor-pointer mt-auto transition-all duration-300 ease-in-out hover:bg-[var(--secondary-color)] hover:text-[var(--white-color)]"
+											reloadDocument
+										>
+											{item.button}
+										</Link>
+									</div>
 								</div>
-							</div>
 							</FadeInOnView>
 						))}
 					</div>

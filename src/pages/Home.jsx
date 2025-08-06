@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Header from "../components/Header";
 import HomePageBackground from "../assets/images/homepage-img.png";
 import WhoWeServeSlideshow from "../components/WhoWeServe";
@@ -16,25 +16,18 @@ const Home = () => {
 	const sendEmail = (e) => {
 		e.preventDefault();
 
-		emailjs
-			.sendForm(
-				import.meta.env.VITE_EMAILJS_SERVICE_ID,
-				import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-				e.target,
-				import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-			)
-			.then(
-				(result) => {
-					alert("Message sent successfully!");
-					e.target.reset();
-				},
-				(error) => {
-					alert("Oops! Something went wrong.");
-					console.error(error.text);
-				}
-			);
+		emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, e.target, import.meta.env.VITE_EMAILJS_PUBLIC_KEY).then(
+			(result) => {
+				alert("Message sent successfully!");
+				e.target.reset();
+			},
+			(error) => {
+				alert("Oops! Something went wrong.");
+				console.error(error.text);
+			}
+		);
 	};
-	
+
 	return (
 		<>
 			<main>
@@ -82,7 +75,6 @@ const Home = () => {
 						{/* Content */}
 						<WhoWeServeSlideshow />
 
-
 						{/* Bottom Divider */}
 						<div
 							className="w-full h-[14px]"
@@ -105,16 +97,13 @@ const Home = () => {
 				/>
 
 				<section>
-
 					{/* Content wrapper */}
 					<div className="flex flex-col-reverse md:flex-row items-center justify-between md:h-[100vh]">
-
 						{/* Text Content */}
 						<div className="flex flex-col gap-5 md:gap-5 w-full p-10 md:w-1/2">
 							<FadeInOnView>
 								<h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-left">Why Businesses Choose Us?</h1>
 							</FadeInOnView>
-
 
 							{/* Card 1 */}
 							<div>
@@ -132,7 +121,6 @@ const Home = () => {
 										arrives in perfect condition.
 									</p>
 								</FadeInOnView>
-
 							</div>
 
 							{/* Card 2 */}
@@ -151,9 +139,7 @@ const Home = () => {
 										internationally.
 									</p>
 								</FadeInOnView>
-
 							</div>
-
 
 							{/* Card 3 */}
 							<div>
@@ -179,7 +165,6 @@ const Home = () => {
 							<img src={Container1Image} alt="Shipping container" className="w-full h-full object-cover md:rounded-tl-[65%] shadow-md" />
 						</div>
 					</div>
-
 				</section>
 
 				{/* 4th Section */}
@@ -223,8 +208,6 @@ const Home = () => {
 
 						<FadeInOnView delay={0.2}>
 							<div className="max-w-[1024px] flex flex-col  md:flex-row justify-center gap-5">
-
-
 								{/* Left: Contact Form */}
 
 								<div className=" flex flex-col max-w-[450px] justify-center md:w-1/2 p-6 bg-[var(--secondary-accent)] shadow-md rounded-lg border-2 border-[var(--primary-color)]">
@@ -289,13 +272,12 @@ const Home = () => {
 									</form>
 								</div>
 
-
 								{/* Right: Contact Info & Map */}
 								<div className="w-full md:w-1/2 max-w-[450px] h-full  ">
 									<div className="flex flex-col  h-full justify-between ">
 										<p className="text-[var(--white-color)] text-justify md:text-sm leading-5 font-light text-sm">
-											Whether you're ready to ship by land, sea, or air – or just have questions – we're here for you. Fill out the form to send us a quick message, or reach us directly via call, email,
-											or visit. Our team is ready to assist you with everything from documents to deliveries.
+											Whether you're ready to ship by air, sea and land – or just have questions – we're here for you. Fill out the form to send us a quick message, or reach us directly via call,
+											email, or visit. Our team is ready to assist you with everything from documents to deliveries.
 										</p>
 										<div className="text-[var(--white-color)] w-full py-5  ">
 											<div className="md:flex-col flex flex-row w-full gap-3">
@@ -350,7 +332,7 @@ const Home = () => {
 						</FadeInOnView>
 					</div>
 				</section>
-			</main >
+			</main>
 		</>
 	);
 };
