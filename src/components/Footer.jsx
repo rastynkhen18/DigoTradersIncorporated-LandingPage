@@ -2,6 +2,8 @@ import React from "react";
 import Logo from "../assets/DigoTradersIncorporatedLogo.svg";
 import FacebookLogo from "../assets/images/Facebook_Logo_Secondary1.svg";
 import InstagramLogo from "../assets/images/Instagram_Glyph_White1.svg";
+import { Link } from "react-router-dom";
+
 
 
 const Footer = () => {
@@ -22,10 +24,10 @@ const Footer = () => {
 					<div className="w-full">
 						<h2 className="font-semibold text-base text-[var(--primary-color)] mb-2">Quick Links</h2>
 						<ul className="space-y-1 text-sm text-[var(--gray-color)]">
-							<li>Home</li>
-							<li>About</li>
-							<li>Services</li>
-							<li>Contact</li>
+							<li className="hover:text-[var(--primary-color)]"><Link to="/" reloadDocument>Home</Link></li>
+							<li className="hover:text-[var(--primary-color)]"><Link to="/about" reloadDocument>About</Link></li>
+							<li className="hover:text-[var(--primary-color)]"><Link to="/services" reloadDocument>Services</Link></li>
+							<li className="hover:text-[var(--primary-color)]"><Link to="/contact" reloadDocument>Contact</Link></li>
 						</ul>
 					</div>
 
@@ -33,19 +35,19 @@ const Footer = () => {
 					<div className="w-full">
 						<h2 className="font-semibold text-base text-[var(--primary-color)] mb-2">Services</h2>
 						<ul className="space-y-1 text-sm text-[var(--gray-color)]">
-							<li>Air Freight</li>
-							<li>Sea Freight</li>
-							<li>Land Freight</li>
-							<li>FCL / LCL</li>
+							<li className="hover:text-[var(--primary-color)]"><Link to="/services/airfreight" reloadDocument>Air Freight</Link></li>
+							<li className="hover:text-[var(--primary-color)]"><Link to="/services/seafreight" reloadDocument>Sea Freight</Link></li>
+							<li className="hover:text-[var(--primary-color)]"><Link to="/services/landfreight" reloadDocument>Land Freight</Link></li>
+							<li className="hover:text-[var(--primary-color)]"><Link to="/services/fcl_lcl" reloadDocument>FCL / LCL</Link></li>
 						</ul>
 					</div>
 
 					{/* About */}
 					<div className="w-full">
-						<h2 className="font-semibold text-base text-[var(--primary-color)] mb-2">About</h2>
+						<h2 className="font-semibold text-base text-[var(--primary-color)] mb-2 hover:text-[var(--primary-color)]">About</h2>
 						<ul className="space-y-1 text-sm text-[var(--gray-color)]">
-							<li>Mission</li>
-							<li>Vision</li>
+							<li className="hover:text-[var(--primary-color)]"><Link to="/about" reloadDocument>Mission</Link></li>
+							<li className="hover:text-[var(--primary-color)]"><Link to="/about" reloadDocument>Vision</Link></li>
 						</ul>
 					</div>
 
