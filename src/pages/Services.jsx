@@ -52,7 +52,7 @@ const data = [
 		title: "Trucking Services",
 		description: "We provide reliable transport for containers, equipment, and delivered safely, on time, and cost-efficiently.",
 		button: "Read More",
-		link: "freight-&-tariff-consultation",
+		link: "trucking-services",
 	},
 
 	{
