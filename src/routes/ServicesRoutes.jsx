@@ -9,7 +9,7 @@ import Landfreight from "../pages/ServicesPages/landfreight";
 import CustomBrokerage from "../pages/ServicesPages/custombrokerage";
 import FclLcl from "../pages/ServicesPages/fcl_lcl";
 import DomesticTransferServices from "../pages/ServicesPages/domesticTransferServices";
-import FreightTariffConsultation from "../pages/ServicesPages/freightTariffConsultation";
+import TruckingServices from "../pages/ServicesPages/truckingServices";
 import AmoCertificate from "../pages/ServicesPages/amoCertificate";
 import ImportLicense from "../pages/ServicesPages/importLicense";
 
@@ -36,7 +36,7 @@ const ServicesRoutes = () => {
 						<Route path="custombrokerage" element={<CustomBrokerage />} />
 						<Route path="fcl_lcl" element={<FclLcl />} />
 						<Route path="domestic-transfer-services" element={<DomesticTransferServices />} />
-						<Route path="freight-&-tariff-consultation" element={<FreightTariffConsultation />} />
+						<Route path="trucking-services" element={<TruckingServices />} />
 						<Route path="amo-certificate" element={<AmoCertificate />} />
 						<Route path="import-license" element={<ImportLicense />} />
 					</Routes>

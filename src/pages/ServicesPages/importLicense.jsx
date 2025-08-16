@@ -27,7 +27,6 @@ const importLicense = () => {
 					</p>
 				</FadeInOnView>
 
-
 				<img src={AccreditationOfImportLicenseImage} alt="AccreditationOfImportLicenseImage" className="w-full max-w-4xl mx-auto rounded-2xl" />
 
 				<FadeInOnView>
@@ -36,8 +35,8 @@ const importLicense = () => {
 
 				<FadeInOnView>
 					<p className="text-sm md:text-base">
-						Import accreditation is the process of registering your company with the Bureau of Customs and other regulatory agencies like the Bureau of Internal Revenue (BIR) and Department of Trade and
-						Industry (DTI) or SEC. This allows your business to legally import goods into the country.
+						Import accreditation is the process of registering your company with the Bureau of Customs and other regulatory agencies like the Bureau of Internal Revenue (BIR) and Department of Trade
+						and Industry (DTI) or SEC. This allows your business to legally import goods into the country.
 					</p>
 				</FadeInOnView>
 
@@ -51,7 +50,6 @@ const importLicense = () => {
 						<FadeInOnView>
 							<h2 className="text-xl font-bold mt-6 text-[var(--primary-color)]">Our Services Include:</h2>
 						</FadeInOnView>
-
 
 						<div className="mt-4 space-y-4">
 							<FadeInOnView>
@@ -100,7 +98,8 @@ const importLicense = () => {
 								>
 									<h1 className="text-xl font-bold text-[var(--white-color)]">🕒 How Long Does It Take?</h1>
 									<p className="text-sm md:text-base text-[var(--white-color)]">
-										With complete documents, import license accreditation can be done in 7–15 business days depending on agency response times. We help you move faster by ensuring everything is in order.
+										With complete documents, import license accreditation can be done in 7–15 business days depending on agency response times. We help you move faster by ensuring everything is in
+										order.
 									</p>
 								</div>
 							</FadeInOnView>
@@ -121,7 +120,7 @@ const importLicense = () => {
 				</FadeInOnView>
 
 				<FadeInOnView>
-					<div className="flex justify-center items-start flex-col  p-5 mt-3 w-full rounded-2xl">
+					<div className="flex justify-center items-start flex-col   mt-3 w-full rounded-2xl">
 						<h1 className="text-xl font-bold text-[var(--primary-color)]">Why Choose Us?</h1>
 						<ul className="list-disc mt-2 text-base md:text-base">
 							<p className="text:base md:text-base">✅ End-to-end assistance.</p>

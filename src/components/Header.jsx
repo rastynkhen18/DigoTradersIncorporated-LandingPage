@@ -9,9 +9,9 @@ const services = [
 	{ to: "/services/seafreight", label: "Sea Freight" },
 	{ to: "/services/landfreight", label: "Land Freight" },
 	{ to: "/services/custombrokerage", label: "Custom Brokerage" },
-	{ to: "/services/fcl_lcl", label: "FCL/LCL" },
+	{ to: "/services/trucking-services", label: "Trucking Services" },
 	{ to: "/services/domestic-transfer-services", label: "Domestic Transport" },
-	{ to: "/services/freight-&-tariff-consultation", label: "Freight & Tariff Consultation" },
+	{ to: "/services/fcl_lcl", label: "FCL/LCL" },
 	{ to: "/services/amo-certificate", label: "Renewal of AMO Certificate" },
 	{ to: "/services/import-license", label: "Accreditation of Import License" },
 ];
@@ -19,7 +19,8 @@ const services = [
 const getLinkClass = ({ isActive }) => (isActive ? "border-b-2 border-[var(--primary-color)] m-0 p-0" : "text-inherit");
 
 const getDropdownLinkClass = ({ isActive }) =>
-	`block w-full text-left py-2 transition-colors ${isActive ? "text-[var(--primary-color)] bg-gray-50 font-bold text-sm px-5" : "text-[#1e1e1e] hover:bg-gray-100 font-normal text-sm leading-[1] px-5"
+	`block w-full text-left py-2 transition-colors ${
+		isActive ? "text-[var(--primary-color)] bg-gray-50 font-bold text-sm px-5" : "text-[#1e1e1e] hover:bg-gray-100 font-normal text-sm leading-[1] px-5"
 	}`;
 
 const Header = () => {
@@ -77,23 +78,12 @@ const Header = () => {
 					</NavLink>
 
 					{/* Services dropdown (desktop) */}
-					<div
-						className="relative"
-						onMouseEnter={() => setServicesOpen(true)}
-						onMouseLeave={() => setServicesOpen(false)}
-						ref={desktopServicesRef}
-					>
-						<button
-							type="button"
-							className={`flex items-center gap-1 focus:outline-none ${servicesOpen ? "text-[var(--primary-color)]" : ""}`}
-						>
+					<div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)} ref={desktopServicesRef}>
+						<button type="button" className={`flex items-center gap-1 focus:outline-none ${servicesOpen ? "text-[var(--primary-color)]" : ""}`}>
 							<NavLink to="/services" className={getLinkClass} reloadDocument>
 								Services
 							</NavLink>
-							<ChevronDown
-								size={16}
-								className={`transition-transform duration-200 cursor-pointer ${servicesOpen ? "rotate-180" : ""}`}
-							/>
+							<ChevronDown size={16} className={`transition-transform duration-200 cursor-pointer ${servicesOpen ? "rotate-180" : ""}`} />
 						</button>
 
 						<AnimatePresence>
@@ -107,13 +97,7 @@ const Header = () => {
 									className="absolute left-0 w-72 bg-[var(--white-color)] shadow-lg rounded-md overflow-hidden py-2 z-50"
 								>
 									{services.map((s) => (
-										<NavLink
-											key={s.to}
-											to={s.to}
-											className={getDropdownLinkClass}
-											onClick={() => setServicesOpen(false)}
-											reloadDocument
-										>
+										<NavLink key={s.to} to={s.to} className={getDropdownLinkClass} onClick={() => setServicesOpen(false)} reloadDocument>
 											{s.label}
 										</NavLink>
 									))}
@@ -150,9 +134,11 @@ const Header = () => {
 			{/* Mobile Menu */}
 			<div
 				ref={mobileMenuRef}
-				className={`absolute z-40 top-16 left-0 w-full ${scrolled ? "bg-[var(--white-color)] text-[var(--secondary-color)]" : "bg-[var(--white-color)] text-[var(--secondary-color)]"
-					} flex flex-col items-start gap-6 px-10 py-5  transition-all duration-300 md:hidden ${isOpen ? "translate-x-0 opacity-100" : "-translate-x-[-130%] opacity-0 pointer-events-none"} ${scrolled ? "text-[var(--secondary-color)]" : "text-[var(--secondary-color)]"
-					}`}
+				className={`absolute z-40 top-16 left-0 w-full ${
+					scrolled ? "bg-[var(--white-color)] text-[var(--secondary-color)]" : "bg-[var(--white-color)] text-[var(--secondary-color)]"
+				} flex flex-col items-start gap-6 px-10 py-5  transition-all duration-300 md:hidden ${isOpen ? "translate-x-0 opacity-100" : "-translate-x-[-130%] opacity-0 pointer-events-none"} ${
+					scrolled ? "text-[var(--secondary-color)]" : "text-[var(--secondary-color)]"
+				}`}
 			>
 				<NavLink to="/" className={getLinkClass} onClick={() => setIsOpen(false)} reloadDocument>
 					Home
@@ -164,20 +150,13 @@ const Header = () => {
 					Contact
 				</NavLink>
 
-				<button
-					type="button"
-					className="flex items-center justify-between gap-1 w-full"
-					onClick={() => setMobileServicesOpen((p) => !p)}
-				>
+				<button type="button" className="flex items-center justify-between gap-1 w-full" onClick={() => setMobileServicesOpen((p) => !p)}>
 					<span className="flex-1 text-left">
 						<NavLink to="/services" className={getLinkClass} reloadDocument>
 							Services
 						</NavLink>
 					</span>
-					<ChevronDown
-						size={16}
-						className={`transition-transform duration-200 cursor-pointer ${mobileServicesOpen ? "rotate-180" : ""}`}
-					/>
+					<ChevronDown size={16} className={`transition-transform duration-200 cursor-pointer ${mobileServicesOpen ? "rotate-180" : ""}`} />
 				</button>
 
 				<AnimatePresence>

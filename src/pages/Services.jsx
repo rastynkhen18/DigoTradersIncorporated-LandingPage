@@ -8,7 +8,7 @@ import ServicesLandFreight from "../assets/images/servicesLandFreightImg1.png";
 import ServicesCustomBrokerage from "../assets/images/servicesCustomBrokerageImg1.png";
 import ServicesFCL from "../assets/images/servicesFCL.png";
 import ServicesDomesticTransfer from "../assets/images/servicesDomesticTransfer.png";
-import ServicesFreightConsultation from "../assets/images/servicesFreightConsultation.png";
+import ServicesTrucking from "../assets/images/trucking.png";
 import ServicesRenewal from "../assets/images/servicesRenewal.png";
 import ServicesAccreditation from "../assets/images/servicesAccreditation.png";
 import FadeInOnView from "../components/FadeInOnView";
@@ -47,13 +47,14 @@ const data = [
 		link: "custombrokerage",
 	},
 	{
-		img: ServicesFCL,
-		alt: "ServicesFCL",
-		title: "FCL/LCL",
-		description: "Ship your goods worldwide, whether full load or shared.",
+		img: ServicesTrucking,
+		alt: "ServicesTrucking",
+		title: "Trucking Services",
+		description: "We provide reliable transport for containers, equipment, and delivered safely, on time, and cost-efficiently.",
 		button: "Read More",
-		link: "fcl_lcl",
+		link: "freight-&-tariff-consultation",
 	},
+
 	{
 		img: ServicesDomesticTransfer,
 		alt: "ServicesDomesticTransfer",
@@ -62,14 +63,16 @@ const data = [
 		button: "Read More",
 		link: "domestic-transfer-services",
 	},
+
 	{
-		img: ServicesFreightConsultation,
-		alt: "ServicesFreightConsultation",
-		title: "Freight & Tariff Consultation",
-		description: "We advise on shipping rates, customs duties, and taxes, helping clients save money and avoid penalties.",
+		img: ServicesFCL,
+		alt: "ServicesFCL",
+		title: "FCL/LCL",
+		description: "Ship your goods worldwide, whether full load or shared.",
 		button: "Read More",
-		link: "freight-&-tariff-consultation",
+		link: "fcl_lcl",
 	},
+
 	{
 		img: ServicesRenewal,
 		alt: "ServicesRenewal",
@@ -137,7 +140,7 @@ const Services = () => {
 									<div className="p-10 text-[var(--primary-color)] flex flex-col justify-between flex-1">
 										<div>
 											<h1 className="text-xl font-bold mb-2 text-[var(--white-color)]">{item.title}</h1>
-											<p className="mb-4 text-[var(--white-color)]">{item.description}</p>
+											<p className="mb-4 text-[var(--white-color)] text-justify">{item.description}</p>
 										</div>
 										<Link
 											to={item.link}
