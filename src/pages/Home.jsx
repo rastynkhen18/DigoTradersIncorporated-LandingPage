@@ -7,8 +7,9 @@ import Container2Image from "../assets/images/container2Image.png";
 import DropDownFAQ from "../components/DropDownFAQ";
 import ServicesSection from "../components/ServicesSection";
 import Airplane from "../assets/images/airplane-transparent.png";
-import { Package, ShoppingCart, Truck, Factory, Building2, ShieldCheck, Clock, FileText, Check } from "lucide-react";
+import { Package, ShoppingCart, Truck, Factory, Building2, ShieldCheck, Clock, FileText, Check, PhoneCallIcon, PhoneCall } from "lucide-react";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { FaWhatsapp, FaViber } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import FadeInOnView from "../components/FadeInOnView";
 
@@ -285,7 +286,7 @@ const Home = () => {
 													<Phone size={24} />
 													<div>
 														<h1 className="font-semibold text-sm leading-3">Phone Number</h1>
-														<p className="text-[var(--primary-color)] text-sm">0976-590-9243</p>
+														<p className="text-[var(--primary-color)] text-sm">0985-631-8468</p>
 													</div>
 												</div>
 
@@ -297,7 +298,15 @@ const Home = () => {
 													</div>
 												</div>
 											</div>
-
+											<div className="flex flex-row items-center gap-3 mt-3">
+												{/* <FaViber size={32} />
+													<FaWhatsapp size={36} /> */}
+												<Phone size={24} />
+												<div>
+													<h1 className="font-semibold text-sm leading-3">Viber & WhatsApp</h1>
+													<a className="text-[var(--primary-color)] text-sm">0985-631-8468</a>
+												</div>
+											</div>
 											<div className=" flex flex-row items-center mt-3 gap-3">
 												<Mail size={24} />
 												<div>

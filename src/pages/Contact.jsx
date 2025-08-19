@@ -6,29 +6,22 @@ import emailjs from "@emailjs/browser";
 import FacebookLogo from "../assets/images/Facebook_Logo_Secondary1.svg";
 import InstagramLogo from "../assets/images/Instagram_Glyph_White1.svg";
 import FadeInOnView from "../components/FadeInOnView";
-
+import { FaWhatsapp, FaViber } from "react-icons/fa";
 
 const Contact = () => {
 	const sendEmail = (e) => {
 		e.preventDefault();
 
-		emailjs
-			.sendForm(
-				import.meta.env.VITE_EMAILJS_SERVICE_ID,
-				import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-				e.target,
-				import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-			)
-			.then(
-				(result) => {
-					alert("Message sent successfully!");
-					e.target.reset();
-				},
-				(error) => {
-					alert("Oops! Something went wrong.");
-					console.error(error.text);
-				}
-			);
+		emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, e.target, import.meta.env.VITE_EMAILJS_PUBLIC_KEY).then(
+			(result) => {
+				alert("Message sent successfully!");
+				e.target.reset();
+			},
+			(error) => {
+				alert("Oops! Something went wrong.");
+				console.error(error.text);
+			}
+		);
 	};
 
 	return (
@@ -114,7 +107,6 @@ const Contact = () => {
 							</div>
 						</div>
 
-
 						{/* Right: Contact Info */}
 						<div className="w-full h-auto flex justify-between text-[var(--white-color)] flex-col  gap-5">
 							<div>
@@ -122,7 +114,6 @@ const Contact = () => {
 							</div>
 
 							<div
-
 								className="flex h-full flex-col justify-between rounded-xl p-6"
 								style={{
 									background: "linear-gradient(to right, var(--primary-color), var(--primary-accent))",
@@ -133,11 +124,40 @@ const Contact = () => {
 									<p className="text-sm">2442 Park Avenue, Torred Bldg. Pasay City</p>
 								</div>
 
+								{/* <div>
+									<h2 className="text-xl font-semibold mb-1">Contact</h2>
+									<p className="text-sm">Email: support@digotraders.com</p>
+									<p className="text-sm">Phone: +63 985-631-8468</p>
+									<p className="text-sm">Landline: (02) 835 67892</p>
+								</div> */}
+
 								<div>
 									<h2 className="text-xl font-semibold mb-1">Contact</h2>
 									<p className="text-sm">Email: support@digotraders.com</p>
-									<p className="text-sm">Phone: +63 976-590-9243</p>
+									<p className="text-sm">Phone: +63 985-631-8468</p>
 									<p className="text-sm">Landline: (02) 835 67892</p>
+
+									<div className="flex-col space-y-2 mt-2 items-center">
+										{/* WhatsApp */}
+										<div className="flex flex-row items-center space-x-2">
+											<a href="https://wa.me/639856318468" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:scale-110 transition-transform">
+												<FaWhatsapp size={36} />
+											</a>
+											<a href="https://wa.me/639856318468" target="_blank" rel="noopener noreferrer" className=" hover:underline">
+												0985-631-8468
+											</a>
+										</div>
+										{/* Viber */}
+										<div className="flex flex-row items-center space-x-2">
+											{/* Viber */}
+											<a href="https://vb.me/09856318468" target="_blank" className="text-white text-2xl hover:scale-110 transition-transform">
+												<FaViber size={32} />
+											</a>
+											<a href="https://vb.me/09856318468" target="_blank" className="hover:underline">
+												0985-631-8468
+											</a>
+										</div>
+									</div>
 								</div>
 
 								<div>
@@ -156,7 +176,6 @@ const Contact = () => {
 					</div>
 				</FadeInOnView>
 			</section>
-
 
 			<section className="w-full">
 				<iframe
