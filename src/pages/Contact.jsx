@@ -54,7 +54,7 @@ const Contact = () => {
 										<label className="block text-sm font-medium text-slate-600 mb-2">Name</label>
 										<input
 											type="text"
-											placeholder="Your Name"
+											placeholder="username"
 											name="name"
 											required
 											className="w-full p-2 text-sm border border-[var(--gray-color)] rounded-md bg-[#e2e2e2] placeholder-[var(--gray-accent)] placeholder:text-sm focus:outline-none mb-2"
@@ -65,7 +65,7 @@ const Contact = () => {
 										<label className="block text-sm font-medium  text-slate-600  mb-2">Email</label>
 										<input
 											type="email"
-											placeholder="e.g your-email@gmail.com"
+											placeholder="email address"
 											name="email"
 											required
 											className="w-full p-2 text-sm border border-[var(--gray-color)] rounded-md bg-[#e2e2e2] placeholder-[var(--gray-accent)] placeholder:text-sm focus:outline-none mb-2"
@@ -148,12 +148,20 @@ const Contact = () => {
 											</a>
 										</div>
 										{/* Viber */}
-										<div className="flex flex-row items-center space-x-2">
-											{/* Viber */}
-											<a href="https://vb.me/09856318468" target="_blank" className="text-white text-2xl hover:scale-110 transition-transform">
+										<div className="flex flex-row items-center space-x-3">
+											{/* Viber Icon */}
+											<a
+												href="viber://add?number=639856318468"
+												target="_blank"
+												rel="noopener noreferrer"
+												className="text-purple-500 hover:scale-110 transition-transform"
+												aria-label="Chat with us on Viber"
+											>
 												<FaViber size={32} />
 											</a>
-											<a href="https://vb.me/09856318468" target="_blank" className="hover:underline">
+
+											{/* Viber Number */}
+											<a href="viber://add?number=639856318468" target="_blank" rel="noopener noreferrer" className="text-white text-lg hover:underline">
 												0985-631-8468
 											</a>
 										</div>
