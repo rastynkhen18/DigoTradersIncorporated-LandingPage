@@ -24,7 +24,23 @@ const Contact = () => {
 		);
 	};
 
-	const phonenumber = "+639856318468";
+	const openAppWithFallback = (appUrl, fallbackUrl, timeout = 1000) => {
+		const start = Date.now();
+		// Try opening the app
+		window.location.href = appUrl;
+
+		// After 1s, if still visible, go to fallback
+		setTimeout(() => {
+			const elapsed = Date.now() - start;
+			if (document.visibilityState === "visible" && elapsed < timeout + 500) {
+				window.open(fallbackUrl, "_blank");
+			}
+		}, timeout);
+	};
+
+	const phoneNumber = "09856318468";
+	const viberUrl = `viber://add?number=639856318468`;
+	const viberDownload = "https://www.viber.com/download/";
 
 	return (
 		<div>
@@ -149,45 +165,13 @@ const Contact = () => {
 												0985-631-8468
 											</a>
 										</div>
-										{/* Viber */}
-										<div className="flex flex-row items-center space-x-3">
-											{/* Viber Icon */}
-											<a
-												// href="viber://add?number=639856318468"
-												href={`viber://chat?number=${encodeURIComponent(phonenumber)}`}
-												onClick={(e) => {
-													// fallback for desktop users if Viber app not installed
-													setTimeout(() => {
-														if (document.visibilityState === "visible") {
-															window.open("https://www.viber.com/download/", "_blank");
-														}
-													}, 2000);
-												}}
-												// target="_blank"
-												rel="noopener noreferrer"
-												className="text-purple-500 hover:scale-110 transition-transform"
-												aria-label="Chat with us on Viber"
-											>
-												<FaViber size={32} />
-											</a>
 
-											{/* Viber Number */}
-											<a
-												href={`viber://chat?number=${encodeURIComponent(phonenumber)}`}
-												onClick={(e) => {
-													// fallback for desktop users if Viber app not installed
-													setTimeout(() => {
-														if (document.visibilityState === "visible") {
-															window.open("https://www.viber.com/download/", "_blank");
-														}
-													}, 2000);
-												}}
-												rel="noopener noreferrer"
-												className="text-white text-lg hover:underline"
-											>
-												0985-631-8468
-											</a>
-										</div>
+										<button onClick={() => openAppWithFallback(viberUrl, viberDownload)} className="flex-col">
+											<div className="flex-row flex space-x-3">
+												<FaViber size={32} />
+												<div className=" hover:underline">0985-631-8468</div>
+											</div>
+										</button>
 									</div>
 								</div>
 
