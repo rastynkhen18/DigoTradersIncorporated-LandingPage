@@ -28,6 +28,21 @@ const Home = () => {
 			}
 		);
 	};
+	const viberUrl = `viber://add?number=639856318468`;
+	const viberDownload = "https://www.viber.com/download/";
+	const openAppWithFallback = (appUrl, fallbackUrl, timeout = 1000) => {
+		const start = Date.now();
+		// Try opening the app
+		window.location.href = appUrl;
+
+		// After 1s, if still visible, go to fallback
+		setTimeout(() => {
+			const elapsed = Date.now() - start;
+			if (document.visibilityState === "visible" && elapsed < timeout + 500) {
+				window.open(fallbackUrl, "_blank");
+			}
+		}, timeout);
+	};
 
 	return (
 		<>
@@ -298,13 +313,26 @@ const Home = () => {
 													</div>
 												</div>
 											</div>
-											<div className="flex flex-row items-center gap-3 mt-3">
+											<div className="flex  mt-3">
 												{/* <FaViber size={32} />
 													<FaWhatsapp size={36} /> */}
-												<Phone size={24} />
-												<div>
-													<h1 className="font-semibold text-sm leading-3">Viber & WhatsApp</h1>
-													<a className="text-[var(--primary-color)] text-sm">0985-631-8468</a>
+												<div className="flex flex-row  mt-2 items-center justify-center space-x-3">
+													{/* WhatsApp */}
+													<div className="flex flex-row items-center space-x-2 ">
+														<a href="https://wa.me/639856318468" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:scale-110 transition-transform">
+															<FaWhatsapp size={26} />
+														</a>
+														<a href="https://wa.me/639856318468" target="_blank" rel="noopener noreferrer" className=" hover:underline">
+															0985-631-8468
+														</a>
+													</div>
+
+													<button onClick={() => openAppWithFallback(viberUrl, viberDownload)} className="flex-col">
+														<div className="flex-row flex space-x-3  items-center ">
+															<FaViber size={26} />
+															<div className=" hover:underline">0985-631-8468</div>
+														</div>
+													</button>
 												</div>
 											</div>
 											<div className=" flex flex-row items-center mt-3 gap-3">

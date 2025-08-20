@@ -142,13 +142,6 @@ const Contact = () => {
 									<p className="text-sm">2442 Park Avenue, Torred Bldg. Pasay City</p>
 								</div>
 
-								{/* <div>
-									<h2 className="text-xl font-semibold mb-1">Contact</h2>
-									<p className="text-sm">Email: support@digotraders.com</p>
-									<p className="text-sm">Phone: +63 985-631-8468</p>
-									<p className="text-sm">Landline: (02) 835 67892</p>
-								</div> */}
-
 								<div>
 									<h2 className="text-xl font-semibold mb-1">Contact</h2>
 									<p className="text-sm">Email: support@digotraders.com</p>
