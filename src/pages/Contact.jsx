@@ -139,7 +139,7 @@ const Contact = () => {
 							>
 								<div>
 									<h2 className="text-xl font-semibold mb-1">Our Office</h2>
-									<p className="text-sm">2442 Park Avenue, Torred Bldg. Pasay City</p>
+									<p className="text-sm">2442 Park Avenue, Torres Bldg. Pasay City</p>
 								</div>
 
 								<div>
