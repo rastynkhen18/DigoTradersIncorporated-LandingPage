@@ -24,6 +24,8 @@ const Contact = () => {
 		);
 	};
 
+	const phonenumber = "+639856318468";
+
 	return (
 		<div>
 			<section className="relative flex justify-center items-center flex-col h-[300px] bg-cover bg-center" style={{ backgroundImage: `url(${ServicesBackgroundImage})` }}>
@@ -151,8 +153,17 @@ const Contact = () => {
 										<div className="flex flex-row items-center space-x-3">
 											{/* Viber Icon */}
 											<a
-												href="viber://add?number=639856318468"
-												target="_blank"
+												// href="viber://add?number=639856318468"
+												href={`viber://chat?number=${encodeURIComponent(phonenumber)}`}
+												onClick={(e) => {
+													// fallback for desktop users if Viber app not installed
+													setTimeout(() => {
+														if (document.visibilityState === "visible") {
+															window.open("https://www.viber.com/download/", "_blank");
+														}
+													}, 2000);
+												}}
+												// target="_blank"
 												rel="noopener noreferrer"
 												className="text-purple-500 hover:scale-110 transition-transform"
 												aria-label="Chat with us on Viber"
@@ -161,7 +172,19 @@ const Contact = () => {
 											</a>
 
 											{/* Viber Number */}
-											<a href="viber://add?number=639856318468" target="_blank" rel="noopener noreferrer" className="text-white text-lg hover:underline">
+											<a
+												href={`viber://chat?number=${encodeURIComponent(phonenumber)}`}
+												onClick={(e) => {
+													// fallback for desktop users if Viber app not installed
+													setTimeout(() => {
+														if (document.visibilityState === "visible") {
+															window.open("https://www.viber.com/download/", "_blank");
+														}
+													}, 2000);
+												}}
+												rel="noopener noreferrer"
+												className="text-white text-lg hover:underline"
+											>
 												0985-631-8468
 											</a>
 										</div>
