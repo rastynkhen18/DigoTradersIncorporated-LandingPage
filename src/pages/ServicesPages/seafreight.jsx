@@ -132,7 +132,7 @@ const Seafreight = () => {
 
 				<FadeInOnView>
 					<p className="text:base md:text-base">
-						We consolidate shipments to and from major ports such as:
+						We consolidate shipments to and from major ports in the philippines such as:
 						<ul className="list-disc list-inside mt-2">
 							<li>PORT OF SOUTH HARBOR</li>
 							<li>PORT OF NORTH HARBOR</li>
