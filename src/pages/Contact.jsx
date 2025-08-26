@@ -174,7 +174,7 @@ const Contact = () => {
 										<a href="https://www.facebook.com/profile.php?id=61577367794634" target="_blank" rel="noreferrer">
 											<img src={FacebookLogo} alt="Facebook" className="w-6 h-6" />
 										</a>
-										<a href="">
+										<a href="https://www.instagram.com/digotradersincorporated">
 											<img src={InstagramLogo} alt="Instagram" className="w-6 h-6" />
 										</a>
 									</div>

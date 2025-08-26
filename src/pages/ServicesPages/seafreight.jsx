@@ -134,13 +134,13 @@ const Seafreight = () => {
 					<p className="text:base md:text-base">
 						We consolidate shipments to and from major ports in the philippines such as:
 						<ul className="list-disc list-inside mt-2">
-							<li>PORT OF SOUTH HARBOR</li>
-							<li>PORT OF NORTH HARBOR</li>
 							<li>MANILA INTERNATIONAL CONTAINER PORT (M.I.C.P.)</li>
-							<li>PORT OF CEBU </li>
-							<li>PORT OF DAVAO</li>
-							<li>PORT OF CAGAYAN DE ORO</li>
+							<li>PORT OF MANILA NORTH HARBOR</li>
+							<li>PORT OF MANILA SOUTH HARBOR</li>
 							<li>PORT OF SUBIC</li>
+							<li>PORT OF CEBU</li>
+							<li>PORT OF CAGAYAN DE ORO</li>
+							<li>PORT OF DAVAO</li>
 						</ul>
 						Need a specific port? Contact us for a custom quote.
 					</p>

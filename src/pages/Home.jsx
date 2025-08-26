@@ -318,7 +318,7 @@ const Home = () => {
 													<FaWhatsapp size={36} /> */}
 												<div className="flex flex-row  mt-2 items-center justify-center space-x-3">
 													{/* WhatsApp */}
-													<div className="flex flex-row items-center space-x-2 ">
+													<div className="flex flex-row items-center space-x-1 ">
 														<a href="https://wa.me/639856318468" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:scale-110 transition-transform">
 															<FaWhatsapp size={26} />
 														</a>
