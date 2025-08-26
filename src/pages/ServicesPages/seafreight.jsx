@@ -31,14 +31,15 @@ const Seafreight = () => {
 
 				<FadeInOnView>
 					<p className="text:base md:text-base">
-						Sea freight consolidation is a logistics service where shipments from multiple customers are combined into one container — also known as Less than Container Load (LCL). Instead of paying for
-						an entire container, you only pay for the space you need. This allows importers and exporters to ship internationally by sea without the high costs of Full Container Load (FCL) shipping.
+						Sea freight consolidation is a logistics service where shipments from multiple customers are combined into one container — also known as Less than Container Load (LCL). Instead of paying
+						for an entire container, you only pay for the space you need. This allows importers and exporters to ship internationally by sea without the high costs of Full Container Load (FCL)
+						shipping.
 					</p>
 				</FadeInOnView>
 
-					<div className="aspect-video w-full ">
-						<iframe src="https://www.youtube.com/embed/1Zla30BpI_k?si=ruMzYks4YtcGh5ij" title="FCL vs LCL" frameBorder="0" allowFullScreen className="w-full h-full rounded-2xl"></iframe>
-					</div>
+				<div className="aspect-video w-full ">
+					<iframe src="https://www.youtube.com/embed/1Zla30BpI_k?si=ruMzYks4YtcGh5ij" title="FCL vs LCL" frameBorder="0" allowFullScreen className="w-full h-full rounded-2xl"></iframe>
+				</div>
 
 				<FadeInOnView>
 					<h1 className="text-xl md:xl font-bold text-[var(--secondary-color)]">FCL vs LCL Shipment: Cost Calculation & Break‑Even</h1>
@@ -133,13 +134,13 @@ const Seafreight = () => {
 					<p className="text:base md:text-base">
 						We consolidate shipments to and from major ports such as:
 						<ul className="list-disc list-inside mt-2">
-							<li>Manila</li>
-							<li>Cebu</li>
-							<li>Singapore</li>
-							<li>Hong Kong</li>
-							<li>Los Angeles / Long Beach</li>
-							<li>Dubai / Jebel Ali</li>
-							<li>Shanghai / Ningbo</li>
+							<li>PORT OF SOUTH HARBOR</li>
+							<li>PORT OF NORTH HARBOR</li>
+							<li>MANILA INTERNATIONAL CONTAINER PORT (M.I.C.P.)</li>
+							<li>PORT OF CEBU </li>
+							<li>PORT OF DAVAO</li>
+							<li>PORT OF CAGAYAN DE ORO</li>
+							<li>PORT OF SUBIC</li>
 						</ul>
 						Need a specific port? Contact us for a custom quote.
 					</p>
@@ -165,9 +166,8 @@ const Seafreight = () => {
 				<FadeInOnView>
 					<ReadyToShip />
 				</FadeInOnView>
-
-			</main >
-		</div >
+			</main>
+		</div>
 	);
 };
 
