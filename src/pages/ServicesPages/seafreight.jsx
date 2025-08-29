@@ -135,7 +135,6 @@ const Seafreight = () => {
 						We consolidate shipments to and from major ports in the philippines such as:
 						<ul className="list-disc list-inside mt-2">
 							<li>MANILA INTERNATIONAL CONTAINER PORT (M.I.C.P.)</li>
-							<li>PORT OF MANILA NORTH HARBOR</li>
 							<li>PORT OF MANILA SOUTH HARBOR</li>
 							<li>PORT OF SUBIC</li>
 							<li>PORT OF CEBU</li>

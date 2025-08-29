@@ -1,33 +1,35 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Header from './components/Header';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Services from './pages/Services';
-import ServicesRoutes from './routes/ServicesRoutes';
-import Footer from './components/Footer';
-
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Services from "./pages/Services";
+import ServicesRoutes from "./routes/ServicesRoutes";
+import Footer from "./components/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
-  return (
-    <div>
-      <Router>
-        {/* <Header /> */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/*" element={<ServicesRoutes />} />
-        </Routes>
-        <Footer />
-      </Router>
-    </div>
-  )
-}
+	return (
+		<div>
+			<Router>
+				{/* <Header /> */}
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/contact" element={<Contact />} />
+					<Route path="/services" element={<Services />} />
+					<Route path="/services/*" element={<ServicesRoutes />} />
+				</Routes>
+				<Footer />
+			</Router>
+			<ToastContainer position="top-right" autoClose={3000} />
+		</div>
+	);
+};
 
-export default App
+export default App;
 
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header2 from "../components/Header2";
 import ServicesBackgroundImage from "../assets/images/services-bg.png";
 import ContactImage from "../assets/images/contactImg.png";
@@ -7,22 +7,41 @@ import FacebookLogo from "../assets/images/Facebook_Logo_Secondary1.svg";
 import InstagramLogo from "../assets/images/Instagram_Glyph_White1.svg";
 import FadeInOnView from "../components/FadeInOnView";
 import { FaWhatsapp, FaViber } from "react-icons/fa";
-
+import { toast } from "react-toastify";
 const Contact = () => {
+	const [loading, setLoading] = useState();
+
 	const sendEmail = (e) => {
 		e.preventDefault();
+		setLoading(true);
 
 		emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, e.target, import.meta.env.VITE_EMAILJS_PUBLIC_KEY).then(
 			(result) => {
-				alert("Message sent successfully!");
+				toast.success("Message sent successfully!");
 				e.target.reset();
+				setLoading(false);
 			},
 			(error) => {
-				alert("Oops! Something went wrong.");
+				toast.error("❌ Oops! Something went wrong.");
 				console.error(error.text);
+				setLoading(false);
 			}
 		);
 	};
+	// const sendEmail = (e) => {
+	// 	e.preventDefault();
+
+	// 	emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, e.target, import.meta.env.VITE_EMAILJS_PUBLIC_KEY).then(
+	// 		(result) => {
+	// 			alert("Message sent successfully!");
+	// 			e.target.reset();
+	// 		},
+	// 		(error) => {
+	// 			alert("Oops! Something went wrong.");
+	// 			console.error(error.text);
+	// 		}
+	// 	);
+	// };
 
 	const openAppWithFallback = (appUrl, fallbackUrl, timeout = 1000) => {
 		const start = Date.now();
@@ -119,7 +138,7 @@ const Contact = () => {
 											background: "linear-gradient(to right, var(--primary-color), var(--primary-accent))",
 										}}
 									>
-										Submit
+										{loading ? "Sending..." : "Submit"}
 									</button>
 								</form>
 							</div>

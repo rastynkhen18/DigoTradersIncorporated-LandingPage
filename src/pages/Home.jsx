@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+
+import "react-toastify/dist/ReactToastify.css";
 import Header from "../components/Header";
 import HomePageBackground from "../assets/images/homepage-img.png";
 import WhoWeServeSlideshow from "../components/WhoWeServe";
@@ -10,24 +12,46 @@ import Airplane from "../assets/images/airplane-transparent.png";
 import { Package, ShoppingCart, Truck, Factory, Building2, ShieldCheck, Clock, FileText, Check, PhoneCallIcon, PhoneCall } from "lucide-react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { FaWhatsapp, FaViber } from "react-icons/fa";
+import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import FadeInOnView from "../components/FadeInOnView";
 
 const Home = () => {
+	const [loading, setLoading] = useState();
+
+	// const sendEmail = (e) => {
+	// 	e.preventDefault();
+	// 	setLoading(true);
+
+	// 	emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, e.target, import.meta.env.VITE_EMAILJS_PUBLIC_KEY).then(
+	// 		(result) => {
+	// 			alert("Message sent successfully!");
+	// 			e.target.reset();
+	// 		},
+	// 		(error) => {
+	// 			alert("Oops! Something went wrong.");
+	// 			console.error(error.text);
+	// 		}
+	// 	);
+	// };
 	const sendEmail = (e) => {
 		e.preventDefault();
+		setLoading(true);
 
 		emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, e.target, import.meta.env.VITE_EMAILJS_PUBLIC_KEY).then(
 			(result) => {
-				alert("Message sent successfully!");
+				toast.success("Message sent successfully!");
 				e.target.reset();
+				setLoading(false);
 			},
 			(error) => {
-				alert("Oops! Something went wrong.");
+				toast.error("❌ Oops! Something went wrong.");
 				console.error(error.text);
+				setLoading(false);
 			}
 		);
 	};
+
 	const viberUrl = `viber://add?number=639856318468`;
 	const viberDownload = "https://www.viber.com/download/";
 	const openAppWithFallback = (appUrl, fallbackUrl, timeout = 1000) => {
@@ -283,7 +307,7 @@ const Home = () => {
 												background: "linear-gradient(to right, var(--primary-color), var(--primary-accent))",
 											}}
 										>
-											Send Now
+											{loading ? "Sending..." : "Send Now"}
 										</button>
 									</form>
 								</div>
