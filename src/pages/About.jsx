@@ -10,7 +10,6 @@ import VisionImage from "../assets/images/vision-image.png";
 import { Truck, Plane, Anchor, Scale, MapPin, FileText } from "lucide-react";
 import FadeInOnView from "../components/FadeInOnView";
 
-
 const services = [
 	{
 		title: "Air Freight",
@@ -67,8 +66,10 @@ const About = () => {
 
 						<FadeInOnView delay={0.2}>
 							<p className="text-sm md:text-base text-justify">
-								DIGO Traders Incorporated is a Philippine-based logistics company committed to making import, export, and domestic shipping easier for businesses of all sizes. Whether you're
-								transporting goods across borders or across cities, we handle every step with accuracy, speed, and transparency.
+								DIGO Traders Incorporated is a duly registered Philippine corporation engaged in the importation, exportation, and distribution of consumer goods, food products, and industrial
+								materials. The company has built strong partnerships with suppliers worldwide, ensuring the delivery of high-quality products and services.
+								{/* DIGO Traders Incorporated is a Philippine-based logistics company committed to making import, export, and domestic shipping easier for businesses of all sizes. Whether you're
+								transporting goods across borders or across cities, we handle every step with accuracy, speed, and transparency. */}
 							</p>
 						</FadeInOnView>
 					</div>
@@ -112,7 +113,6 @@ const About = () => {
 						</div>
 					</FadeInOnView>
 
-
 					<div className="flex flex-col md:flex-row justify-center items-center md:p-16  w-full max-w-[1024px]">
 						<div className="flex flex-col gap-5 w-full md:w-1/2 p-5">
 							<FadeInOnView>
@@ -125,14 +125,12 @@ const About = () => {
 									strong relationships with global suppliers.
 								</p>
 							</FadeInOnView>
-
 						</div>
 
 						<div className="w-full md:w-1/2 mt-10 flex justify-center">
 							<FadeInOnView>
 								<img src={MissionImage} alt="About" className="w-full" />
 							</FadeInOnView>
-
 						</div>
 					</div>
 					<div className="flex flex-col-reverse md:flex-row justify-center items-center  md:p-16  w-full max-w-[1024px]">
@@ -140,7 +138,6 @@ const About = () => {
 							<FadeInOnView>
 								<img src={VisionImage} alt="About" className="w-full" />
 							</FadeInOnView>
-
 						</div>
 						<div className="flex flex-col gap-5 w-full md:w-1/2 p-5">
 							<FadeInOnView>
