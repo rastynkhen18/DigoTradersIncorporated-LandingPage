@@ -31,6 +31,14 @@ const data = [
 		button: "Read More",
 		link: "seafreight",
 	},
+	{
+		img: ServicesTrucking,
+		alt: "ServicesTrucking",
+		title: "Trucking Services",
+		description: "We provide reliable transport for containers, equipment, and delivered safely, on time, and cost-efficiently.",
+		button: "Read More",
+		link: "trucking-services",
+	},
 	// {
 	// 	img: ServicesLandFreight,
 	// 	alt: "ServicesLandFreight",
@@ -47,14 +55,6 @@ const data = [
 		button: "Read More",
 		link: "custombrokerage",
 	},
-	{
-		img: ServicesTrucking,
-		alt: "ServicesTrucking",
-		title: "Trucking Services",
-		description: "We provide reliable transport for containers, equipment, and delivered safely, on time, and cost-efficiently.",
-		button: "Read More",
-		link: "trucking-services",
-	},
 
 	// {
 	// 	img: ServicesDomesticTransfer,
@@ -65,14 +65,14 @@ const data = [
 	// 	link: "domestic-transfer-services",
 	// },
 
-	{
-		img: ServicesFCL,
-		alt: "ServicesFCL",
-		title: "FCL/LCL",
-		description: "Ship your goods worldwide, whether full load or shared.",
-		button: "Read More",
-		link: "fcl_lcl",
-	},
+	// {
+	// 	img: ServicesFCL,
+	// 	alt: "ServicesFCL",
+	// 	title: "FCL/LCL",
+	// 	description: "Ship your goods worldwide, whether full load or shared.",
+	// 	button: "Read More",
+	// 	link: "fcl_lcl",
+	// },
 
 	{
 		img: ServicesRenewal,
