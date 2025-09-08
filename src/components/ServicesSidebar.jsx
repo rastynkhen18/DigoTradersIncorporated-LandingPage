@@ -20,9 +20,9 @@ const ServicesSidebar = () => {
 				<NavLink to="/services/seafreight" className={getLinkClass} reloadDocument>
 					Sea Freight
 				</NavLink>
-				<NavLink to="/services/landfreight" className={getLinkClass} reloadDocument>
+				{/* <NavLink to="/services/landfreight" className={getLinkClass} reloadDocument>
 					Land Freight
-				</NavLink>
+				</NavLink> */}
 				<NavLink to="/services/custombrokerage" className={getLinkClass} reloadDocument>
 					Custom Brokerage
 				</NavLink>
@@ -32,9 +32,9 @@ const ServicesSidebar = () => {
 				<NavLink to="/services/domestic-transfer-services" className={getLinkClass} reloadDocument>
 					Domestic Transport
 				</NavLink>
-				<NavLink to="/services/fcl_lcl" className={getLinkClass} reloadDocument>
+				{/* <NavLink to="/services/fcl_lcl" className={getLinkClass} reloadDocument>
 					FCL/LCL
-				</NavLink>
+				</NavLink> */}
 				<NavLink to="/services/amo-certificate" className={getLinkClass} reloadDocument>
 					Renewal of AMO Certificate
 				</NavLink>

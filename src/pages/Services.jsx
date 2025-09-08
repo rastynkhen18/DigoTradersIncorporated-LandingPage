@@ -26,18 +26,19 @@ const data = [
 		img: ServicesSeaFreight,
 		alt: "ServicesSeaFreight",
 		title: "Sea Freight",
-		description: "Save costs by combining small shipments into one container - ideal for light cargo.",
+		// description: "Save costs by combining small shipments into one container - ideal for light cargo.",
+		description: "Ship your goods worldwide, whether full load or shared.",
 		button: "Read More",
 		link: "seafreight",
 	},
-	{
-		img: ServicesLandFreight,
-		alt: "ServicesLandFreight",
-		title: "Land Freight",
-		description: "We provide trucking and delivery services from the port to your warehouse or business location.",
-		button: "Read More",
-		link: "landfreight",
-	},
+	// {
+	// 	img: ServicesLandFreight,
+	// 	alt: "ServicesLandFreight",
+	// 	title: "Land Freight",
+	// 	description: "We provide trucking and delivery services from the port to your warehouse or business location.",
+	// 	button: "Read More",
+	// 	link: "landfreight",
+	// },
 	{
 		img: ServicesCustomBrokerage,
 		alt: "ServicesCustomBrokerage",
@@ -55,14 +56,14 @@ const data = [
 		link: "trucking-services",
 	},
 
-	{
-		img: ServicesDomesticTransfer,
-		alt: "ServicesDomesticTransfer",
-		title: "Domestic Transport",
-		description: "Nationwide delivery across cities and provinces in the Philippines.",
-		button: "Read More",
-		link: "domestic-transfer-services",
-	},
+	// {
+	// 	img: ServicesDomesticTransfer,
+	// 	alt: "ServicesDomesticTransfer",
+	// 	title: "Domestic Transport",
+	// 	description: "Nationwide delivery across cities and provinces in the Philippines.",
+	// 	button: "Read More",
+	// 	link: "domestic-transfer-services",
+	// },
 
 	{
 		img: ServicesFCL,
