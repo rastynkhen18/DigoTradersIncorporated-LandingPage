@@ -19,7 +19,7 @@ const Landfreight = () => {
 						background: "linear-gradient(to left, var(--primary-color), var(--primary-accent))",
 					}}
 				>
-					Land Freight
+					Trucking Services
 				</h1>
 
 				<FadeInOnView>
@@ -62,11 +62,12 @@ const Landfreight = () => {
 									<div className="flex-1 justify-center items-center  p-3">
 										<div className=" flex h-full flex-col  justify-center items-center">
 											<p className="flex text-base font-medium text-[var(--primary-color)] ">Have Questions?</p>
-											<Link to="/contact" reloadDocument><button className="mt-2 px-4 py-2 bg-[var(--primary-color)] text-[var(--white-color)] rounded-full text-center font-bold cursor-pointer">Talk to an Expert</button></Link>
+											<Link to="/contact" reloadDocument>
+												<button className="mt-2 px-4 py-2 bg-[var(--primary-color)] text-[var(--white-color)] rounded-full text-center font-bold cursor-pointer">Talk to an Expert</button>
+											</Link>
 										</div>
 									</div>
 								</FadeInOnView>
-
 							</div>
 
 							<FadeInOnView>
@@ -95,7 +96,6 @@ const Landfreight = () => {
 							</FadeInOnView>
 						</section>
 					</FadeInOnView>
-
 
 					<div className="p-5">
 						<FadeInOnView>
@@ -165,7 +165,6 @@ const Landfreight = () => {
 							<li>✅ E-commerce brands shipping across the country</li>
 						</ul>
 					</FadeInOnView>
-
 				</section>
 				<FadeInOnView>
 					<ReadyToShip />

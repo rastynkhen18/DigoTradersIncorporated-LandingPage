@@ -60,14 +60,24 @@ const Footer = () => {
 						</li>
 						<li className="hover:text-[var(--primary-color)]">
 							<Link to="/services/landfreight" reloadDocument>
-								Land Freight
+								Trucking Services
 							</Link>
 						</li>
 						<li className="hover:text-[var(--primary-color)]">
+							<Link to="/services/custombrokerage" reloadDocument>
+								Custom Brokerage
+							</Link>
+						</li>
+						<li className="hover:text-[var(--primary-color)]">
+							<Link to="/services/amo-certificate" reloadDocument>
+								AMO Certification
+							</Link>
+						</li>
+						{/* <li className="hover:text-[var(--primary-color)]">
 							<Link to="/services/fcl_lcl" reloadDocument>
 								FCL / LCL
 							</Link>
-						</li>
+						</li> */}
 					</ul>
 				</div>
 
