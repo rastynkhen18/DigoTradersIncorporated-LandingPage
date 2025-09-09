@@ -1,69 +1,117 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
+// const faqs = [
+// 	{
+// 		question: "Step 1: Consultation & Requirements Gathering",
+// 		answer: `
+//   You contact Digo Traders via email or phone.
+
+//   You explain what kind of goods you're importing, where they're coming from, and your timeline.
+
+//   Digo Traders will advise you on:
+//     • The best shipping method (sea or air)
+//     • Required documents
+//     • Estimated costs and timeline
+//   `,
+// 	},
+
+// 	{
+// 		question: "Step 2: Import License & AMO Assistance (if needed)",
+// 		answer: `
+//   If you’re a new importer:
+
+//     • Digo helps you apply for an Import License
+//     • They assist with renewal of the AMO Certificate if it’s expired
+//   `,
+// 	},
+// 	{
+// 		question: "Step 3: Freight Arrangement",
+// 		answer: `
+//   If air freight:
+//     • They coordinate international air shipment.
+
+//   If sea freight:
+//     • Choose between:
+//       – FCL (Full Container Load) — for big shipments
+//       – LCL (Less than Container Load) — for small shipments
+//     • They consolidate your cargo with others if using LCL to save costs.
+//   `,
+// 	},
+// 	{
+// 		question: "Step 4: Customs Brokerage",
+// 		answer: `
+//   Digo Traders handles:
+//     • Import declaration
+//     • Customs taxes & tariffs
+//     • Permits and paperwork
+
+//   You don’t have to deal with customs — they handle it for you.
+//   `,
+// 	},
+// 	{
+// 		question: "Step 5: Domestic Transfer & Land Transportation",
+// 		answer: `
+//   Once cleared, your goods are:
+//     • Transferred locally (from port to city/province)
+//     • Delivered via truck to your warehouse or business location
+//   `,
+// 	},
+// 	{
+// 		question: "Step 6: Final Delivery & Support",
+// 		answer: `
+//   You receive your goods at your preferred location.
+
+//   Digo provides post-delivery support or freight consultation for future shipments.
+//   `,
+// 	},
+// ];
 const faqs = [
 	{
-		question: "Step 1: Consultation & Requirements Gathering",
+		question: "Step 1: Consultation & Requirements for customs processing",
 		answer: `
-  You contact Digo Traders via email or phone.
-  
-  You explain what kind of goods you're importing, where they're coming from, and your timeline.
-  
-  Digo Traders will advise you on:
-    • The best shipping method (sea or air)
-    • Required documents
-    • Estimated costs and timeline
-  `,
+    Get in touch with Digo Traders through email or phone.  
+    
+    Provide details about your shipment—type of goods, country of origin, and delivery timeline.  
+    
+    Our team will advise you on:  
+      • The required customs documents  
+      • Permits or licenses you may need  
+      • Estimated duties, taxes, and processing timeframe  
+    `,
 	},
 
 	{
-		question: "Step 2: Import License & AMO Assistance (if needed)",
+		question: "Step 2: Lodgment of import and export declaration",
 		answer: `
-  If you’re a new importer:
-  
-    • Digo helps you apply for an Import License  
-    • They assist with renewal of the AMO Certificate if it’s expired
-  `,
+    Digo Traders prepares and submits your import or export declaration to customs.  
+    
+    • Assistance for new importers in applying for an Import License  
+    • Renewal support for existing permits or certificates  
+    • Proper filing to ensure compliance and avoid delays  
+    `,
 	},
+
 	{
-		question: "Step 3: Freight Arrangement",
+		question: "Step 3: Final assessment of custom duties",
 		answer: `
-  If air freight:  
-    • They coordinate international air shipment.
-  
-  If sea freight:  
-    • Choose between:  
-      – FCL (Full Container Load) — for big shipments  
-      – LCL (Less than Container Load) — for small shipments  
-    • They consolidate your cargo with others if using LCL to save costs.
-  `,
+    We coordinate with customs for accurate evaluation of duties and taxes.  
+    
+    • Verification of HS codes and tariff classifications  
+    • Transparent breakdown of duties, VAT, and other charges  
+    • Ensuring compliance to prevent penalties or shipment holds  
+    `,
 	},
+
 	{
-		question: "Step 4: Customs Brokerage",
+		question: "Step 4: Final delivery for trucking services",
 		answer: `
-  Digo Traders handles:
-    • Import declaration  
-    • Customs taxes & tariffs  
-    • Permits and paperwork
-  
-  You don’t have to deal with customs — they handle it for you.
-  `,
-	},
-	{
-		question: "Step 5: Domestic Transfer & Land Transportation",
-		answer: `
-  Once cleared, your goods are:
-    • Transferred locally (from port to city/province)  
-    • Delivered via truck to your warehouse or business location
-  `,
-	},
-	{
-		question: "Step 6: Final Delivery & Support",
-		answer: `
-  You receive your goods at your preferred location.
-  
-  Digo provides post-delivery support or freight consultation for future shipments.
-  `,
+    After clearance, Digo Traders handles the release of your shipment.  
+    
+    • Payment and settlement of customs duties and tariffs  
+    • Completion of permits and supporting paperwork  
+    • Preparation for secure transport to your chosen location  
+    `,
 	},
 ];
 
