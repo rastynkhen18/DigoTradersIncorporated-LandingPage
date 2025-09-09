@@ -157,11 +157,26 @@ const Home = () => {
 
 								<FadeInOnView>
 									<p className="text-sm md:text-base lg:text-lg">
+										We manage all the required paperwork for cargo shipments—including permits, clearances, and customs documents—so you don’t have to worry about compliance.
+									</p>
+								</FadeInOnView>
+							</div>
+							{/* <div>
+								<FadeInOnView>
+									<h3 className="flex items-center text-xl font-semibold gap-2">
+										<ShieldCheck className="text-[var(--primary-color)] w-10 h-10" />
+										Safe & Secure Handling
+										<Check className="text-[var(--green-color)]  w-10 h-10" />
+									</h3>
+								</FadeInOnView>
+
+								<FadeInOnView>
+									<p className="text-sm md:text-base lg:text-lg">
 										No matter the size or type of shipment, your cargo is protected at every step. From packaging to transport, we follow strict safety protocols across land, sea, and air to ensure it
 										arrives in perfect condition.
 									</p>
 								</FadeInOnView>
-							</div>
+							</div> */}
 
 							{/* Card 2 */}
 							<div>
@@ -175,8 +190,8 @@ const Home = () => {
 
 								<FadeInOnView>
 									<p className="text-sm md:text-base lg:text-lg">
-										We value your time. Our logistics operations are built around efficiency and smart route planning – so your shipments reach their destination on schedule, whether locally or
-										internationally.
+										With our expertise, your products gain priority in the import and export process. We streamline applications and approvals, helping you avoid unnecessary delays at ports and
+										borders.
 									</p>
 								</FadeInOnView>
 							</div>
@@ -193,8 +208,8 @@ const Home = () => {
 
 								<FadeInOnView>
 									<p className="text-sm md:text-base lg:text-lg">
-										We take the burden of paperwork off your shoulders. From shipping documents to import/export permits, our team handles it all – making the logistics process smoother and faster for
-										you.
+										Once documentation is secured, your shipments can move smoothly across land, sea, or air. We ensure your goods are cleared efficiently, giving you peace of mind throughout the
+										logistics journey.
 									</p>
 								</FadeInOnView>
 							</div>

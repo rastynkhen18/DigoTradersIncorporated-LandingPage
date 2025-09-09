@@ -66,8 +66,10 @@ const About = () => {
 
 						<FadeInOnView delay={0.2}>
 							<p className="text-sm md:text-base text-justify">
-								DIGO Traders Incorporated is a duly registered Philippine corporation engaged in the importation, exportation, and distribution of consumer goods, food products, and industrial
-								materials. The company has built strong partnerships with suppliers worldwide, ensuring the delivery of high-quality products and services.
+								DIGO Traders Incorporated is dedicated to empowering businesses in bridging global markets by simplifying the complexities of import and export documentation. Established in 2025, we
+								specialize in preparing, processing, and managing essential trade documents to ensure compliance with international and local regulations. Our services cover everything from customs
+								clearances and permits to shipping paperwork, helping clients secure faster approvals and privileges for smoother cross-border transactions. By focusing on documentation excellence, we
+								enable industries such as retail, food & beverage, and manufacturing to move their products efficiently and with confidence.
 								{/* DIGO Traders Incorporated is a Philippine-based logistics company committed to making import, export, and domestic shipping easier for businesses of all sizes. Whether you're
 								transporting goods across borders or across cities, we handle every step with accuracy, speed, and transparency. */}
 							</p>
