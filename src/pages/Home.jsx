@@ -138,7 +138,7 @@ const Home = () => {
 
 				<section>
 					{/* Content wrapper */}
-					<div className="flex flex-col-reverse md:flex-row items-center justify-between md:h-[100vh]">
+					<div className="flex flex-col-reverse md:flex-row items-center justify-between md:h-[100vh] bg-white">
 						{/* Text Content */}
 						<div className="flex flex-col gap-5 md:gap-5 w-full p-10 md:w-1/2">
 							<FadeInOnView>

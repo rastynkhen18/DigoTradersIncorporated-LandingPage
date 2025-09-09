@@ -11,7 +11,7 @@ const services = [
 	// { to: "/services/landfreight", label: "Land Freight" },
 	{ to: "/services/custombrokerage", label: "Custom Brokerage" },
 
-	{ to: "/services/domestic-transfer-services", label: "Domestic Transport" },
+	// { to: "/services/domestic-transfer-services", label: "Domestic Transport" },
 	// { to: "/services/fcl_lcl", label: "FCL/LCL" },
 	{ to: "/services/amo-certificate", label: "Renewal of AMO Certificate" },
 	{ to: "/services/import-license", label: "Accreditation of Import License" },
