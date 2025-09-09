@@ -73,6 +73,11 @@ const Footer = () => {
 								AMO Certification
 							</Link>
 						</li>
+						<li className="hover:text-[var(--primary-color)]">
+							<Link to="/services/import-license" reloadDocument>
+								Accreditation of Import License
+							</Link>
+						</li>
 						{/* <li className="hover:text-[var(--primary-color)]">
 							<Link to="/services/fcl_lcl" reloadDocument>
 								FCL / LCL
