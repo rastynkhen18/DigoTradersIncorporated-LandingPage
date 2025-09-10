@@ -22,10 +22,15 @@ const services = [
 		icon: <Anchor size={40} />,
 	},
 	{
-		title: "Land Freight",
-		description: "Nationwide delivery.",
+		title: "Trucking Services",
+		description: "Safe and timely transport.",
 		icon: <Truck size={40} />,
 	},
+	// {
+	// 	title: "Land Freight",
+	// 	description: "Nationwide delivery.",
+	// 	icon: <Truck size={40} />,
+	// },
 	{
 		title: "Compliance",
 		description: "Clearance & legal docs.",
@@ -58,18 +63,18 @@ const About = () => {
 			</section>
 
 			<section className="flex justify-center items-center">
-				<div className="flex flex-col md:flex-row justify-center items-center gap-5 md:p-16 p-5 w-full max-w-[1024px]">
+				<div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-10 md:p-16 p-5 w-full max-w-[1024px]">
 					<div className="w-full md:w-1/2">
 						<FadeInOnView>
 							<img src={Logo} alt="Digo Traders Inc." className="w-40 h-auto mb-4" />
 						</FadeInOnView>
 
 						<FadeInOnView delay={0.2}>
-							<p className="text-sm md:text-base text-justify">
-								DIGO Traders Incorporated is dedicated to empowering businesses in bridging global markets by simplifying the complexities of import and export documentation. Established in 2025, we
-								specialize in preparing, processing, and managing essential trade documents to ensure compliance with international and local regulations. Our services cover everything from customs
-								clearances and permits to shipping paperwork, helping clients secure faster approvals and privileges for smoother cross-border transactions. By focusing on documentation excellence, we
-								enable industries such as retail, food & beverage, and manufacturing to move their products efficiently and with confidence.
+							<p className="text-sm md:text-base text-justify ">
+								DIGO Traders Incorporated is a duly accredited importer with the Bureau of Customs, engaged in both importation and exportation. Committed to empowering businesses, we bridge global
+								markets by simplifying the complexities of international trade and documentation. We specialize in preparing, processing, and managing essential trade documents to ensure strict
+								compliance with local and international regulations. We provide end-to-end support that enables faster approvals, greater privileges, and seamless cross-border transactions, from
+								customs clearances and permits to shipping paperwork.
 								{/* DIGO Traders Incorporated is a Philippine-based logistics company committed to making import, export, and domestic shipping easier for businesses of all sizes. Whether you're
 								transporting goods across borders or across cities, we handle every step with accuracy, speed, and transparency. */}
 							</p>

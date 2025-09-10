@@ -120,7 +120,7 @@ const DropdownFAQ = () => {
 	const contentRefs = useRef([]);
 
 	const toggleDropdown = (index) => {
-		setOpenIndex(index === openIndex ? null : index);
+		// setOpenIndex(index === openIndex ? null : index);
 	};
 
 	return (
@@ -133,7 +133,7 @@ const DropdownFAQ = () => {
 					<div key={index} className="text-[var(--primary-color)] border-none rounded-xl shadow-sm bg-[var(--white-color)] p-2 sm:p-2 lg:p-3 transition-all duration-300">
 						<button onClick={() => toggleDropdown(index)} className="w-full flex items-center justify-between text-left md:text-base text-sm font-semibold focus:outline-none cursor-pointer">
 							<span>{faq.question}</span>
-							<FaChevronDown className={`transform transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`} />
+							{/* <FaChevronDown className={`transform transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`} /> */}
 						</button>
 
 						<div ref={(el) => (contentRefs.current[index] = el)} style={{ height }} className="overflow-hidden transition-all duration-300 ease-in-out">
