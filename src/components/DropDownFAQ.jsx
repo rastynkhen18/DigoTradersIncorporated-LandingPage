@@ -93,7 +93,7 @@ const faqs = [
 	},
 
 	{
-		question: "Step 3: Final assessment of custom duties",
+		question: "Step 3: Final assessment of customs duties",
 		answer: `
     We coordinate with customs for accurate evaluation of duties and taxes.  
     
